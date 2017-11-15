@@ -9,6 +9,7 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.PropertySource;
 import org.springframework.context.support.ResourceBundleMessageSource;
 import org.springframework.core.env.Environment;
+import org.springframework.orm.hibernate5.HibernateTransactionManager;
 import org.springframework.orm.hibernate5.LocalSessionFactoryBean;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
 import org.springframework.web.multipart.commons.CommonsMultipartResolver;
@@ -88,6 +89,14 @@ public class ApplicationContextConfig {
         SessionFactory sf = factoryBean.getObject();
         System.out.println(" getSessionFactory: " + sf);
         return sf;
+    }
+
+    //konfiguracja managera transakcji
+    @Autowired
+    @Bean(name = "transactionManager")
+    public HibernateTransactionManager getTransactionManager(SessionFactory sessionFactory) {
+        HibernateTransactionManager transactionManager = new HibernateTransactionManager(sessionFactory);
+        return transactionManager;
     }
 
 }
