@@ -15,6 +15,8 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 import org.springframework.web.multipart.commons.CommonsMultipartResolver;
 import org.springframework.web.servlet.view.InternalResourceViewResolver;
 import org.springframework.web.servlet.view.JstlView;
+import pl.projekt.dao.UsersDAO;
+import pl.projekt.daoimpl.UsersDAOImpl;
 
 import java.util.Properties;
 
@@ -98,5 +100,8 @@ public class ApplicationContextConfig {
         HibernateTransactionManager transactionManager = new HibernateTransactionManager(sessionFactory);
         return transactionManager;
     }
+
+    @Bean(name = "userDAO")
+    public UsersDAO getUsersDAO(){return new UsersDAOImpl();}
 
 }
