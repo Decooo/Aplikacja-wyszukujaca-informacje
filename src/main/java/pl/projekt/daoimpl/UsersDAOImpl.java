@@ -5,9 +5,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import pl.projekt.dao.UsersDAO;
 import pl.projekt.model.Users;
 
-import javax.persistence.EntityManager;
-import javax.persistence.EntityManagerFactory;
-import javax.persistence.Persistence;
+import javax.persistence.*;
 
 /**
  * Created by jakub on 20.11.2017.
@@ -30,4 +28,18 @@ public class UsersDAOImpl implements UsersDAO {
             return null;
         }
     }
+
+    @Override
+    public void add(String login, String haslo) {
+        EntityManager entityManager = emf.createEntityManager();
+        StoredProcedureQuery query = entityManager.createStoredProcedureQuery("addusers",Users.class)
+                .registerStoredProcedureParameter(1,String.class, ParameterMode.IN)
+                .registerStoredProcedureParameter(2,String.class,ParameterMode.IN)
+                .setParameter(1,login)
+                .setParameter(2,haslo);
+        query.execute();
+        entityManager.close();
+    }
+
+
 }

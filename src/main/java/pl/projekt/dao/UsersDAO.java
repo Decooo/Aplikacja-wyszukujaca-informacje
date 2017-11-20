@@ -8,4 +8,5 @@ import pl.projekt.model.Users;
 public interface UsersDAO {
 
     Users findUser(String login);
+    void add(String login, String haslo);
 }

@@ -1,3 +1,4 @@
+
 package pl.projekt.config;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -29,7 +30,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
         http.authorizeRequests().and().exceptionHandling().accessDeniedPage("/403");
 
         http.authorizeRequests().and().formLogin()
-                .loginProcessingUrl("j_spring_security_check")
+                .loginProcessingUrl("/j_spring_security_check")
                 .loginPage("/login")
                 .defaultSuccessUrl("/accountInfo")
                 .failureUrl("/login?error=true")
