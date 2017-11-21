@@ -7,6 +7,10 @@
         <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
 
         <class>pl.projekt.model.Users</class>
+        <class>pl.projekt.model.Advertisement</class>
+        <class>pl.projekt.model.Category</class>
+        <class>pl.projekt.model.Position</class>
+        <class>pl.projekt.model.FormOfEmployment</class>
 
 
         <properties>

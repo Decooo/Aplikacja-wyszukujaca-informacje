@@ -15,8 +15,8 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 import org.springframework.web.multipart.commons.CommonsMultipartResolver;
 import org.springframework.web.servlet.view.InternalResourceViewResolver;
 import org.springframework.web.servlet.view.JstlView;
-import pl.projekt.dao.UsersDAO;
-import pl.projekt.daoimpl.UsersDAOImpl;
+import pl.projekt.dao.*;
+import pl.projekt.daoimpl.*;
 
 import java.util.Properties;
 
@@ -104,4 +104,15 @@ public class ApplicationContextConfig {
     @Bean(name = "userDAO")
     public UsersDAO getUsersDAO(){return new UsersDAOImpl();}
 
+    @Bean(name = "positionDAO")
+    public PositionDAO getPositionDAO(){return new PositionDAOImpl();}
+
+    @Bean(name= "categoryDAO")
+    public CategoryDAO getCategoryDAO(){return new CategoryDAOImpl();}
+
+    @Bean(name = "AdvertisementDAO")
+    public AdvertisementDAO getAdvertisementDAO(){return new AdvertisementDAOImpl();}
+
+    @Bean(name = "FormOfEmployment")
+    public FormOfEmploymentDAO getFormOfEmploymentDAO(){return new FormOfEmplymentDAOImpl();}
 }
