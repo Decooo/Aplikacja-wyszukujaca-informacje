@@ -114,5 +114,5 @@ public class ApplicationContextConfig {
     public AdvertisementDAO getAdvertisementDAO(){return new AdvertisementDAOImpl();}
 
     @Bean(name = "FormOfEmployment")
-    public FormOfEmploymentDAO getFormOfEmploymentDAO(){return new FormOfEmplymentDAOImpl();}
+    public FormOfEmploymentDAO getFormOfEmploymentDAO(){return new FormOfEmploymentDAOImpl();}
 }

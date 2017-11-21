@@ -2,11 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="895e5eca-8b19-4e1f-b585-c72383d0bd34" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/pl/projekt/controller/AdvertController.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/newAdvertisement.jsp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/_menu.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/_menu.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/pl/projekt/config/ApplicationContextConfig.java" afterPath="$PROJECT_DIR$/src/main/java/pl/projekt/config/ApplicationContextConfig.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/pl/projekt/controller/AdvertController.java" afterPath="$PROJECT_DIR$/src/main/java/pl/projekt/controller/AdvertController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/pl/projekt/dao/CategoryDAO.java" afterPath="$PROJECT_DIR$/src/main/java/pl/projekt/dao/CategoryDAO.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/pl/projekt/dao/FormOfEmploymentDAO.java" afterPath="$PROJECT_DIR$/src/main/java/pl/projekt/dao/FormOfEmploymentDAO.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/pl/projekt/dao/PositionDAO.java" afterPath="$PROJECT_DIR$/src/main/java/pl/projekt/dao/PositionDAO.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/pl/projekt/daoimpl/CategoryDAOImpl.java" afterPath="$PROJECT_DIR$/src/main/java/pl/projekt/daoimpl/CategoryDAOImpl.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/pl/projekt/daoimpl/PositionDAOImpl.java" afterPath="$PROJECT_DIR$/src/main/java/pl/projekt/daoimpl/PositionDAOImpl.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/newAdvertisement.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/newAdvertisement.jsp" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/pl/projekt/daoimpl/FormOfEmplymentDAOImpl.java" afterPath="$PROJECT_DIR$/src/main/java/pl/projekt/daoimpl/FormOfEmploymentDAOImpl.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -39,6 +44,60 @@
         <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
       </PATH_ELEMENT>
     </PATH>
+    <PATH>
+      <PATH_ELEMENT>
+        <option name="myItemId" />
+        <option name="myItemType" value="com.intellij.database.view.DatabaseStructure$Root" />
+      </PATH_ELEMENT>
+      <PATH_ELEMENT>
+        <option name="myItemId" value="p_inzynierski@localhost" />
+        <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
+      </PATH_ELEMENT>
+      <PATH_ELEMENT>
+        <option name="myItemId" value="p_inzynierski" />
+        <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
+      </PATH_ELEMENT>
+    </PATH>
+    <PATH>
+      <PATH_ELEMENT>
+        <option name="myItemId" />
+        <option name="myItemType" value="com.intellij.database.view.DatabaseStructure$Root" />
+      </PATH_ELEMENT>
+      <PATH_ELEMENT>
+        <option name="myItemId" value="p_inzynierski@localhost" />
+        <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
+      </PATH_ELEMENT>
+      <PATH_ELEMENT>
+        <option name="myItemId" value="p_inzynierski" />
+        <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
+      </PATH_ELEMENT>
+      <PATH_ELEMENT>
+        <option name="myItemId" />
+        <option name="myItemType" value="com.intellij.database.view.DatabaseStructure$GroupNode" />
+      </PATH_ELEMENT>
+    </PATH>
+    <PATH>
+      <PATH_ELEMENT>
+        <option name="myItemId" />
+        <option name="myItemType" value="com.intellij.database.view.DatabaseStructure$Root" />
+      </PATH_ELEMENT>
+      <PATH_ELEMENT>
+        <option name="myItemId" value="p_inzynierski@localhost" />
+        <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
+      </PATH_ELEMENT>
+      <PATH_ELEMENT>
+        <option name="myItemId" value="p_inzynierski" />
+        <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
+      </PATH_ELEMENT>
+      <PATH_ELEMENT>
+        <option name="myItemId" />
+        <option name="myItemType" value="com.intellij.database.view.DatabaseStructure$GroupNode" />
+      </PATH_ELEMENT>
+      <PATH_ELEMENT>
+        <option name="myItemId" value="stanowisko" />
+        <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
+      </PATH_ELEMENT>
+    </PATH>
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FavoritesManager">
@@ -46,72 +105,12 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="newAdvertisement.jsp" pinned="false" current-in-tab="false">
+      <file leaf-file-name="newAdvertisement.jsp" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/newAdvertisement.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="413">
-              <caret line="38" column="26" lean-forward="false" selection-start-line="38" selection-start-column="26" selection-end-line="38" selection-end-column="26" />
+            <state relative-caret-position="322">
+              <caret line="34" column="117" lean-forward="false" selection-start-line="34" selection-start-column="117" selection-end-line="34" selection-end-column="117" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AdvertisementDAO.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/pl/projekt/dao/AdvertisementDAO.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="5" column="33" lean-forward="false" selection-start-line="5" selection-start-column="33" selection-end-line="5" selection-end-column="33" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AdvertController.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/pl/projekt/controller/AdvertController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="547">
-              <caret line="34" column="0" lean-forward="false" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="_menu.jsp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/_menu.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="14" column="32" lean-forward="false" selection-start-line="14" selection-start-column="32" selection-end-line="14" selection-end-column="32" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DATABASE/3608e8ac-a8eb-49ae-8d91-a974331c4364.SCHEMA:p_inzynierski" pinned="false" current-in-tab="false">
-        <entry file="uml://DATABASE/3608e8ac-a8eb-49ae-8d91-a974331c4364.SCHEMA:p_inzynierski">
-          <provider selected="true" editor-type-id="UmlEditorProvider">
-            <state>
-              <ID>DATABASE</ID>
-              <OriginalElement>3608e8ac-a8eb-49ae-8d91-a974331c4364.SCHEMA:p_inzynierski</OriginalElement>
-              <nodes>
-                <node x="232.0" y="414.0">3608e8ac-a8eb-49ae-8d91-a974331c4364.TABLE:p_inzynierski.kategoria</node>
-                <node x="0.0" y="0.0">3608e8ac-a8eb-49ae-8d91-a974331c4364.TABLE:p_inzynierski.ogloszenie</node>
-                <node x="0.0" y="273.0">3608e8ac-a8eb-49ae-8d91-a974331c4364.TABLE:p_inzynierski.uzytkownik</node>
-                <node x="0.0" y="414.0">3608e8ac-a8eb-49ae-8d91-a974331c4364.TABLE:p_inzynierski.stanowisko</node>
-                <node x="0.0" y="533.0">3608e8ac-a8eb-49ae-8d91-a974331c4364.TABLE:p_inzynierski.hibernate_sequence</node>
-                <node x="255.0" y="273.0">3608e8ac-a8eb-49ae-8d91-a974331c4364.TABLE:p_inzynierski.forma_zatrudnienia</node>
-              </nodes>
-              <notes />
-              <edges />
-              <settings layout="Hierarchic Group" zoom="0.9635761589403974" x="-132.72164948453602" y="239.0721649484536" />
-              <SelectedNodes>
-                <node>3608e8ac-a8eb-49ae-8d91-a974331c4364.TABLE:p_inzynierski.kategoria</node>
-              </SelectedNodes>
-              <Categories>
-                <Category>Key columns</Category>
-                <Category>Columns</Category>
-              </Categories>
             </state>
           </provider>
         </entry>
@@ -176,17 +175,20 @@
         <option value="$PROJECT_DIR$/src/main/java/pl/projekt/model/Position.java" />
         <option value="$PROJECT_DIR$/src/main/java/pl/projekt/model/Advertisement.java" />
         <option value="$PROJECT_DIR$/src/main/java/pl/projekt/controller/MainController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/pl/projekt/dao/PositionDAO.java" />
         <option value="$PROJECT_DIR$/src/main/java/pl/projekt/daoimpl/AdvertisementDAOImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/pl/projekt/daoimpl/PositionDAOImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/pl/projekt/daoimpl/CategoryDAOImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/pl/projekt/daoimpl/FormOfEmplymentDAOImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/pl/projekt/config/ApplicationContextConfig.java" />
         <option value="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" />
         <option value="$PROJECT_DIR$/src/main/java/pl/projekt/controller/advertController.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/_menu.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/newAdvertisement.jsp" />
+        <option value="$PROJECT_DIR$/src/main/java/pl/projekt/dao/CategoryDAO.java" />
+        <option value="$PROJECT_DIR$/src/main/java/pl/projekt/daoimpl/CategoryDAOImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/pl/projekt/dao/PositionDAO.java" />
+        <option value="$PROJECT_DIR$/src/main/java/pl/projekt/daoimpl/PositionDAOImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/pl/projekt/dao/FormOfEmploymentDAO.java" />
+        <option value="$PROJECT_DIR$/src/main/java/pl/projekt/daoimpl/FormOfEmplymentDAOImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/pl/projekt/daoimpl/FormOfEmploymentDAOImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/pl/projekt/controller/AdvertController.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/newAdvertisement.jsp" />
       </list>
     </option>
   </component>
@@ -1462,11 +1464,18 @@
       <option name="project" value="LOCAL" />
       <updated>1511223893028</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Dodanie strony JSP nowych ogłoszen i nowego kontrolera">
+      <created>1511227635599</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1511227635599</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="34534000" />
+    <option name="totallyTimeSpent" value="36763000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -1492,7 +1501,7 @@
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3319239" sideWeight="0.49791667" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27378437" sideWeight="0.49791667" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32980973" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
@@ -1581,7 +1590,8 @@
     <MESSAGE value="Poprawienie konfiguracji, edycja web.xml, nowe strony jsp, edycja style.css, model users i DAO (DAOImpl), konfiguracja spring security, Rozbudowanie MainController" />
     <MESSAGE value="Dodanie modeli wszystkich encji z bazy danych" />
     <MESSAGE value="Dodanie klas DAO i DAOImpl dla wszystkich encji oraz utworzenie Bean w ApplicationContextConfig" />
-    <option name="LAST_COMMIT_MESSAGE" value="Dodanie klas DAO i DAOImpl dla wszystkich encji oraz utworzenie Bean w ApplicationContextConfig" />
+    <MESSAGE value="Dodanie strony JSP nowych ogłoszen i nowego kontrolera" />
+    <option name="LAST_COMMIT_MESSAGE" value="Dodanie strony JSP nowych ogłoszen i nowego kontrolera" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1592,22 +1602,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/403.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-core/4.2.5.RELEASE/spring-core-4.2.5.RELEASE-sources.jar!/org/springframework/core/env/Environment.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-52">
-          <caret line="70" column="17" lean-forward="false" selection-start-line="70" selection-start-column="17" selection-end-line="70" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/pl/projekt/authentication/MyDBAuthenticationService.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="493">
@@ -1818,19 +1812,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="dbDummy://dbtable:/8603faa9/3608e8ac-a8eb-49ae-8d91-a974331c4364/p_inzynierski.kategoria">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/pl/projekt/model/FormOfEmployment.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="194">
@@ -1860,34 +1841,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/pl/projekt/controller/MainController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1513">
-          <caret line="117" column="5" lean-forward="false" selection-start-line="117" selection-start-column="5" selection-end-line="117" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/pl/projekt/dao/UsersDAO.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
           <caret line="10" column="41" lean-forward="true" selection-start-line="10" selection-start-column="41" selection-end-line="10" selection-end-column="41" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/pl/projekt/dao/CategoryDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="28" lean-forward="false" selection-start-line="5" selection-start-column="28" selection-end-line="5" selection-end-column="28" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/pl/projekt/dao/PositionDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="16" lean-forward="false" selection-start-line="5" selection-start-column="16" selection-end-line="5" selection-end-column="16" />
           <folding />
         </state>
       </provider>
@@ -1911,30 +1868,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/pl/projekt/daoimpl/FormOfEmplymentDAOImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="66" lean-forward="false" selection-start-line="7" selection-start-column="66" selection-end-line="7" selection-end-column="66" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/pl/projekt/daoimpl/CategoryDAOImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="51" lean-forward="false" selection-start-line="7" selection-start-column="51" selection-end-line="7" selection-end-column="51" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/pl/projekt/daoimpl/PositionDAOImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="51" lean-forward="false" selection-start-line="7" selection-start-column="51" selection-end-line="7" selection-end-column="51" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/pl/projekt/daoimpl/AdvertisementDAOImpl.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
@@ -1950,30 +1883,6 @@
           <folding>
             <marker date="1511223056679" expanded="true" signature="665:717" ph="Select * FRO... uzytkownik" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/pl/projekt/dao/FormOfEmploymentDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="36" lean-forward="false" selection-start-line="5" selection-start-column="36" selection-end-line="5" selection-end-column="36" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/_menu.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" column="32" lean-forward="false" selection-start-line="14" selection-start-column="32" selection-end-line="14" selection-end-column="32" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/pl/projekt/dao/AdvertisementDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="33" lean-forward="false" selection-start-line="5" selection-start-column="33" selection-end-line="5" selection-end-column="33" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2003,21 +1912,143 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/newAdvertisement.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="413">
-          <caret line="38" column="26" lean-forward="false" selection-start-line="38" selection-start-column="26" selection-end-line="38" selection-end-column="26" />
+    <entry file="dbDummy://dbtable:/8603faa9/3608e8ac-a8eb-49ae-8d91-a974331c4364/p_inzynierski.forma_zatrudnienia">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/8603faa9/3608e8ac-a8eb-49ae-8d91-a974331c4364/p_inzynierski.stanowisko">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/pl/projekt/dao/AdvertisementDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="33" lean-forward="false" selection-start-line="5" selection-start-column="33" selection-end-line="5" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/8603faa9/3608e8ac-a8eb-49ae-8d91-a974331c4364/p_inzynierski.kategoria">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/pl/projekt/dao/FormOfEmploymentDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="7" lean-forward="false" selection-start-line="10" selection-start-column="7" selection-end-line="10" selection-end-column="7" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/pl/projekt/controller/AdvertController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="547">
-          <caret line="34" column="0" lean-forward="false" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
+        <state relative-caret-position="313">
+          <caret line="49" column="49" lean-forward="true" selection-start-line="49" selection-start-column="49" selection-end-line="49" selection-end-column="49" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/pl/projekt/daoimpl/FormOfEmploymentDAOImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="20" column="124" lean-forward="false" selection-start-line="20" selection-start-column="124" selection-end-line="20" selection-end-column="124" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <marker date="1511229759922" expanded="true" signature="676:708" ph="SELECT * Fro... forma_zatrudnienia" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/pl/projekt/dao/PositionDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="11" column="1" lean-forward="true" selection-start-line="11" selection-start-column="1" selection-end-line="11" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/pl/projekt/dao/CategoryDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="10" column="3" lean-forward="false" selection-start-line="10" selection-start-column="3" selection-end-line="10" selection-end-column="3" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/pl/projekt/daoimpl/PositionDAOImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="19" column="37" lean-forward="true" selection-start-line="19" selection-start-column="37" selection-end-line="23" selection-end-column="22" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <marker date="1511229759957" expanded="true" signature="629:653" ph="SELECT * Fro... stanowisko" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/pl/projekt/daoimpl/CategoryDAOImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" column="0" lean-forward="false" selection-start-line="14" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <marker date="1511228987042" expanded="true" signature="627:650" ph="SELECT * Fro... kategoria" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/_menu.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" column="32" lean-forward="false" selection-start-line="14" selection-start-column="32" selection-end-line="14" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/pl/projekt/controller/MainController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="483">
+          <caret line="117" column="5" lean-forward="false" selection-start-line="117" selection-start-column="5" selection-end-line="117" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/newAdvertisement.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="322">
+          <caret line="34" column="117" lean-forward="false" selection-start-line="34" selection-start-column="117" selection-end-line="34" selection-end-column="117" />
+          <folding />
         </state>
       </provider>
     </entry>

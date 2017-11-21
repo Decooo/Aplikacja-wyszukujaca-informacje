@@ -28,9 +28,12 @@
 
     <form:form commandName="advert" method="post" action="${pageContext.request.contextPath}save" role="form">
 
-        Kategoria: <form:select path="id_kategoria"><form:options items="${kategoria}"/></form:select><br/><br/>
-        Forma zatrudnienia: <form:select path="id_forma_zatrudnienia"><form:options items="${formaZatrudnienia}"/></form:select><br/><br/>
-        Stanowisko: <form:select path="id_stanowisko"><form:options items="${stanowisko}"/></form:select><br/><br/>
+        Kategoria: <form:select path="id_kategoria"><form:options items="${id_kategoria}" itemValue="id_kategoria"
+    itemLabel="nazwa"/></form:select><br/><br/>
+        Forma zatrudnienia: <form:select path="id_forma_zatrudnienia"><form:options items="${id_forma_zatrudnienia}" itemValue="id_forma_zatrudnienia"
+                                                                                    itemLabel="nazwa"/></form:select><br/><br/>
+        Stanowisko: <form:select path="id_stanowisko"><form:options items="${id_stanowisko}" itemValue="id_stanowisko"
+                                                                    itemLabel="nazwa"/></form:select><br/><br/>
         Tytul: <form:input path="tytul"/><form:errors path="tytul"/><br/><br/>
         Lokalizacja: <form:input path="lokalizacja"/><form:errors path="lokalizacja"/><br/><br/>
         Zarobki: <form:input path="zarobki"/><form:errors path="zarobki"/><br/><br/>
