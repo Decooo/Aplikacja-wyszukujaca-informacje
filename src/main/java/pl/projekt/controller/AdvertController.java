@@ -89,22 +89,24 @@ public class AdvertController {
 
         if(bindingResult.hasErrors()){
             fillListBox(model);
-            model.addObject("css","errors");
+            model.addObject("css","error");
             model.addObject("msg","Nie wprowadzono wszystkich danych lub wprowadzono je niepoprawnie");
+        }else {
+
+            Users user = usersDAO.findUser(principal.getName());
+
+            advertisementDAO.add(user.getId_uzytkownik(), advertisement);
+            model.addObject("css", "msgSuccess");
+            model.addObject("msg", "Dodano poprawnie!");
+            fillListBox(model);
+
+            advertisement.setLokalizacja("");
+            advertisement.setTytul("");
+            advertisement.setOpis("");
+            advertisement.setZarobki(0);
+
+            return model;
         }
-
-        Users user = usersDAO.findUser(principal.getName());
-
-        advertisementDAO.add(user.getId_uzytkownik(), advertisement);
-        model.addObject("css","msgSuccess");
-        model.addObject("msg","Dodano poprawnie!");
-        fillListBox(model);
-
-        advertisement.setLokalizacja("");
-        advertisement.setTytul("");
-        advertisement.setOpis("");
-        advertisement.setZarobki(0);
-
         return model;
-    }
+        }
 }

@@ -21,5 +21,22 @@ public class AdvertisementValidator implements Validator{
         if(advertisement.getTytul().length()<5){
             errors.rejectValue("tytul","NotEmpty.advertisementForm.tytul");
         }
+
+        if(advertisement.getTytul().length()>50){
+            errors.rejectValue("tytul","tooLong.advertisementForm.tytul");
+        }
+
+        if(advertisement.getLokalizacja().length()<5){
+            errors.rejectValue("lokalizacja","NotEmpty.advertisementForm.lokalizacja");
+        }
+
+        if(advertisement.getLokalizacja().length()>50){
+            errors.rejectValue("lokalizacja","tooLong.advertisementForm.lokalizacja");
+        }
+
+        if(advertisement.getOpis().length()<5){
+            errors.rejectValue("opis","NotEmpty.advertisementForm.opis");
+        }
+
     }
 }
