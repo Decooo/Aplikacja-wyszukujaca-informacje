@@ -9,4 +9,6 @@ import java.util.List;
  */
 public interface PositionDAO {
     List<Position> findAll();
+
+    Position findByID(int id_stanowisko);
 }

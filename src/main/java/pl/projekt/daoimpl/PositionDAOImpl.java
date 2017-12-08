@@ -24,4 +24,12 @@ public class PositionDAOImpl implements PositionDAO {
         return result;
 
     }
+
+    @Override
+    public Position findByID(int id_stanowisko) {
+        EntityManager entityManager = emf.createEntityManager();
+        Position position = (Position) entityManager.createNativeQuery("SELECT * FROM stanowisko WHERE id_stanowisko='"+id_stanowisko+"'",Position.class).getSingleResult();
+        entityManager.close();
+        return  position;
+    }
 }

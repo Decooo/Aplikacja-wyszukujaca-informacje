@@ -152,6 +152,20 @@
     </dependency>
 
 
+    <!-- https://mvnrepository.com/artifact/org.springframework.data/spring-data-jpa -->
+    <dependency>
+      <groupId>org.springframework.data</groupId>
+      <artifactId>spring-data-jpa</artifactId>
+      <version>2.0.0.RELEASE</version>
+    </dependency>
+
+    <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-dependencies</artifactId>
+      <version>1.5.8.RELEASE</version>
+      <type>pom</type>
+    </dependency>
+
 
   </dependencies>
   <build>

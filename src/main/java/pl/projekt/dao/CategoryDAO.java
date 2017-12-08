@@ -9,4 +9,6 @@ import java.util.List;
  */
 public interface CategoryDAO {
     List<Category> findAll();
+
+    Category findCategoryByID(int id_kategoria);
 }

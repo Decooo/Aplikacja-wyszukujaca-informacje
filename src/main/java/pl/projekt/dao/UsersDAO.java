@@ -9,4 +9,6 @@ public interface UsersDAO {
 
     Users findUser(String login);
     void add(String login, String haslo);
+
+    Users findByID(int id_uzytkownik);
 }

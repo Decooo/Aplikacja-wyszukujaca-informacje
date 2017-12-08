@@ -21,4 +21,12 @@ public class CategoryDAOImpl implements CategoryDAO {
         entityManager.close();
         return result;
     }
+
+    @Override
+    public Category findCategoryByID(int id_kategoria) {
+        EntityManager entityManager = emf.createEntityManager();
+        Category category = (Category) entityManager.createNativeQuery("SELECT * FROM kategoria WHERE id_kategoria='"+id_kategoria+"'",Category.class).getSingleResult();
+        entityManager.close();
+        return  category;
+    }
 }

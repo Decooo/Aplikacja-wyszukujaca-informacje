@@ -41,5 +41,13 @@ public class UsersDAOImpl implements UsersDAO {
         entityManager.close();
     }
 
+    @Override
+    public Users findByID(int id_uzytkownik) {
+        EntityManager entityManager = emf.createEntityManager();
+        Users user = (Users) entityManager.createNativeQuery("SELECT * FROM uzytkownik WHERE id_uzytkownik='"+id_uzytkownik+"'",Users.class).getSingleResult();
+        entityManager.close();
+        return  user;
+    }
+
 
 }

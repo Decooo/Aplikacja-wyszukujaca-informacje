@@ -9,4 +9,6 @@ import java.util.List;
  */
 public interface FormOfEmploymentDAO {
     List<FormOfEmployment> findAll();
+
+    FormOfEmployment findByID(int id_forma_zatrudnienia);
 }

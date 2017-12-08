@@ -4,6 +4,7 @@ import pl.projekt.dao.AdvertisementDAO;
 import pl.projekt.model.Advertisement;
 
 import javax.persistence.*;
+import java.util.List;
 
 /**
  * Created by jakub on 21.11.2017.
@@ -37,5 +38,13 @@ public class AdvertisementDAOImpl implements AdvertisementDAO {
         query.execute();
         entityManager.close();
 
+    }
+
+    @Override
+    public List<Advertisement> findAll() {
+        EntityManager entityManager = emf.createEntityManager();
+        List<Advertisement> adverts = entityManager.createNativeQuery("SELECT * FROM ogloszenie", Advertisement.class).getResultList();
+        entityManager.close();
+        return adverts;
     }
 }

@@ -17,6 +17,7 @@ import pl.projekt.validator.AdvertisementValidator;
 
 import javax.servlet.http.HttpServletRequest;
 import java.security.Principal;
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -59,6 +60,31 @@ public class AdvertController {
 
         fillListBox(model);
 
+        return model;
+    }
+
+    @RequestMapping(value = "/lista")
+    public ModelAndView list(){
+        ModelAndView model = new ModelAndView("advertsList");
+        List<Advertisement> adverts = advertisementDAO.findAll();
+        model.addObject("adverts", adverts);
+
+        List<Category> category = new ArrayList<Category>();
+        List<FormOfEmployment> formOfEmployments = new ArrayList<FormOfEmployment>();
+        List<Users> users = new ArrayList<Users>();
+        List<Position> positions = new ArrayList<Position>();
+
+        for(Advertisement advert : adverts){
+            category.add(categoryDAO.findCategoryByID(advert.getId_kategoria()));
+            formOfEmployments.add(formOfEmploymentDAO.findByID(advert.getId_forma_zatrudnienia()));
+            users.add(usersDAO.findByID(advert.getId_uzytkownik()));
+            positions.add(positionDAO.findByID(advert.getId_stanowisko()));
+        }
+
+        model.addObject("category",category);
+        model.addObject("formOfEmployments", formOfEmployments);
+        model.addObject("users",users);
+        model.addObject("positions",positions);
         return model;
     }
 
