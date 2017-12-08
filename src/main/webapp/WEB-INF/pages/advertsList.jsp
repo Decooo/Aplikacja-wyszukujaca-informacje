@@ -8,6 +8,7 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@taglib prefix="list" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <html>
 <head>
     <title>Ogloszenia</title>
@@ -19,6 +20,19 @@
 <jsp:include page="_menu.jsp"/>
 
 <div class="main">
+    <h1>Wyszukaj</h1>
+
+    <c:if test="${not empty msg}">
+        <div class=${css}>${msg}</div>
+    </c:if>
+
+    <form:form action="search" method="post">
+
+        <input type="search" name="inquiry"><br/><br/>
+        <button name="btnSearch" >Szukaj</button>
+
+    </form:form>
+
     <h1>Lista wszystkich ogłoszeń</h1>
 
     <table border="1" align="center">
