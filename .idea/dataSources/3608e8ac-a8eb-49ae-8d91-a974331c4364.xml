@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataSource name="p_inzynierski@localhost">
+  <database-model serializer="dbm" rdbms="MYSQL" format-version="4.2">
+    <root id="1"/>
+    <schema id="2" parent="1" name="p_inzynierski">
+      <Current>1</Current>
+      <Visible>1</Visible>
+    </schema>
+    <schema id="3" parent="1" name="information_schema"/>
+    <schema id="4" parent="1" name="mysql"/>
+    <schema id="5" parent="1" name="performance_schema"/>
+    <schema id="6" parent="1" name="sys"/>
+    <table id="7" parent="2" name="forma_zatrudniena"/>
+    <table id="8" parent="2" name="forma_zatrudnienia"/>
+    <table id="9" parent="2" name="hibernate_sequence"/>
+    <table id="10" parent="2" name="kategoria"/>
+    <table id="11" parent="2" name="ogloszenie"/>
+    <table id="12" parent="2" name="stanowisko"/>
+    <table id="13" parent="2" name="uzytkownik"/>
+    <routine id="14" parent="2" name="addAdverts">
+      <RoutineKind>procedure</RoutineKind>
+    </routine>
+    <routine id="15" parent="2" name="addusers">
+      <RoutineKind>procedure</RoutineKind>
+    </routine>
+    <routine id="16" parent="2" name="deleteAdvert">
+      <RoutineKind>procedure</RoutineKind>
+    </routine>
+    <routine id="17" parent="2" name="updateAdverts">
+      <RoutineKind>procedure</RoutineKind>
+    </routine>
+    <column id="18" parent="7" name="id_forma_zatrudnienia">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="19" parent="7" name="nazwa">
+      <Position>2</Position>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <key id="20" parent="7" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id_forma_zatrudnienia</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="21" parent="8" name="id_forma_zatrudnienia">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="22" parent="8" name="nazwa">
+      <Position>2</Position>
+      <DataType>varchar(20)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <key id="23" parent="8" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id_forma_zatrudnienia</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="24" parent="9" name="next_val">
+      <Position>1</Position>
+      <DataType>bigint(20)|0</DataType>
+    </column>
+    <column id="25" parent="10" name="id_kategoria">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="26" parent="10" name="nazwa">
+      <Position>2</Position>
+      <DataType>varchar(40)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <key id="27" parent="10" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id_kategoria</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="28" parent="11" name="id_ogloszenie">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="29" parent="11" name="id_uzytkownik">
+      <Position>2</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="30" parent="11" name="id_kategoria">
+      <Position>3</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="31" parent="11" name="id_forma_zatrudnienia">
+      <Position>4</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="32" parent="11" name="id_stanowisko">
+      <Position>5</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="33" parent="11" name="tytul">
+      <Position>6</Position>
+      <DataType>varchar(50)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="34" parent="11" name="lokalizacja">
+      <Position>7</Position>
+      <DataType>varchar(50)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="35" parent="11" name="zarobki">
+      <Position>8</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="36" parent="11" name="opis">
+      <Position>9</Position>
+      <DataType>text|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <key id="37" parent="11" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id_ogloszenie</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="38" parent="12" name="id_stanowisko">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="39" parent="12" name="nazwa">
+      <Position>2</Position>
+      <DataType>varchar(30)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <key id="40" parent="12" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id_stanowisko</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="41" parent="13" name="id_uzytkownik">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="42" parent="13" name="login">
+      <Position>2</Position>
+      <DataType>text|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="43" parent="13" name="haslo">
+      <Position>3</Position>
+      <DataType>text|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <key id="44" parent="13" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id_uzytkownik</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <argument id="45" parent="14" name="idUser">
+      <DataType>int(11)|0</DataType>
+    </argument>
+    <argument id="46" parent="14" name="idKategoria">
+      <DataType>int(11)|0</DataType>
+    </argument>
+    <argument id="47" parent="14" name="formaZatrudnienia">
+      <DataType>int(11)|0</DataType>
+    </argument>
+    <argument id="48" parent="14" name="stanowisko">
+      <DataType>int(11)|0</DataType>
+    </argument>
+    <argument id="49" parent="14" name="tytul">
+      <DataType>varchar(150)|0</DataType>
+    </argument>
+    <argument id="50" parent="14" name="lokalizacja">
+      <DataType>varchar(100)|0</DataType>
+    </argument>
+    <argument id="51" parent="14" name="zarobki">
+      <DataType>int(11)|0</DataType>
+    </argument>
+    <argument id="52" parent="14" name="opis">
+      <DataType>varchar(5000)|0</DataType>
+    </argument>
+    <argument id="53" parent="15" name="in_login">
+      <DataType>varchar(45)|0</DataType>
+    </argument>
+    <argument id="54" parent="15" name="in_haslo">
+      <DataType>varchar(45)|0</DataType>
+    </argument>
+    <argument id="55" parent="16" name="idAdvert">
+      <DataType>int(11)|0</DataType>
+    </argument>
+    <argument id="56" parent="17" name="idKategoria">
+      <DataType>int(11)|0</DataType>
+    </argument>
+    <argument id="57" parent="17" name="formaZatrudnienia">
+      <DataType>int(11)|0</DataType>
+    </argument>
+    <argument id="58" parent="17" name="stanowisko">
+      <DataType>int(11)|0</DataType>
+    </argument>
+    <argument id="59" parent="17" name="tytul">
+      <DataType>varchar(150)|0</DataType>
+    </argument>
+    <argument id="60" parent="17" name="lokalizacja">
+      <DataType>varchar(100)|0</DataType>
+    </argument>
+    <argument id="61" parent="17" name="zarobki">
+      <DataType>int(11)|0</DataType>
+    </argument>
+    <argument id="62" parent="17" name="opis">
+      <DataType>varchar(5000)|0</DataType>
+    </argument>
+    <argument id="63" parent="17" name="idOgloszenie">
+      <DataType>int(11)|0</DataType>
+    </argument>
+  </database-model>
+</dataSource>
