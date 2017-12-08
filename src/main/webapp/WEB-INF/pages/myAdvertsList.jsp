@@ -36,6 +36,7 @@
         <th>Zarobki</th>
         <th>Opis</th>
         <th>Usuń</th>
+        <th>Edytuj</th>
 
 
         <list:forEach var="advert" items="${adverts}" varStatus="loop">
@@ -51,6 +52,8 @@
                 <td>${advert.zarobki}</td>
                 <td>${advert.opis}</td>
                 <td><input type="submit" value="Usuń" onclick="location.href='usun/${advert.id_ogloszenie}';"/></td>
+                <td><input type="submit" value="Edytuj" onclick="location.href='edytuj/${advert.id_ogloszenie}';"/></td>
+
             </tr>
         </list:forEach>
     </table>

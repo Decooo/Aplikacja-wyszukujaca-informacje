@@ -13,4 +13,8 @@ public interface AdvertisementDAO {
     List<Advertisement> findAllByID(Integer id_uzytkownika);
 
     void delete(int id);
+
+    Advertisement findByID(int idAdvert);
+
+    void update(int id_ogloszenia, int id_kategoria, int id_forma_zatrudnienia, int id_stanowisko, String tytul, String lokalizacja, int zarobki, String opis);
 }
