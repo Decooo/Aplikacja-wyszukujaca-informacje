@@ -11,4 +11,6 @@ public interface AdvertisementDAO {
     void add(Integer userId, Advertisement advertisement);
     List<Advertisement> findAll();
     List<Advertisement> findAllByID(Integer id_uzytkownika);
+
+    void delete(int id);
 }

@@ -55,4 +55,14 @@ public class AdvertisementDAOImpl implements AdvertisementDAO {
         entityManager.close();
         return adverts;
     }
+
+    @Override
+    public void delete(int id) {
+        EntityManager entityManager =emf.createEntityManager();
+        StoredProcedureQuery query =entityManager.createStoredProcedureQuery("deleteAdvert",Advertisement.class)
+                .registerStoredProcedureParameter(1,Integer.class,ParameterMode.IN)
+                .setParameter(1,id);
+        query.execute();
+        entityManager.close();
+    }
 }

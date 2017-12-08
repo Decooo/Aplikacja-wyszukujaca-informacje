@@ -23,6 +23,10 @@
 
     <h1>Moje ogłoszenia</h1>
 
+    <c:if test="${not empty msg}">
+        <div class=${css}>${msg}</div>
+    </c:if>
+
     <table border="1" align="center">
         <th>Kategoria</th>
         <th>Forma zatrudnienia</th>
@@ -31,6 +35,7 @@
         <th>Lokalizacja</th>
         <th>Zarobki</th>
         <th>Opis</th>
+        <th>Usuń</th>
 
 
         <list:forEach var="advert" items="${adverts}" varStatus="loop">
@@ -45,6 +50,7 @@
                 <td>${advert.lokalizacja}</td>
                 <td>${advert.zarobki}</td>
                 <td>${advert.opis}</td>
+                <td><input type="submit" value="Usuń" onclick="location.href='usun/${advert.id_ogloszenie}';"/></td>
             </tr>
         </list:forEach>
     </table>

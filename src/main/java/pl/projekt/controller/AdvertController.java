@@ -126,6 +126,14 @@ public class AdvertController {
         return model;
     }
 
+    @RequestMapping(value = "/usun/{id_ogloszenie}", method = RequestMethod.GET)
+    public ModelAndView delete(@PathVariable("id_ogloszenie") int id, RedirectAttributes attributes){
+        ModelAndView model = new ModelAndView("redirect:/ogloszenia/moje");
+        advertisementDAO.delete(id);
+        attributes.addFlashAttribute("css","msgSuccess");
+        attributes.addFlashAttribute("msg","Ogloszenie zostało usunięte");
+        return model;
+    }
 
     private void populateModelCategory(ModelAndView model) {
         List<Category> category = categoryDAO.findAll();
