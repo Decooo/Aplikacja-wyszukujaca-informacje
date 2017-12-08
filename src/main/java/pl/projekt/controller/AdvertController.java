@@ -6,11 +6,9 @@ import org.springframework.transaction.annotation.Transactional;
 import org.springframework.validation.BindingResult;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.WebDataBinder;
-import org.springframework.web.bind.annotation.InitBinder;
-import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
+import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 import pl.projekt.dao.*;
 import pl.projekt.model.*;
 import pl.projekt.validator.AdvertisementValidator;
@@ -93,6 +91,17 @@ public class AdvertController {
         populateModelFormOfEmployment(model);
         populateModelPosition(model);
     }
+
+    @RequestMapping(value = "/search")
+    public ModelAndView search(@RequestParam("inquiry") String inquiry, RedirectAttributes attributes){
+        ModelAndView model = new ModelAndView("redirect:/ogloszenia/lista");
+
+        attributes.addFlashAttribute("css","error");
+        attributes.addFlashAttribute("msg","Wyszukiwanie nie jest zaimplementowane");
+        System.out.println("zapytanie = " + inquiry);
+        return model;
+    }
+
 
     private void populateModelCategory(ModelAndView model) {
         List<Category> category = categoryDAO.findAll();

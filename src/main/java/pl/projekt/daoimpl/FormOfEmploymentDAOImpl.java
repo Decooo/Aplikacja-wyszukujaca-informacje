@@ -26,7 +26,7 @@ public class FormOfEmploymentDAOImpl implements FormOfEmploymentDAO {
     @Override
     public FormOfEmployment findByID(int id_forma_zatrudnienia) {
         EntityManager entityManager = emf.createEntityManager();
-        FormOfEmployment formOfEmployment = (FormOfEmployment) entityManager.createNativeQuery("SELECT * FROM forma_zatrudnienia WHERE id_uzytkownik='"+id_forma_zatrudnienia+"'",FormOfEmployment.class).getSingleResult();
+        FormOfEmployment formOfEmployment = (FormOfEmployment) entityManager.createNativeQuery("SELECT * FROM forma_zatrudnienia WHERE id_forma_zatrudnienia='"+id_forma_zatrudnienia+"'",FormOfEmployment.class).getSingleResult();
         entityManager.close();
         return  formOfEmployment;
     }
