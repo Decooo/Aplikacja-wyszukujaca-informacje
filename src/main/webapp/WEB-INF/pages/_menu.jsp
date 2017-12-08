@@ -11,6 +11,7 @@
 
 <div class="menu">
     <a href="${pageContext.request.contextPath}/">Strona główna</a>
+    <a href="${pageContext.request.contextPath}/ogloszenia/lista">Ogłoszenia</a>
     <security:authorize access="hasAnyRole('ROLE_klient')">
         <a href="${pageContext.request.contextPath}/ogloszenia/dodaj">Dodaj ogloszenie</a>
     </security:authorize>
