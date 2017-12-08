@@ -2,9 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="895e5eca-8b19-4e1f-b585-c72383d0bd34" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/myAdvertsList.jsp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/pl/projekt/controller/AdvertController.java" afterPath="$PROJECT_DIR$/src/main/java/pl/projekt/controller/AdvertController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/advertsList.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/advertsList.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/pl/projekt/dao/AdvertisementDAO.java" afterPath="$PROJECT_DIR$/src/main/java/pl/projekt/dao/AdvertisementDAO.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/pl/projekt/daoimpl/AdvertisementDAOImpl.java" afterPath="$PROJECT_DIR$/src/main/java/pl/projekt/daoimpl/AdvertisementDAOImpl.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/_menu.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/_menu.jsp" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -148,37 +151,32 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="AdvertController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/pl/projekt/controller/AdvertController.java">
+      <file leaf-file-name="AdvertisementDAO.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/pl/projekt/dao/AdvertisementDAO.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="359">
-              <caret line="100" column="37" lean-forward="false" selection-start-line="100" selection-start-column="37" selection-end-line="100" selection-end-column="37" />
+            <state relative-caret-position="238">
+              <caret line="14" column="0" lean-forward="true" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
               <folding>
-                <element signature="e#2172#2182#0" expanded="true" />
-                <element signature="e#2250#2268#0" expanded="true" />
-                <element signature="e#2313#2320#0" expanded="true" />
-                <element signature="e#2372#2382#0" expanded="true" />
+                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="advertsList.jsp" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/advertsList.jsp">
+      <file leaf-file-name="AdvertController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/pl/projekt/controller/AdvertController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="30" column="43" lean-forward="false" selection-start-line="30" selection-start-column="43" selection-end-line="30" selection-end-column="43" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MainController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/pl/projekt/controller/MainController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="560">
-              <caret line="92" column="0" lean-forward="true" selection-start-line="92" selection-start-column="0" selection-end-line="92" selection-end-column="0" />
-              <folding />
+            <state relative-caret-position="628">
+              <caret line="101" column="17" lean-forward="false" selection-start-line="101" selection-start-column="17" selection-end-line="101" selection-end-column="17" />
+              <folding>
+                <element signature="e#2172#2182#0" expanded="true" />
+                <element signature="e#2250#2268#0" expanded="true" />
+                <element signature="e#2313#2320#0" expanded="true" />
+                <element signature="e#2372#2382#0" expanded="true" />
+                <element signature="e#3403#3413#0" expanded="true" />
+                <element signature="e#3481#3499#0" expanded="true" />
+                <element signature="e#3551#3561#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -186,81 +184,58 @@
       <file leaf-file-name="_menu.jsp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/_menu.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="13" column="64" lean-forward="false" selection-start-line="13" selection-start-column="64" selection-end-line="13" selection-end-column="64" />
+            <state relative-caret-position="306">
+              <caret line="18" column="67" lean-forward="false" selection-start-line="18" selection-start-column="67" selection-end-line="18" selection-end-column="67" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AdvertisementDAOImpl.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/pl/projekt/daoimpl/AdvertisementDAOImpl.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="441">
-              <caret line="47" column="23" lean-forward="false" selection-start-line="47" selection-start-column="23" selection-end-line="47" selection-end-column="23" />
-              <folding>
-                <marker date="1512761315594" expanded="true" signature="2040:2053" ph="SELECT * FRO... " />
-                <marker date="1512761315594" expanded="true" signature="2040:2064" ph="SELECT * FRO... ogloszenie" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="UsersDAOImpl.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/pl/projekt/daoimpl/UsersDAOImpl.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="373">
-              <caret line="46" column="106" lean-forward="false" selection-start-line="46" selection-start-column="106" selection-end-line="46" selection-end-column="106" />
-              <folding>
-                <marker date="1512763163766" expanded="true" signature="665:717" ph="Select * FRO... uzytkownik" />
-                <marker date="1512763163766" expanded="true" signature="1649:1695" ph="SELECT * FRO... uzytkownik" />
-                <marker date="1512763163766" expanded="true" signature="1649:1713" ph="SELECT * FRO... uzytkownik" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Advertisement.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/pl/projekt/model/Advertisement.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="12" column="13" lean-forward="false" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="FormOfEmploymentDAO.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/pl/projekt/dao/FormOfEmploymentDAO.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="12" column="20" lean-forward="false" selection-start-line="12" selection-start-column="4" selection-end-line="12" selection-end-column="20" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="FormOfEmploymentDAOImpl.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/pl/projekt/daoimpl/FormOfEmploymentDAOImpl.java">
+      <file leaf-file-name="myAdvertsList.jsp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/myAdvertsList.jsp">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="374">
-              <caret line="28" column="156" lean-forward="false" selection-start-line="28" selection-start-column="156" selection-end-line="28" selection-end-column="156" />
-              <folding>
-                <marker date="1512763422806" expanded="true" signature="676:708" ph="SELECT * Fro... forma_zatrudnienia" />
-                <marker date="1512763422806" expanded="true" signature="1054:1142" ph="SELECT * FRO... forma_zatrudnienia" />
-              </folding>
+              <caret line="22" column="0" lean-forward="true" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="PositionDAOImpl.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/pl/projekt/daoimpl/PositionDAOImpl.java">
+      <file leaf-file-name="advertsList.jsp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/advertsList.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="425">
-              <caret line="31" column="30" lean-forward="false" selection-start-line="31" selection-start-column="30" selection-end-line="31" selection-end-column="30" />
+            <state relative-caret-position="-459">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="p_inzynierski.uzytkownik" pinned="false" current-in-tab="false">
+        <entry file="dbDummy://dbtable:/8603faa9/3608e8ac-a8eb-49ae-8d91-a974331c4364/p_inzynierski.uzytkownik">
+          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+            <state>
+              <filtering enabled="true" />
+            </state>
+          </provider>
+          <provider editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AdvertisementDAOImpl.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/pl/projekt/daoimpl/AdvertisementDAOImpl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="476">
+              <caret line="53" column="179" lean-forward="false" selection-start-line="53" selection-start-column="179" selection-end-line="53" selection-end-column="179" />
               <folding>
-                <marker date="1512761315547" expanded="true" signature="629:653" ph="SELECT * Fro... stanowisko" />
-                <marker date="1512761315547" expanded="true" signature="952:1016" ph="SELECT * FRO... stanowisko" />
+                <marker date="1512768438064" expanded="true" signature="2040:2053" ph="SELECT * FRO... " />
+                <marker date="1512768438064" expanded="true" signature="2040:2064" ph="SELECT * FRO... ogloszenie" />
+                <marker date="1512768438064" expanded="true" signature="2407:2453" ph="SELECT * FRO... ogloszenie" />
+                <marker date="1512768438064" expanded="true" signature="2407:2472" ph="SELECT * FRO... ogloszenie" />
               </folding>
             </state>
           </provider>
@@ -325,14 +300,11 @@
         <option value="$PROJECT_DIR$/src/main/java/pl/projekt/config/ApplicationContextConfig.java" />
         <option value="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" />
         <option value="$PROJECT_DIR$/src/main/java/pl/projekt/controller/advertController.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/_menu.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/pl/projekt/daoimpl/FormOfEmplymentDAOImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/pl/projekt/controller/MainController.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/newAdvertisement.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/pl/projekt/validator/AdvertisementValidator.java" />
         <option value="$PROJECT_DIR$/src/main/resources/messages/validator.properties" />
-        <option value="$PROJECT_DIR$/src/main/java/pl/projekt/dao/AdvertisementDAO.java" />
-        <option value="$PROJECT_DIR$/src/main/java/pl/projekt/daoimpl/AdvertisementDAOImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/pl/projekt/dao/UsersDAO.java" />
         <option value="$PROJECT_DIR$/src/main/java/pl/projekt/daoimpl/UsersDAOImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/pl/projekt/dao/CategoryDAO.java" />
@@ -341,8 +313,11 @@
         <option value="$PROJECT_DIR$/src/main/java/pl/projekt/daoimpl/PositionDAOImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/pl/projekt/dao/FormOfEmploymentDAO.java" />
         <option value="$PROJECT_DIR$/src/main/java/pl/projekt/daoimpl/FormOfEmploymentDAOImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/pl/projekt/dao/AdvertisementDAO.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/_menu.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/myAdvertsList.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/pl/projekt/controller/AdvertController.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/advertsList.jsp" />
+        <option value="$PROJECT_DIR$/src/main/java/pl/projekt/daoimpl/AdvertisementDAOImpl.java" />
       </list>
     </option>
   </component>
@@ -845,15 +820,15 @@
     <property name="com.intellij.database.dataSource.DataSourceTemplate" value="MySQL" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\Projekt inzynierski\Aplikacja-wyszukujaca-informacje\src\main\webapp\WEB-INF\pages" />
-      <recent name="D:\Projekt inzynierski\Aplikacja-wyszukujaca-informacje\src\main\webapp" />
-      <recent name="D:\Projekt inzynierski\Aplikacja-wyszukujaca-informacje\src\main\webapp\WEB-INF" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\Projekt inzynierski\Aplikacja-wyszukujaca-informacje\src\main\webapp\WEB-INF\pages" />
       <recent name="D:\Projekt inzynierski\Aplikacja-wyszukujaca-informacje\src\main\resources" />
       <recent name="D:\Projekt inzynierski\Aplikacja-wyszukujaca-informacje\src\main\webapp\img" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Projekt inzynierski\Aplikacja-wyszukujaca-informacje\src\main\webapp\WEB-INF\pages" />
+      <recent name="D:\Projekt inzynierski\Aplikacja-wyszukujaca-informacje\src\main\webapp" />
+      <recent name="D:\Projekt inzynierski\Aplikacja-wyszukujaca-informacje\src\main\webapp\WEB-INF" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -1537,25 +1512,11 @@
       <option name="project" value="LOCAL" />
       <updated>1511392872830</updated>
     </task>
-    <task id="LOCAL-00014" summary="Dodanie widoku jsp listy ogloszen">
-      <created>1512763226112</created>
-      <option name="number" value="00014" />
-      <option name="presentableId" value="LOCAL-00014" />
-      <option name="project" value="LOCAL" />
-      <updated>1512763226112</updated>
-    </task>
-    <task id="LOCAL-00015" summary="fix/poprawienie zapytania sql w metodzie findByID">
-      <created>1512763457323</created>
-      <option name="number" value="00015" />
-      <option name="presentableId" value="LOCAL-00015" />
-      <option name="project" value="LOCAL" />
-      <updated>1512763457324</updated>
-    </task>
-    <option name="localTasksCounter" value="16" />
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="49944000" />
+    <option name="totallyTimeSpent" value="49273000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -1569,7 +1530,7 @@
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18603411" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1609808" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
@@ -1586,7 +1547,7 @@
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
       <window_info id="Persistence" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24040511" sideWeight="0.49369085" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19722815" sideWeight="0.49369085" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="true" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.50630915" order="9" side_tool="true" content_ui="tabs" />
@@ -1672,9 +1633,7 @@
     <MESSAGE value="Dodanie strony JSP nowych ogłoszen i nowego kontrolera" />
     <MESSAGE value="Ładowanie List Boxów przy dodawaniu ogłoszenia" />
     <MESSAGE value="Dodawanie nowych ogłoszen do bazy" />
-    <MESSAGE value="Dodanie widoku jsp listy ogloszen" />
-    <MESSAGE value="fix/poprawienie zapytania sql w metodzie findByID" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix/poprawienie zapytania sql w metodzie findByID" />
+    <option name="LAST_COMMIT_MESSAGE" value="Dodawanie nowych ogłoszen do bazy" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1685,14 +1644,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/.idea/dataSources.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/.idea/dataSources.local.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1742,7 +1693,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="374">
           <caret line="22" column="25" lean-forward="false" selection-start-line="22" selection-start-column="25" selection-end-line="22" selection-end-column="25" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1792,7 +1742,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="dbDummy://dbtable:/8603faa9/3608e8ac-a8eb-49ae-8d91-a974331c4364/p_inzynierski.uzytkownik" />
     <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/3608e8ac-a8eb-49ae-8d91-a974331c4364/console.sql">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1844,11 +1793,18 @@
         <state />
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/pl/projekt/model/Advertisement.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="12" column="13" lean-forward="false" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
           <caret line="9" column="45" lean-forward="false" selection-start-line="9" selection-start-column="45" selection-end-line="9" selection-end-column="45" />
-          <folding />
         </state>
       </provider>
       <provider editor-type-id="JavaFX-Scene-Builder">
@@ -1959,6 +1915,14 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/pl/projekt/controller/MainController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="560">
+          <caret line="92" column="0" lean-forward="true" selection-start-line="92" selection-start-column="0" selection-end-line="92" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/newAdvertisement.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="595">
@@ -1993,10 +1957,15 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/pl/projekt/dao/AdvertisementDAO.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/pl/projekt/daoimpl/UsersDAOImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="7" lean-forward="false" selection-start-line="11" selection-start-column="7" selection-end-line="11" selection-end-column="7" />
+        <state relative-caret-position="373">
+          <caret line="46" column="106" lean-forward="false" selection-start-line="46" selection-start-column="106" selection-end-line="46" selection-end-column="106" />
+          <folding>
+            <marker date="1512763163766" expanded="true" signature="665:717" ph="Select * FRO... uzytkownik" />
+            <marker date="1512763163766" expanded="true" signature="1649:1695" ph="SELECT * FRO... uzytkownik" />
+            <marker date="1512763163766" expanded="true" signature="1649:1713" ph="SELECT * FRO... uzytkownik" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -2022,73 +1991,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
           <caret line="12" column="12" lean-forward="false" selection-start-line="12" selection-start-column="4" selection-end-line="12" selection-end-column="12" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/pl/projekt/dao/PositionDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="12" column="12" lean-forward="true" selection-start-line="12" selection-start-column="12" selection-end-line="12" selection-end-column="12" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/pl/projekt/daoimpl/FormOfEmploymentDAOImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="28" column="156" lean-forward="false" selection-start-line="28" selection-start-column="156" selection-end-line="28" selection-end-column="156" />
-          <folding>
-            <marker date="1512763422806" expanded="true" signature="676:708" ph="SELECT * Fro... forma_zatrudnienia" />
-            <marker date="1512763422806" expanded="true" signature="1054:1142" ph="SELECT * FRO... forma_zatrudnienia" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/pl/projekt/dao/FormOfEmploymentDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="12" column="20" lean-forward="false" selection-start-line="12" selection-start-column="4" selection-end-line="12" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/pl/projekt/model/Advertisement.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="12" column="13" lean-forward="false" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/pl/projekt/daoimpl/UsersDAOImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="373">
-          <caret line="46" column="106" lean-forward="false" selection-start-line="46" selection-start-column="106" selection-end-line="46" selection-end-column="106" />
-          <folding>
-            <marker date="1512763163766" expanded="true" signature="665:717" ph="Select * FRO... uzytkownik" />
-            <marker date="1512763163766" expanded="true" signature="1649:1695" ph="SELECT * FRO... uzytkownik" />
-            <marker date="1512763163766" expanded="true" signature="1649:1713" ph="SELECT * FRO... uzytkownik" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/pl/projekt/daoimpl/AdvertisementDAOImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="441">
-          <caret line="47" column="23" lean-forward="false" selection-start-line="47" selection-start-column="23" selection-end-line="47" selection-end-column="23" />
-          <folding>
-            <marker date="1512761315594" expanded="true" signature="2040:2053" ph="SELECT * FRO... " />
-            <marker date="1512761315594" expanded="true" signature="2040:2064" ph="SELECT * FRO... ogloszenie" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/_menu.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="13" column="64" lean-forward="false" selection-start-line="13" selection-start-column="64" selection-end-line="13" selection-end-column="64" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2103,32 +2005,105 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/pl/projekt/controller/MainController.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/pl/projekt/dao/PositionDAO.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="560">
-          <caret line="92" column="0" lean-forward="true" selection-start-line="92" selection-start-column="0" selection-end-line="92" selection-end-column="0" />
+        <state relative-caret-position="170">
+          <caret line="12" column="12" lean-forward="true" selection-start-line="12" selection-start-column="12" selection-end-line="12" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/pl/projekt/dao/FormOfEmploymentDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="12" column="20" lean-forward="false" selection-start-line="12" selection-start-column="4" selection-end-line="12" selection-end-column="20" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/pl/projekt/controller/AdvertController.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/pl/projekt/daoimpl/FormOfEmploymentDAOImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="359">
-          <caret line="100" column="37" lean-forward="false" selection-start-line="100" selection-start-column="37" selection-end-line="100" selection-end-column="37" />
+        <state relative-caret-position="374">
+          <caret line="28" column="156" lean-forward="false" selection-start-line="28" selection-start-column="156" selection-end-line="28" selection-end-column="156" />
           <folding>
-            <element signature="e#2172#2182#0" expanded="true" />
-            <element signature="e#2250#2268#0" expanded="true" />
-            <element signature="e#2313#2320#0" expanded="true" />
-            <element signature="e#2372#2382#0" expanded="true" />
+            <marker date="1512766301357" expanded="true" signature="676:708" ph="SELECT * Fro... forma_zatrudnienia" />
+            <marker date="1512766301357" expanded="true" signature="1054:1142" ph="SELECT * FRO... forma_zatrudnienia" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/_menu.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="18" column="67" lean-forward="false" selection-start-line="18" selection-start-column="67" selection-end-line="18" selection-end-column="67" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/pl/projekt/dao/AdvertisementDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" column="0" lean-forward="true" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/advertsList.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="30" column="43" lean-forward="false" selection-start-line="30" selection-start-column="43" selection-end-line="30" selection-end-column="43" />
+        <state relative-caret-position="-459">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/8603faa9/3608e8ac-a8eb-49ae-8d91-a974331c4364/p_inzynierski.uzytkownik">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/myAdvertsList.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="22" column="0" lean-forward="true" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/pl/projekt/controller/AdvertController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="628">
+          <caret line="101" column="17" lean-forward="false" selection-start-line="101" selection-start-column="17" selection-end-line="101" selection-end-column="17" />
+          <folding>
+            <element signature="e#2172#2182#0" expanded="true" />
+            <element signature="e#2250#2268#0" expanded="true" />
+            <element signature="e#2313#2320#0" expanded="true" />
+            <element signature="e#2372#2382#0" expanded="true" />
+            <element signature="e#3403#3413#0" expanded="true" />
+            <element signature="e#3481#3499#0" expanded="true" />
+            <element signature="e#3551#3561#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/pl/projekt/daoimpl/AdvertisementDAOImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="476">
+          <caret line="53" column="179" lean-forward="false" selection-start-line="53" selection-start-column="179" selection-end-line="53" selection-end-column="179" />
+          <folding>
+            <marker date="1512768438064" expanded="true" signature="2040:2053" ph="SELECT * FRO... " />
+            <marker date="1512768438064" expanded="true" signature="2040:2064" ph="SELECT * FRO... ogloszenie" />
+            <marker date="1512768438064" expanded="true" signature="2407:2453" ph="SELECT * FRO... ogloszenie" />
+            <marker date="1512768438064" expanded="true" signature="2407:2472" ph="SELECT * FRO... ogloszenie" />
+          </folding>
         </state>
       </provider>
     </entry>

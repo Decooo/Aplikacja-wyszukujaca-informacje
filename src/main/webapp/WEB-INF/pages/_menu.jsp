@@ -13,6 +13,9 @@
     <a href="${pageContext.request.contextPath}/">Strona główna</a>
     <a href="${pageContext.request.contextPath}/ogloszenia/lista">Ogłoszenia</a>
     <security:authorize access="hasAnyRole('ROLE_klient')">
-        <a href="${pageContext.request.contextPath}/ogloszenia/dodaj">Dodaj ogloszenie</a>
+        <a href="${pageContext.request.contextPath}/ogloszenia/dodaj">Dodaj ogłoszenie</a>
+    </security:authorize>
+    <security:authorize access="hasAnyRole('ROLE_klient')">
+        <a href="${pageContext.request.contextPath}/ogloszenia/moje">Moje ogłoszenia</a>
     </security:authorize>
 </div>

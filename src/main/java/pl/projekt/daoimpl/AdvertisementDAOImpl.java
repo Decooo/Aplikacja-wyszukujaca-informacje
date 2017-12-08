@@ -47,4 +47,12 @@ public class AdvertisementDAOImpl implements AdvertisementDAO {
         entityManager.close();
         return adverts;
     }
+
+    @Override
+    public List<Advertisement> findAllByID(Integer id_uzytkownika) {
+        EntityManager entityManager =emf.createEntityManager();
+        List<Advertisement> adverts = (List<Advertisement>) entityManager.createNativeQuery("SELECT * FROM ogloszenie WHERE id_uzytkownik='"+id_uzytkownika+"'",Advertisement.class).getResultList();
+        entityManager.close();
+        return adverts;
+    }
 }

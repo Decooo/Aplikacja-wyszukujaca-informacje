@@ -10,4 +10,5 @@ import java.util.List;
 public interface AdvertisementDAO {
     void add(Integer userId, Advertisement advertisement);
     List<Advertisement> findAll();
+    List<Advertisement> findAllByID(Integer id_uzytkownika);
 }

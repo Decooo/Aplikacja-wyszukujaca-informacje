@@ -86,6 +86,30 @@ public class AdvertController {
         return model;
     }
 
+    @RequestMapping(value = "/moje")
+    public ModelAndView myList(Principal principal){
+        ModelAndView model = new ModelAndView("myAdvertsList");
+        Users user = usersDAO.findUser(principal.getName());
+        List<Advertisement> myAdverts = advertisementDAO.findAllByID(user.getId_uzytkownik());
+        model.addObject("adverts", myAdverts);
+
+        List<Category> category = new ArrayList<Category>();
+        List<FormOfEmployment> formOfEmployments = new ArrayList<FormOfEmployment>();
+        List<Position> positions = new ArrayList<Position>();
+
+        for(Advertisement advert : myAdverts){
+            category.add(categoryDAO.findCategoryByID(advert.getId_kategoria()));
+            formOfEmployments.add(formOfEmploymentDAO.findByID(advert.getId_forma_zatrudnienia()));
+            positions.add(positionDAO.findByID(advert.getId_stanowisko()));
+        }
+
+        model.addObject("category",category);
+        model.addObject("formOfEmployments", formOfEmployments);
+        model.addObject("positions",positions);
+
+        return model;
+    }
+
     private void fillListBox(ModelAndView model){
         populateModelCategory(model);
         populateModelFormOfEmployment(model);
