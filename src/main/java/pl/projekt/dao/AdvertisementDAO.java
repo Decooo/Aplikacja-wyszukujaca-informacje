@@ -17,4 +17,6 @@ public interface AdvertisementDAO {
     Advertisement findByID(int idAdvert);
 
     void update(int id_ogloszenia, int id_kategoria, int id_forma_zatrudnienia, int id_stanowisko, String tytul, String lokalizacja, int zarobki, String opis);
+
+    List<Advertisement> findAllPagintaion(int page);
 }
