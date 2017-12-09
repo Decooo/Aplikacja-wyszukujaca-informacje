@@ -101,4 +101,16 @@ public class AdvertisementDAOImpl implements AdvertisementDAO {
         entityManager.close();
 
     }
+
+    @Override
+    public List<Advertisement> findAllPagintaion(int page) {
+        System.out.println("page = " + page);
+        EntityManager entityManager = emf.createEntityManager();
+        List<Advertisement> adverts = entityManager.createNativeQuery("SELECT * FROM ogloszenie", Advertisement.class)
+                .setFirstResult(page*15-15)
+                .setMaxResults(15)
+                .getResultList();
+        entityManager.close();
+        return adverts;
+    }
 }

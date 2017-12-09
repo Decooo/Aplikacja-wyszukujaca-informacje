@@ -61,11 +61,27 @@ public class AdvertController {
     }
 
     @RequestMapping(value = "/lista")
-    public ModelAndView list() {
+    public ModelAndView list(@RequestParam(value = "page", required = false) Integer page) {
         ModelAndView model = new ModelAndView("advertsList");
-        List<Advertisement> adverts = advertisementDAO.findAll();
+        if (null == page) {
+            page = 1;
+        }
+        List<Advertisement> adverts = advertisementDAO.findAllPagintaion(page);
         model.addObject("adverts", adverts);
 
+        List<Advertisement> allAdverts = advertisementDAO.findAll();
+        int size = allAdverts.size();
+        int startpage = (page - 5 > 0 ? page - 5 : 1);
+
+        int endpage = size / 15 + 1;
+
+        if (endpage > startpage + 10) {
+            endpage = startpage + 10;
+        }
+
+        model.addObject("startpage", startpage);
+        model.addObject("endpage", endpage);
+        model.addObject("page", page);
         List<Category> category = new ArrayList<Category>();
         List<FormOfEmployment> formOfEmployments = new ArrayList<FormOfEmployment>();
         List<Users> users = new ArrayList<Users>();
@@ -146,14 +162,14 @@ public class AdvertController {
 
 
     @RequestMapping(value = "updatesave", method = RequestMethod.POST)
-    public ModelAndView update(ModelAndView m, @ModelAttribute("updateAdvert")@Validated Advertisement advertisement, BindingResult bindingResult) {
+    public ModelAndView update(ModelAndView m, @ModelAttribute("updateAdvert") @Validated Advertisement advertisement, BindingResult bindingResult) {
         ModelAndView model = new ModelAndView("updateAdvert");
         if (bindingResult.hasErrors()) {
             model.addObject("css", "error");
             model.addObject("msg", "Nie wprowadzono wszystkich danych lub wprowadzono je niepoprawnie!");
             return model;
         }
-        advertisementDAO.update(advertisement.getId_ogloszenie(), advertisement.getId_kategoria(), advertisement.getId_forma_zatrudnienia(),advertisement.getId_stanowisko(),advertisement.getTytul(),advertisement.getLokalizacja(),advertisement.getZarobki(),advertisement.getOpis());
+        advertisementDAO.update(advertisement.getId_ogloszenie(), advertisement.getId_kategoria(), advertisement.getId_forma_zatrudnienia(), advertisement.getId_stanowisko(), advertisement.getTytul(), advertisement.getLokalizacja(), advertisement.getZarobki(), advertisement.getOpis());
         model.setViewName("redirect:/ogloszenia/moje");
         return model;
     }

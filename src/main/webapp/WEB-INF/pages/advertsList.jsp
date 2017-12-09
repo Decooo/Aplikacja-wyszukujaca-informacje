@@ -64,6 +64,11 @@
         </list:forEach>
     </table>
 
+
+    <div class="pagination">
+            <list:forEach begin="${startpage}" end="${endpage}" var="p"><a href="<list:url value="/ogloszenia/lista" ><list:param name="page" value="${p}"/>${p}</list:url>"> ${p}</a></list:forEach>
+    </div>
+
 </div>
 <jsp:include page="_footer.jsp"/>
 
