@@ -12,7 +12,7 @@
 
 
     <div class="site-name">
-        <img src="${pageContext.request.contextPath}/img/logoUR.png" align="left" width="400" height="45">
+        <img src="${pageContext.request.contextPath}/img/logoUR.png" align="left" width="292px" height="43px">
         Aplikacja wspierająca proces wyszukiwania ogłoszen</div>
 
     <div class="header-bar">
