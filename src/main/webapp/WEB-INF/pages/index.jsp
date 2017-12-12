@@ -12,7 +12,9 @@
 
 <div class="main">
 
-<h2>Hello World! Aplikacja wyszukujaca ogloszenia o prace</h2>
+<h2>Hello World! Aplikacja wyszukujaca ogloszenia o prace!</h2>
+    <h2>Test2</h2>
+
 </div>
 <jsp:include page="_footer.jsp"/>
 </body>
