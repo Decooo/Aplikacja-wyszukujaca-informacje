@@ -12,7 +12,7 @@
 
 <div class="main">
 
-<h2>Aplikacja wyszukujaca ogloszenia o prace</h2>
+<h2>Aplikacjataee  3 wyszukujaca ogloszenia o prace</h2>
 </div>
 <jsp:include page="_footer.jsp"/>
 </body>

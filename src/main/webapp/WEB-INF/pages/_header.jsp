@@ -13,7 +13,7 @@
 
     <div class="site-name">
         <img src="${pageContext.request.contextPath}/img/logoUR.png" align="left" width="292px" height="43px">
-        Aplikacja wspierająca proces wyszukiwania ogłoszen</div>
+    </div>
 
     <div class="header-bar">
         <c:if test="${pageContext.request.userPrincipal.name != null}">
