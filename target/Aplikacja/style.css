@@ -195,3 +195,36 @@ input[type="submit"] {
 
 
 }
+#tytul{
+    text-align:left;
+    font-weight: bold;
+    color:#21688f;
+    font-size:21px;
+    margin:30px 0px 10px 0px;
+
+}
+#container{
+    width: 900px;
+    margin: auto;
+    height:auto;
+    text-aligh:center;
+}
+#box h {
+    color: #3d3e49;
+
+}
+#box{
+    width:300px;
+    height:auto;
+    text-align:center;
+    float:left;
+    margin:10px 0px;
+    color: #21688f;
+}
+#opis{
+    margin:40px 0px;
+    padding-top:60px ;
+    color: #1d1d1d;
+    font-size:17px;
+
+}
