@@ -27,7 +27,7 @@
         <div class=${css}>${msg}</div>
     </c:if>
 
-    <table border="1" align="center">
+    <table border="00" align="center"  >
         <th>Kategoria</th>
         <th>Forma zatrudnienia</th>
         <th>Stanowisko</th>
@@ -41,7 +41,7 @@
 
         <list:forEach var="advert" items="${adverts}" varStatus="loop">
             <tr>
-                <td><list:forEach begin="${loop.index}" step="1" end="${loop.index}" var="cat"
+                <td>Kategoria: <list:forEach begin="${loop.index}" step="1" end="${loop.index}" var="cat"
                                   items="${category}">${cat.nazwa}</list:forEach></td>
                 <td><list:forEach begin="${loop.index}" step="1" end="${loop.index}" var="formOfEmployment"
                                   items="${formOfEmployments}">${formOfEmployment.nazwa}</list:forEach></td>
