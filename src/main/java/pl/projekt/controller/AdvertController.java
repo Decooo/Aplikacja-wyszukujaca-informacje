@@ -135,6 +135,9 @@ public class AdvertController {
     public ModelAndView search(@RequestParam("inquiry") String inquiry, RedirectAttributes attributes) {
         ModelAndView model = new ModelAndView("redirect:/ogloszenia/lista");
 
+        List<Advertisement> adverts = advertisementDAO.fullTextSearch(inquiry);
+        model.addObject("adverts",adverts);
+
         attributes.addFlashAttribute("css", "error");
         attributes.addFlashAttribute("msg", "Wyszukiwanie nie jest zaimplementowane");
         System.out.println("zapytanie = " + inquiry);

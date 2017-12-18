@@ -113,4 +113,16 @@ public class AdvertisementDAOImpl implements AdvertisementDAO {
         entityManager.close();
         return adverts;
     }
+
+    @Override
+    public List<Advertisement> fullTextSearch(String data) {
+        EntityManager entityManager = emf.createEntityManager();
+        StoredProcedureQuery query= entityManager.createStoredProcedureQuery("fullTextSearch",Advertisement.class)
+                .registerStoredProcedureParameter(1,String.class,ParameterMode.IN)
+                .setParameter(1,data);
+        List<Advertisement> foundAds = query.getResultList();
+
+        entityManager.close();
+        return foundAds;
+    }
 }
