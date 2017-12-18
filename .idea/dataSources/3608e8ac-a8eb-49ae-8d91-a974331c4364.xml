@@ -32,208 +32,215 @@
     <routine id="18" parent="2" name="fullTextSearch">
       <RoutineKind>procedure</RoutineKind>
     </routine>
-    <column id="19" parent="7" name="id_forma_zatrudnienia">
+    <routine id="19" parent="2" name="numbersRecords">
+      <RoutineKind>procedure</RoutineKind>
+    </routine>
+    <column id="20" parent="7" name="id_forma_zatrudnienia">
       <Position>1</Position>
       <DataType>int(11)|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="20" parent="7" name="nazwa">
+    <column id="21" parent="7" name="nazwa">
       <Position>2</Position>
       <DataType>varchar(255)|0</DataType>
     </column>
-    <key id="21" parent="7" name="PRIMARY">
+    <key id="22" parent="7" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id_forma_zatrudnienia</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="22" parent="8" name="id_forma_zatrudnienia">
+    <column id="23" parent="8" name="id_forma_zatrudnienia">
       <Position>1</Position>
       <DataType>int(11)|0</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
     </column>
-    <column id="23" parent="8" name="nazwa">
+    <column id="24" parent="8" name="nazwa">
       <Position>2</Position>
       <DataType>varchar(20)|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <key id="24" parent="8" name="PRIMARY">
+    <key id="25" parent="8" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id_forma_zatrudnienia</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="25" parent="9" name="next_val">
+    <column id="26" parent="9" name="next_val">
       <Position>1</Position>
       <DataType>bigint(20)|0</DataType>
     </column>
-    <column id="26" parent="10" name="id_kategoria">
+    <column id="27" parent="10" name="id_kategoria">
       <Position>1</Position>
       <DataType>int(11)|0</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
     </column>
-    <column id="27" parent="10" name="nazwa">
+    <column id="28" parent="10" name="nazwa">
       <Position>2</Position>
       <DataType>varchar(40)|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <key id="28" parent="10" name="PRIMARY">
+    <key id="29" parent="10" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id_kategoria</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="29" parent="11" name="id_ogloszenie">
+    <column id="30" parent="11" name="id_ogloszenie">
       <Position>1</Position>
       <DataType>int(11)|0</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
     </column>
-    <column id="30" parent="11" name="id_uzytkownik">
+    <column id="31" parent="11" name="id_uzytkownik">
       <Position>2</Position>
       <DataType>int(11)|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="31" parent="11" name="id_kategoria">
+    <column id="32" parent="11" name="id_kategoria">
       <Position>3</Position>
       <DataType>int(11)|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="32" parent="11" name="id_forma_zatrudnienia">
+    <column id="33" parent="11" name="id_forma_zatrudnienia">
       <Position>4</Position>
       <DataType>int(11)|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="33" parent="11" name="id_stanowisko">
+    <column id="34" parent="11" name="id_stanowisko">
       <Position>5</Position>
       <DataType>int(11)|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="34" parent="11" name="tytul">
+    <column id="35" parent="11" name="tytul">
       <Position>6</Position>
       <DataType>varchar(50)|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="35" parent="11" name="lokalizacja">
+    <column id="36" parent="11" name="lokalizacja">
       <Position>7</Position>
       <DataType>varchar(50)|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="36" parent="11" name="zarobki">
+    <column id="37" parent="11" name="zarobki">
       <Position>8</Position>
       <DataType>int(11)|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="37" parent="11" name="opis">
+    <column id="38" parent="11" name="opis">
       <Position>9</Position>
       <DataType>text|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <index id="38" parent="11" name="index2">
+    <index id="39" parent="11" name="index2">
       <ColNames>tytul
 lokalizacja
 opis</ColNames>
     </index>
-    <key id="39" parent="11" name="PRIMARY">
+    <key id="40" parent="11" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id_ogloszenie</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="40" parent="12" name="id_stanowisko">
+    <column id="41" parent="12" name="id_stanowisko">
       <Position>1</Position>
       <DataType>int(11)|0</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
     </column>
-    <column id="41" parent="12" name="nazwa">
+    <column id="42" parent="12" name="nazwa">
       <Position>2</Position>
       <DataType>varchar(30)|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <key id="42" parent="12" name="PRIMARY">
+    <key id="43" parent="12" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id_stanowisko</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="43" parent="13" name="id_uzytkownik">
+    <column id="44" parent="13" name="id_uzytkownik">
       <Position>1</Position>
       <DataType>int(11)|0</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
     </column>
-    <column id="44" parent="13" name="login">
+    <column id="45" parent="13" name="login">
       <Position>2</Position>
       <DataType>text|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="45" parent="13" name="haslo">
+    <column id="46" parent="13" name="haslo">
       <Position>3</Position>
       <DataType>text|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <key id="46" parent="13" name="PRIMARY">
+    <key id="47" parent="13" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id_uzytkownik</ColNames>
       <Primary>1</Primary>
     </key>
-    <argument id="47" parent="14" name="idUser">
+    <argument id="48" parent="14" name="idUser">
       <DataType>int(11)|0</DataType>
     </argument>
-    <argument id="48" parent="14" name="idKategoria">
+    <argument id="49" parent="14" name="idKategoria">
       <DataType>int(11)|0</DataType>
     </argument>
-    <argument id="49" parent="14" name="formaZatrudnienia">
+    <argument id="50" parent="14" name="formaZatrudnienia">
       <DataType>int(11)|0</DataType>
     </argument>
-    <argument id="50" parent="14" name="stanowisko">
+    <argument id="51" parent="14" name="stanowisko">
       <DataType>int(11)|0</DataType>
     </argument>
-    <argument id="51" parent="14" name="tytul">
+    <argument id="52" parent="14" name="tytul">
       <DataType>varchar(150)|0</DataType>
     </argument>
-    <argument id="52" parent="14" name="lokalizacja">
+    <argument id="53" parent="14" name="lokalizacja">
       <DataType>varchar(100)|0</DataType>
     </argument>
-    <argument id="53" parent="14" name="zarobki">
+    <argument id="54" parent="14" name="zarobki">
       <DataType>int(11)|0</DataType>
     </argument>
-    <argument id="54" parent="14" name="opis">
+    <argument id="55" parent="14" name="opis">
       <DataType>varchar(5000)|0</DataType>
     </argument>
-    <argument id="55" parent="15" name="in_login">
+    <argument id="56" parent="15" name="in_login">
       <DataType>varchar(45)|0</DataType>
     </argument>
-    <argument id="56" parent="15" name="in_haslo">
+    <argument id="57" parent="15" name="in_haslo">
       <DataType>varchar(45)|0</DataType>
     </argument>
-    <argument id="57" parent="16" name="idAdvert">
+    <argument id="58" parent="16" name="idAdvert">
       <DataType>int(11)|0</DataType>
     </argument>
-    <argument id="58" parent="17" name="idKategoria">
+    <argument id="59" parent="17" name="idKategoria">
       <DataType>int(11)|0</DataType>
     </argument>
-    <argument id="59" parent="17" name="formaZatrudnienia">
+    <argument id="60" parent="17" name="formaZatrudnienia">
       <DataType>int(11)|0</DataType>
     </argument>
-    <argument id="60" parent="17" name="stanowisko">
+    <argument id="61" parent="17" name="stanowisko">
       <DataType>int(11)|0</DataType>
     </argument>
-    <argument id="61" parent="17" name="tytul">
+    <argument id="62" parent="17" name="tytul">
       <DataType>varchar(150)|0</DataType>
     </argument>
-    <argument id="62" parent="17" name="lokalizacja">
+    <argument id="63" parent="17" name="lokalizacja">
       <DataType>varchar(100)|0</DataType>
     </argument>
-    <argument id="63" parent="17" name="zarobki">
+    <argument id="64" parent="17" name="zarobki">
       <DataType>int(11)|0</DataType>
     </argument>
-    <argument id="64" parent="17" name="opis">
+    <argument id="65" parent="17" name="opis">
       <DataType>varchar(5000)|0</DataType>
     </argument>
-    <argument id="65" parent="17" name="idOgloszenie">
+    <argument id="66" parent="17" name="idOgloszenie">
       <DataType>int(11)|0</DataType>
     </argument>
-    <argument id="66" parent="18" name="zapytanie">
+    <argument id="67" parent="18" name="zapytanie">
       <DataType>varchar(200)|0</DataType>
+    </argument>
+    <argument id="68" parent="19" name="quantity">
+      <ArgumentDirection>O</ArgumentDirection>
+      <DataType>int(11)|0</DataType>
     </argument>
   </database-model>
 </dataSource>

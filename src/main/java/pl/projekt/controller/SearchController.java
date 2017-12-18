@@ -36,8 +36,8 @@ public class SearchController {
     private AdvertisementValidator advertisementValidator;
 
     @RequestMapping(value = "/search")
-    public ModelAndView FullTextSearch(@RequestParam(value = "inquiry", required = false) String inquiry,
-                               RedirectAttributes attributes) {
+    public ModelAndView fullTextSearch(@RequestParam(value = "inquiry", required = false) String inquiry,
+                                       RedirectAttributes attributes) {
         ModelAndView model = new ModelAndView();
 
         List<Advertisement> adverts = advertisementDAO.fullTextSearch(inquiry);
@@ -65,9 +65,11 @@ public class SearchController {
         model.addObject("formOfEmployments", formOfEmployments);
         model.addObject("users", users);
         model.addObject("positions", positions);
-        model.setViewName("searchList");
         model.addObject("adverts",adverts);
+        model.addObject("inquiry",inquiry);
+        model.setViewName("searchList");
         System.out.println("inquiry = " + inquiry);
+
         return model;
     }
 

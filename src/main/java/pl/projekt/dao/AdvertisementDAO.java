@@ -22,4 +22,6 @@ public interface AdvertisementDAO {
 
     List<Advertisement> fullTextSearch(String data);
 
+    int numbersRecords();
+
 }

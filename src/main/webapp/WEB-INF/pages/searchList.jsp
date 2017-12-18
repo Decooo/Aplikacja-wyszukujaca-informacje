@@ -28,7 +28,7 @@
 
     <form:form action="search" method="post">
 
-        <input type="search" name="inquiry"><br/><br/>
+        <input type="search" name="inquiry" value="${pageContext.request.getAttribute("inquiry")}"><br/><br/>
         <button name="btnSearch" >Szukaj</button>
 
     </form:form>

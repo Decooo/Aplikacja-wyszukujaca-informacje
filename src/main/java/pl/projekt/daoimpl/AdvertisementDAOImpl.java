@@ -125,4 +125,16 @@ public class AdvertisementDAOImpl implements AdvertisementDAO {
         return foundAds;
     }
 
+    @Override
+    public int numbersRecords() {
+        EntityManager entityManager =emf.createEntityManager();
+        Integer quantity =0;
+        StoredProcedureQuery query = entityManager.createStoredProcedureQuery("numbersRecords",Advertisement.class)
+                .registerStoredProcedureParameter(1,Integer.class,ParameterMode.OUT);
+        query.execute();
+        quantity = (Integer) query.getOutputParameterValue(1);
+        entityManager.close();
+        return quantity;
+    }
+
 }
