@@ -133,14 +133,20 @@ public class AdvertController {
 
     @RequestMapping(value = "/search")
     public ModelAndView search(@RequestParam("inquiry") String inquiry, RedirectAttributes attributes) {
-        ModelAndView model = new ModelAndView("redirect:/ogloszenia/lista");
+        ModelAndView model = new ModelAndView();
 
         List<Advertisement> adverts = advertisementDAO.fullTextSearch(inquiry);
-        model.addObject("adverts",adverts);
+        if(adverts.size()<1){
+            model.setViewName("redirect:/ogloszenia/lista");
+            attributes.addFlashAttribute("css", "error");
+            attributes.addFlashAttribute("msg", "Obecnie nie posiadamy ofert pracy spełniających podane kryteria");
+            System.out.println("zapytanie = " + inquiry);
+            return model;
+        }
 
-        attributes.addFlashAttribute("css", "error");
-        attributes.addFlashAttribute("msg", "Wyszukiwanie nie jest zaimplementowane");
-        System.out.println("zapytanie = " + inquiry);
+        model.setViewName("searchList");
+        model.addObject("adverts",adverts);
+        System.out.println("inquiry = " + inquiry);
         return model;
     }
 
