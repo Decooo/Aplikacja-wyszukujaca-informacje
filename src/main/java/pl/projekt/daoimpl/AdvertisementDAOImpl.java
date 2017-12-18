@@ -107,7 +107,7 @@ public class AdvertisementDAOImpl implements AdvertisementDAO {
         System.out.println("page = " + page);
         EntityManager entityManager = emf.createEntityManager();
         List<Advertisement> adverts = entityManager.createNativeQuery("SELECT * FROM ogloszenie", Advertisement.class)
-                .setFirstResult(page*15-15)
+                .setFirstResult(page * 15 - 15)
                 .setMaxResults(15)
                 .getResultList();
         entityManager.close();
@@ -117,12 +117,12 @@ public class AdvertisementDAOImpl implements AdvertisementDAO {
     @Override
     public List<Advertisement> fullTextSearch(String data) {
         EntityManager entityManager = emf.createEntityManager();
-        StoredProcedureQuery query= entityManager.createStoredProcedureQuery("fullTextSearch",Advertisement.class)
-                .registerStoredProcedureParameter(1,String.class,ParameterMode.IN)
-                .setParameter(1,data);
+        StoredProcedureQuery query = entityManager.createStoredProcedureQuery("fullTextSearch", Advertisement.class)
+                .registerStoredProcedureParameter(1, String.class, ParameterMode.IN)
+                .setParameter(1, data);
         List<Advertisement> foundAds = query.getResultList();
-
         entityManager.close();
         return foundAds;
     }
+
 }
