@@ -62,6 +62,7 @@ body{
     color: #31708f;
     background-color: #d9edf7;
     border-color: #bce8f1;
+
 }
 
 .msgSuccess{
@@ -162,7 +163,7 @@ label {
     text-shadow: 0 0 1px silver;
 }
 #lower {
-    background: #ecf2f5;
+    /*background: #ecf2f5;*/
     width: 360px;
     padding: 5px 20px;
     margin-top: 20px;
@@ -220,6 +221,13 @@ input[type="submit"] {
     float:left;
     margin:10px 0px;
     color: #21688f;
+}
+#box2{
+    color:#ff605b;
+
+    float:left;
+    margin-bottom: 60px;
+
 }
 #opis{
     margin:40px 0px;

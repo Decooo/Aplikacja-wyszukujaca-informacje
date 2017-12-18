@@ -19,21 +19,31 @@
 <jsp:include page="_header.jsp"/>
 <jsp:include page="_menu.jsp"/>
 
-<div id="container">
-    <h1>Wyszukaj</h1>
+    <div id="container">
+        <hr>
+        <div id="box2" >
+            <h1 ">Wyszukaj Ogłoszenie:</h1>
+        </div>
+        <div id="box2">
 
-    <c:if test="${not empty msg}">
-        <div class=${css}>${msg}</div>
-    </c:if>
+            <c:if test="${not empty msg}">
+                <div class=${css}>${msg}</div>
+            </c:if>
 
-    <form:form action="search" method="post">
 
-        <input type="search" name="inquiry"><br/><br/>
-        <button name="btnSearch" >Szukaj</button>
 
-    </form:form>
+            <form:form action="search" method="post">
 
-    <h1 style="text-align:center;color:#193f8f;">Lista wszystkich ogłoszeń</h1>
+
+                <div id="lower">
+                    <input type="search" name="inquiry">
+
+                    <input  type="submit" name="btnSearch"  value="SZUKAJ">
+                </div>
+             </form:form>
+        </div>
+       
+    <h1 style="text-align:center;color:#193f8f; clear: both;">Lista wszystkich ogłoszeń</h1>
 
 
 
