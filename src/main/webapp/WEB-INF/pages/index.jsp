@@ -12,7 +12,9 @@
 
 <div class="main">
 
-<h2>Aplikacjataee  3 wyszukujaca ogloszenia o prace</h2>
+<h2 >Aplikacja  wyszukujaca ogloszenia o prace</h2>
+    <img src="${pageContext.request.contextPath}/img/jobsearch.png" align="center" width="425px" height="380px">
+
 </div>
 <jsp:include page="_footer.jsp"/>
 </body>
