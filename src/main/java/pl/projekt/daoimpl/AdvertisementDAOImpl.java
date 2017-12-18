@@ -110,7 +110,6 @@ public class AdvertisementDAOImpl implements AdvertisementDAO {
                 .setFirstResult(page * 15 - 15)
                 .setMaxResults(15)
                 .getResultList();
-        System.out.println("adverts = " + adverts.toString());
         entityManager.close();
         return adverts;
     }
@@ -122,12 +121,8 @@ public class AdvertisementDAOImpl implements AdvertisementDAO {
                 .registerStoredProcedureParameter(1, String.class, ParameterMode.IN)
                 .setParameter(1, data);
         List<Advertisement> foundAds = query.getResultList();
-
-        // List<Advertisement> foundAds = entityManager.createNativeQuery("SELECT * FROM ogloszenie WHERE MATCH (tytul,lokalizacja,opis) AGAINST('"+data+"' WITH QUERY EXPANSION)",Advertisement.class)
-        //        .getResultList();
-
-        System.out.println("foundAds = " + foundAds.toString());
         entityManager.close();
         return foundAds;
     }
+
 }

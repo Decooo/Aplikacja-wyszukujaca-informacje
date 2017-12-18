@@ -131,8 +131,10 @@ public class AdvertController {
         populateModelPosition(model);
     }
 
+    @SuppressWarnings("Duplicates")
     @RequestMapping(value = "/search")
-    public ModelAndView search(@RequestParam("inquiry") String inquiry, RedirectAttributes attributes) {
+    public ModelAndView search(@RequestParam(value = "inquiry", required = false) String inquiry,
+                               RedirectAttributes attributes) {
         ModelAndView model = new ModelAndView();
 
         List<Advertisement> adverts = advertisementDAO.fullTextSearch(inquiry);
@@ -144,6 +146,22 @@ public class AdvertController {
             return model;
         }
 
+        List<Category> category = new ArrayList<Category>();
+        List<FormOfEmployment> formOfEmployments = new ArrayList<FormOfEmployment>();
+        List<Users> users = new ArrayList<Users>();
+        List<Position> positions = new ArrayList<Position>();
+
+        for (Advertisement advert : adverts) {
+            category.add(categoryDAO.findCategoryByID(advert.getId_kategoria()));
+            formOfEmployments.add(formOfEmploymentDAO.findByID(advert.getId_forma_zatrudnienia()));
+            users.add(usersDAO.findByID(advert.getId_uzytkownik()));
+            positions.add(positionDAO.findByID(advert.getId_stanowisko()));
+        }
+
+        model.addObject("category", category);
+        model.addObject("formOfEmployments", formOfEmployments);
+        model.addObject("users", users);
+        model.addObject("positions", positions);
         model.setViewName("searchList");
         model.addObject("adverts",adverts);
         System.out.println("inquiry = " + inquiry);
