@@ -24,8 +24,10 @@
             <a href="${pageContext.request.contextPath}/logout">Wyloguj</a>
 
         </c:if>
+
         <c:if test="${pageContext.request.userPrincipal.name == null}">
             <a href="${pageContext.request.contextPath}/login">Zaloguj</a>
         </c:if>
-    </div>
+        </div>
+
 </div>

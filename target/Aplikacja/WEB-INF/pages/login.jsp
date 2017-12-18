@@ -17,10 +17,8 @@
 <jsp:include page="_header.jsp"/>
 <jsp:include page="_menu.jsp"/>
 <div class="main">
-<h1>Logowanie</h1><br/>
 
-<div class="login">
-
+    <div class="log-box">
     <br/>
     <c:if test="${param.error == 'true'}">
         <div class="error">
@@ -35,33 +33,48 @@
         <div class="msg">${msg}</div>
     </c:if>
 
+        <h3 >Logowanie:</h3>
 
-    <form method="post" action="${pageContext.request.contextPath}j_spring_security_check" role="form">
-        <h3>Podaj login i hasło użytkownika:</h3>
-        <table align="center">
-            <tr>
-                <td>Nazwa użytkownika:</td>
-                <td><input type="text" name="username"/></td>
-            </tr>
 
-            <tr>
-                <td>Hasło:</td>
-                <td><input type="password" name="password"/></td>
 
-            </tr>
+        <div id="panel">
+            <form method="post" action="${pageContext.request.contextPath}j_spring_security_check" role="form">
+            <label for="username">Nazwa użytkownika:</label>
+                <input type="text" id="username" name="username">
+                <label for="password">Hasło:</label>
+                <input type="password" id="password" name="password">
+                <div id="lower">
+                    <input type="submit" value="Zaloguj">
+                    <input type="submit" value="Zarejestruj" onclick="form.action='registration';">
+                </div>
 
-            <tr>
-                <td>&nbsp;</td>
-                <td><input type="submit" value="Zaloguj"></td>
-                <td><input type="submit" value="Zarejestruj" onclick="form.action='registration';"></td>
-            </tr>
+            </form>
+        </div>
+        <%--<table align="center">--%>
+            <%--<tr>--%>
+                <%--<td style="text-align: left;">Nazwa użytkownika:</td>--%>
+                <%--<td><input type="text" name="username"/></td>--%>
+            <%--</tr>--%>
 
-        </table>
-    </form>
-    <br/><br/>
+            <%--<tr>--%>
+                <%--<td style="text-align: left;">Hasło:</td>--%>
+                <%--<td><input type="password" name="password"/></td>--%>
+
+            <%--</tr>--%>
+
+            <%--<tr>--%>
+                <%--<td>&nbsp;</td>--%>
+                <%--<td align="left"><input type="submit" value="Zaloguj"></td>--%>
+                <%--<td align="left"><input type="submit" value="Zarejestruj" onclick="form.action='registration';"></td>--%>
+            <%--</tr>--%>
+
+        <%--</table>--%>
+    <%--</form>--%>
+    <%--<br/><br/>--%>
 
 </div>
 </div>
+
 <jsp:include page="_footer.jsp"/>
 </body>
 </html>
