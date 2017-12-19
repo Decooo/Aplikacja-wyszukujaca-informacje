@@ -98,10 +98,16 @@ tr:hover{
 
 button:hover,a:hover, input[type="submit"]{
     background-color: white;
+    text-decoration: none;
+    color: #21688f;
+    padding: 10px 10px;
 }
 
 button, input[type="submit"]{
-    background-color: #5989f1;
+    background-color: #21688f;
+    text-decoration: none;
+    color: white;
+    padding: 10px 10px;
 }
 
 a{
@@ -236,20 +242,23 @@ input[type="submit"] {
 
 
     color: #193f8f;
-    margin:0px 20px;
+    margin:20px 20px;
 
 }
-#opis{
-    margin:40px 0px;
-    padding-top:60px ;
-    color: #1d1d1d;
-    font-size:17px;
+#box4{
+    width:410px;
+    height:auto;
+    color: #193f8f;
+    margin:20px auto ;
+    text-align: center;
 
 }
+
 #container h1{
     text-align:center;
     color:#193f8f;
     clear: both;
+    margin-bottom: 40px;
 }
 
 input[type=text] {
@@ -261,4 +270,15 @@ input[type=text] {
 }
 #error{
     color:red;
+}
+textarea {
+    width: 100%;
+    height: 200px;
+    padding: 12px 0px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    background-color: #f8f8f8;
+    resize: none;
+    color:#1d1d1d;
 }
