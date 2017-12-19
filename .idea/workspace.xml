@@ -1,26 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="895e5eca-8b19-4e1f-b585-c72383d0bd34" name="Default" comment="Ilość rekordów w tabeli ogloszenia">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/pl/projekt/util/FillListBox.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources/3608e8ac-a8eb-49ae-8d91-a974331c4364/_metadata_/metadata" afterPath="$PROJECT_DIR$/.idea/dataSources/3608e8ac-a8eb-49ae-8d91-a974331c4364/_metadata_/metadata" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources/3608e8ac-a8eb-49ae-8d91-a974331c4364/_metadata_/metadata.keystream" afterPath="$PROJECT_DIR$/.idea/dataSources/3608e8ac-a8eb-49ae-8d91-a974331c4364/_metadata_/metadata.keystream" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources/3608e8ac-a8eb-49ae-8d91-a974331c4364/_metadata_/metadata.keystream.len" afterPath="$PROJECT_DIR$/.idea/dataSources/3608e8ac-a8eb-49ae-8d91-a974331c4364/_metadata_/metadata.keystream.len" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources/3608e8ac-a8eb-49ae-8d91-a974331c4364/_metadata_/metadata.len" afterPath="$PROJECT_DIR$/.idea/dataSources/3608e8ac-a8eb-49ae-8d91-a974331c4364/_metadata_/metadata.len" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources/3608e8ac-a8eb-49ae-8d91-a974331c4364/_metadata_/metadata_i" afterPath="$PROJECT_DIR$/.idea/dataSources/3608e8ac-a8eb-49ae-8d91-a974331c4364/_metadata_/metadata_i" />
+    <list default="true" id="895e5eca-8b19-4e1f-b585-c72383d0bd34" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/Aplikacja.war" afterPath="$PROJECT_DIR$/target/Aplikacja.war" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/Aplikacja/WEB-INF/classes/pl/projekt/controller/AdvertController.class" afterPath="$PROJECT_DIR$/target/Aplikacja/WEB-INF/classes/pl/projekt/controller/AdvertController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/Aplikacja/WEB-INF/classes/pl/projekt/dao/AdvertisementDAO.class" afterPath="$PROJECT_DIR$/target/Aplikacja/WEB-INF/classes/pl/projekt/dao/AdvertisementDAO.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/Aplikacja/WEB-INF/classes/pl/projekt/daoimpl/AdvertisementDAOImpl.class" afterPath="$PROJECT_DIR$/target/Aplikacja/WEB-INF/classes/pl/projekt/daoimpl/AdvertisementDAOImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/pl/projekt/controller/AdvertController.class" afterPath="$PROJECT_DIR$/target/classes/pl/projekt/controller/AdvertController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/pl/projekt/dao/AdvertisementDAO.class" afterPath="$PROJECT_DIR$/target/classes/pl/projekt/dao/AdvertisementDAO.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/pl/projekt/daoimpl/AdvertisementDAOImpl.class" afterPath="$PROJECT_DIR$/target/classes/pl/projekt/daoimpl/AdvertisementDAOImpl.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/pl/projekt/controller/AdvertController.java" afterPath="$PROJECT_DIR$/src/main/java/pl/projekt/controller/AdvertController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/pl/projekt/controller/MyAdvertsController.java" afterPath="$PROJECT_DIR$/src/main/java/pl/projekt/controller/MyAdvertsController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/pl/projekt/controller/SearchController.java" afterPath="$PROJECT_DIR$/src/main/java/pl/projekt/controller/SearchController.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/searchList.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/searchList.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/Aplikacja/WEB-INF/pages/advertsList.jsp" afterPath="$PROJECT_DIR$/target/Aplikacja/WEB-INF/pages/advertsList.jsp" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -34,6 +18,9 @@
   <component name="ChangesViewManager" flattened_view="false" />
   <component name="CodeInsightWorkspaceSettings">
     <option name="optimizeImportsOnTheFly" value="true" />
+  </component>
+  <component name="CompilerWorkspaceConfiguration">
+    <option name="MAKE_PROJECT_ON_SAVE" value="true" />
   </component>
   <component name="DatabaseView">
     <option name="SHOW_INTERMEDIATE" value="true" />
@@ -117,11 +104,9 @@
       <file leaf-file-name="FillListBox.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/pl/projekt/util/FillListBox.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="53">
-              <caret line="25" column="0" lean-forward="true" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="238">
+              <caret line="25" column="0" lean-forward="false" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -129,11 +114,9 @@
       <file leaf-file-name="SearchController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/pl/projekt/controller/SearchController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-321">
-              <caret line="28" column="14" lean-forward="true" selection-start-line="28" selection-start-column="14" selection-end-line="28" selection-end-column="14" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="204">
+              <caret line="28" column="14" lean-forward="false" selection-start-line="28" selection-start-column="14" selection-end-line="28" selection-end-column="14" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -141,8 +124,8 @@
       <file leaf-file-name="MyAdvertsController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/pl/projekt/controller/MyAdvertsController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="278">
-              <caret line="100" column="78" lean-forward="false" selection-start-line="100" selection-start-column="47" selection-end-line="100" selection-end-column="78" />
+            <state relative-caret-position="-446">
+              <caret line="58" column="46" lean-forward="false" selection-start-line="58" selection-start-column="46" selection-end-line="58" selection-end-column="46" />
               <folding />
             </state>
           </provider>
@@ -151,9 +134,19 @@
       <file leaf-file-name="MainController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/pl/projekt/controller/MainController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-493">
+            <state relative-caret-position="272">
               <caret line="36" column="0" lean-forward="false" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
-              <folding />
+              <folding>
+                <element signature="imports" expanded="false" />
+                <element signature="e#1311#1312#0" expanded="false" />
+                <element signature="e#1359#1360#0" expanded="false" />
+                <element signature="e#1424#1425#0" expanded="false" />
+                <element signature="e#1472#1473#0" expanded="false" />
+                <element signature="e#1535#1536#0" expanded="false" />
+                <element signature="e#1564#1565#0" expanded="false" />
+                <element signature="e#1904#1905#0" expanded="false" />
+                <element signature="e#1941#1942#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -161,9 +154,10 @@
       <file leaf-file-name="AdvertisementDAOImpl.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/pl/projekt/daoimpl/AdvertisementDAOImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-442">
+            <state relative-caret-position="119">
               <caret line="11" column="53" lean-forward="false" selection-start-line="11" selection-start-column="53" selection-end-line="11" selection-end-column="53" />
               <folding>
+                <element signature="imports" expanded="false" />
                 <marker date="1513639206864" expanded="true" signature="2065:2089" ph="SELECT * FRO... ogloszenie" />
                 <marker date="1513639206864" expanded="true" signature="2433:2502" ph="SELECT * FRO... ogloszenie" />
                 <marker date="1513639206864" expanded="true" signature="3235:3298" ph="SELECT * FRO... ogloszenie" />
@@ -176,10 +170,13 @@
       <file leaf-file-name="SimpleLists.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/pl/projekt/logic/SimpleLists.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
+            <state relative-caret-position="221">
               <caret line="15" column="24" lean-forward="false" selection-start-line="15" selection-start-column="24" selection-end-line="15" selection-end-column="24" />
               <folding>
-                <element signature="imports" expanded="true" />
+                <element signature="e#508#509#0" expanded="false" />
+                <element signature="e#564#565#0" expanded="false" />
+                <element signature="e#593#594#0" expanded="false" />
+                <element signature="e#649#650#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -188,9 +185,11 @@
       <file leaf-file-name="ApplicationContextConfig.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/pl/projekt/config/ApplicationContextConfig.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="581">
+            <state relative-caret-position="1666">
               <caret line="116" column="92" lean-forward="false" selection-start-line="116" selection-start-column="92" selection-end-line="116" selection-end-column="92" />
-              <folding />
+              <folding>
+                <element signature="imports" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -199,7 +198,7 @@
         <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/searchList.jsp">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="257">
-              <caret line="53" column="45" lean-forward="true" selection-start-line="53" selection-start-column="45" selection-end-line="53" selection-end-column="45" />
+              <caret line="44" column="106" lean-forward="false" selection-start-line="44" selection-start-column="106" selection-end-line="44" selection-end-column="106" />
               <folding />
             </state>
           </provider>
@@ -208,8 +207,8 @@
       <file leaf-file-name="newAdvertisement.jsp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/newAdvertisement.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="28" column="33" lean-forward="true" selection-start-line="28" selection-start-column="33" selection-end-line="28" selection-end-column="33" />
+            <state relative-caret-position="476">
+              <caret line="28" column="33" lean-forward="false" selection-start-line="28" selection-start-column="33" selection-end-line="28" selection-end-column="33" />
               <folding />
             </state>
           </provider>
@@ -360,8 +359,8 @@
   <component name="ProjectFrameBounds">
     <option name="x" value="-8" />
     <option name="y" value="-8" />
-    <option name="width" value="1936" />
-    <option name="height" value="1056" />
+    <option name="width" value="1552" />
+    <option name="height" value="840" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -381,8 +380,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
-      <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -873,11 +871,12 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
+      <pane id="PackagesPane" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="settings.editor.selected.configurable" value="project.propCompiler" />
     <property name="last_opened_file_path" value="D:/Java/Sklep komputerowy/Computer-store" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
@@ -1398,8 +1397,8 @@
         </artifact>
       </deployment>
       <server-settings>
-        <option name="BASE_DIRECTORY_NAME" value="Unnamed_AplikacjaWyszukujacaOgloszenia_3" />
-        <option name="JNDI_PORT" value="1095" />
+        <option name="BASE_DIRECTORY_NAME" value="Unnamed_AplikacjaWyszukujacaOgloszenia_4" />
+        <option name="JNDI_PORT" value="1093" />
       </server-settings>
       <predefined_log_file id="Tomcat" enabled="true" />
       <predefined_log_file id="Tomcat Catalina" enabled="true" />
@@ -1499,7 +1498,8 @@
       <workItem from="1513601471103" duration="351000" />
       <workItem from="1513602891225" duration="14062000" />
       <workItem from="1513622797503" duration="8326000" />
-      <workItem from="1513636912534" duration="6384000" />
+      <workItem from="1513636912534" duration="6694000" />
+      <workItem from="1513674609339" duration="2078000" />
     </task>
     <task id="LOCAL-00001" summary="Pusty projekt">
       <created>1510775152311</created>
@@ -1655,14 +1655,21 @@
       <option name="project" value="LOCAL" />
       <updated>1513636824920</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="Formularz wyszukiwania zaawansowanego">
+      <created>1513643448003</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1513643448003</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="107717000" />
+    <option name="totallyTimeSpent" value="110105000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="0" />
+    <frame x="-8" y="-8" width="1552" height="840" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
@@ -1686,11 +1693,12 @@
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.16901408" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3531961" sideWeight="0.49791667" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.35219237" sideWeight="0.49791667" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
       <window_info id="Persistence" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21108742" sideWeight="0.4876161" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21313673" sideWeight="0.4876161" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Problems" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="true" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.20682302" sideWeight="0.5123839" order="9" side_tool="true" content_ui="tabs" />
@@ -1807,7 +1815,8 @@
     <MESSAGE value="Rozwiązanie błędu konwertowania, Strona JSP znalezionych ogloszen" />
     <MESSAGE value="Gotowe wyszukiwanie pełnotekstowe" />
     <MESSAGE value="Ilość rekordów w tabeli ogloszenia" />
-    <option name="LAST_COMMIT_MESSAGE" value="Ilość rekordów w tabeli ogloszenia" />
+    <MESSAGE value="Formularz wyszukiwania zaawansowanego" />
+    <option name="LAST_COMMIT_MESSAGE" value="Formularz wyszukiwania zaawansowanego" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1820,19 +1829,14 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/baza/encja.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml">
-      <provider editor-type-id="JavaFX-Scene-Builder">
-        <state />
-      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
           <caret line="9" column="45" lean-forward="false" selection-start-line="9" selection-start-column="45" selection-end-line="9" selection-end-column="45" />
         </state>
+      </provider>
+      <provider editor-type-id="JavaFX-Scene-Builder">
+        <state />
       </provider>
     </entry>
     <entry file="uml://DATABASE/3608e8ac-a8eb-49ae-8d91-a974331c4364.SCHEMA:p_inzynierski">
@@ -1863,38 +1867,38 @@
       </provider>
     </entry>
     <entry file="dbDummy://dbtable:/8603faa9/3608e8ac-a8eb-49ae-8d91-a974331c4364/p_inzynierski.forma_zatrudnienia">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
       <provider editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
         </state>
       </provider>
     </entry>
     <entry file="dbDummy://dbtable:/8603faa9/3608e8ac-a8eb-49ae-8d91-a974331c4364/p_inzynierski.stanowisko">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
       <provider editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
         </state>
       </provider>
     </entry>
     <entry file="dbDummy://dbtable:/8603faa9/3608e8ac-a8eb-49ae-8d91-a974331c4364/p_inzynierski.kategoria">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
       <provider editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
         </state>
       </provider>
     </entry>
@@ -2013,14 +2017,14 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/pl/projekt/model/PaginationResult.java" />
     <entry file="dbSrc:///8603faa9/3608e8ac-a8eb-49ae-8d91-a974331c4364/schema/p_inzynierski/routine/fullTextSearch.(varchar(200)).sql" />
     <entry file="dbDummy://dbtable:/8603faa9/3608e8ac-a8eb-49ae-8d91-a974331c4364/p_inzynierski.uzytkownik">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
       <provider editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
         </state>
       </provider>
     </entry>
@@ -2035,10 +2039,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="357">
           <caret line="27" column="11" lean-forward="false" selection-start-line="27" selection-start-column="11" selection-end-line="27" selection-end-column="11" />
-          <folding>
-            <marker date="1512761315556" expanded="true" signature="627:650" ph="SELECT * Fro... kategoria" />
-            <marker date="1512761315556" expanded="true" signature="955:1016" ph="SELECT * FRO... kategoria" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -2077,14 +2077,14 @@
       </provider>
     </entry>
     <entry file="dbDummy://dbtable:/8603faa9/3608e8ac-a8eb-49ae-8d91-a974331c4364/p_inzynierski.ogloszenie">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
       <provider editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
         </state>
       </provider>
     </entry>
@@ -2137,25 +2137,28 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-2681">
           <caret line="19" column="19" lean-forward="false" selection-start-line="19" selection-start-column="19" selection-end-line="19" selection-end-column="19" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/pl/projekt/logic/SimpleLists.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
+        <state relative-caret-position="221">
           <caret line="15" column="24" lean-forward="false" selection-start-line="15" selection-start-column="24" selection-end-line="15" selection-end-column="24" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="e#508#509#0" expanded="false" />
+            <element signature="e#564#565#0" expanded="false" />
+            <element signature="e#593#594#0" expanded="false" />
+            <element signature="e#649#650#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/pl/projekt/daoimpl/AdvertisementDAOImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-442">
+        <state relative-caret-position="119">
           <caret line="11" column="53" lean-forward="false" selection-start-line="11" selection-start-column="53" selection-end-line="11" selection-end-column="53" />
           <folding>
+            <element signature="imports" expanded="false" />
             <marker date="1513639206864" expanded="true" signature="2065:2089" ph="SELECT * FRO... ogloszenie" />
             <marker date="1513639206864" expanded="true" signature="2433:2502" ph="SELECT * FRO... ogloszenie" />
             <marker date="1513639206864" expanded="true" signature="3235:3298" ph="SELECT * FRO... ogloszenie" />
@@ -2166,9 +2169,19 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/pl/projekt/controller/MainController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-493">
+        <state relative-caret-position="272">
           <caret line="36" column="0" lean-forward="false" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="e#1311#1312#0" expanded="false" />
+            <element signature="e#1359#1360#0" expanded="false" />
+            <element signature="e#1424#1425#0" expanded="false" />
+            <element signature="e#1472#1473#0" expanded="false" />
+            <element signature="e#1535#1536#0" expanded="false" />
+            <element signature="e#1564#1565#0" expanded="false" />
+            <element signature="e#1904#1905#0" expanded="false" />
+            <element signature="e#1941#1942#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -2180,54 +2193,60 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/pl/projekt/controller/MyAdvertsController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="278">
-          <caret line="100" column="78" lean-forward="false" selection-start-line="100" selection-start-column="47" selection-end-line="100" selection-end-column="78" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/pl/projekt/util/FillListBox.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="53">
-          <caret line="25" column="0" lean-forward="true" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="238">
+          <caret line="25" column="0" lean-forward="false" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/newAdvertisement.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="28" column="33" lean-forward="true" selection-start-line="28" selection-start-column="33" selection-end-line="28" selection-end-column="33" />
+        <state relative-caret-position="476">
+          <caret line="28" column="33" lean-forward="false" selection-start-line="28" selection-start-column="33" selection-end-line="28" selection-end-column="33" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/pl/projekt/config/ApplicationContextConfig.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="581">
+        <state relative-caret-position="1666">
           <caret line="116" column="92" lean-forward="false" selection-start-line="116" selection-start-column="92" selection-end-line="116" selection-end-column="92" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/pl/projekt/controller/SearchController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-321">
-          <caret line="28" column="14" lean-forward="true" selection-start-line="28" selection-start-column="14" selection-end-line="28" selection-end-column="14" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="204">
+          <caret line="28" column="14" lean-forward="false" selection-start-line="28" selection-start-column="14" selection-end-line="28" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/pl/projekt/controller/MyAdvertsController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-446">
+          <caret line="58" column="46" lean-forward="false" selection-start-line="58" selection-start-column="46" selection-end-line="58" selection-end-column="46" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2704">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/searchList.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="257">
-          <caret line="53" column="45" lean-forward="true" selection-start-line="53" selection-start-column="45" selection-end-line="53" selection-end-column="45" />
+          <caret line="44" column="106" lean-forward="false" selection-start-line="44" selection-start-column="106" selection-end-line="44" selection-end-column="106" />
           <folding />
         </state>
       </provider>
@@ -2251,7 +2270,7 @@
       </state>
       <state key="FacetStructureConfigurable.UI">
         <settings>
-          <last-edited>Web</last-edited>
+          <last-edited>Spring (AplikacjaWyszukujacaOgloszenia)|Spring</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>

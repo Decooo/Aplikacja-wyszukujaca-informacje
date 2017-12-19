@@ -41,7 +41,7 @@
                                                                   itemLabel="nazwa"/></form:select><br/><br/>
         Forma zatrudnienia: <form:select path="id_forma_zatrudnienia"><form:options items="${id_forma_zatrudnienia}"
                                                                                     itemValue="id_forma_zatrudnienia"
-                                                                                    itemLabel="nazwa"/></form:select><br/><br/>
+                                                                                    itemLabel="nazwa"  /></form:select><br/><br/>
         Stanowisko: <form:select path="id_stanowisko"><form:options items="${id_stanowisko}" itemValue="id_stanowisko"
                                                                     itemLabel="nazwa"/></form:select><br/><br/>
         Zarobki:<select size="1" name="salary">
