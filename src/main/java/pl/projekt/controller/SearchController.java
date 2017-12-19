@@ -4,13 +4,11 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.WebDataBinder;
-import org.springframework.web.bind.annotation.InitBinder;
-import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 import pl.projekt.dao.*;
+import pl.projekt.logic.SimpleLists;
 import pl.projekt.model.*;
 import pl.projekt.util.FillListBox;
 import pl.projekt.validator.AdvertisementValidator;
@@ -38,6 +36,7 @@ public class SearchController {
     UsersDAO usersDAO;
     @Autowired
     private AdvertisementValidator advertisementValidator;
+    private List<Advertisement> ads;
 
     @InitBinder
     public void myInitBuilder(WebDataBinder dataBinder) {
@@ -56,6 +55,7 @@ public class SearchController {
                                        RedirectAttributes attributes, @ModelAttribute("search") Advertisement advertisement) {
         ModelAndView model = new ModelAndView();
         List<Advertisement> adverts = advertisementDAO.fullTextSearch(inquiry);
+        setAds(adverts);
         if (adverts.size() < 1) {
             model.setViewName("redirect:/ogloszenia/lista");
             attributes.addFlashAttribute("css", "error");
@@ -91,13 +91,24 @@ public class SearchController {
     }
 
     @RequestMapping("/advancedSearch")
-    public ModelAndView advancedSearch(@RequestParam(value = "inquiry", required = false) String inquiry,@ModelAttribute("search") Advertisement advertisement) {
+    public ModelAndView advancedSearch(@ModelAttribute("search") Advertisement advertisement) {
         ModelAndView model = new ModelAndView();
         FillListBox fillListBox = new FillListBox(categoryDAO, formOfEmploymentDAO, positionDAO);
         fillListBox.fillListBox(model);
+
+        SimpleLists simpleLists = new SimpleLists(advertisementDAO);
+        simpleLists.searchSimpleList(getAds());
 
         model.setViewName("searchList");
         return model;
     }
 
+
+    public List<Advertisement> getAds() {
+        return ads;
+    }
+
+    public void setAds(List<Advertisement> ads) {
+        this.ads = ads;
+    }
 }
