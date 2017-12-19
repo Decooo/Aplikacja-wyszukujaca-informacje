@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
 import pl.projekt.dao.*;
 import pl.projekt.model.*;
+import pl.projekt.util.FillListBox;
 import pl.projekt.validator.AdvertisementValidator;
 
 import java.security.Principal;
@@ -54,8 +55,8 @@ public class AdvertController {
     public ModelAndView addAdvert() {
         ModelAndView model = new ModelAndView("newAdvertisement");
         model.addObject("advert", new Advertisement());
-
-        fillListBox(model);
+        FillListBox fillListBox = new FillListBox(categoryDAO, formOfEmploymentDAO, positionDAO);
+        fillListBox.fillListBox(model);
 
         return model;
     }
@@ -104,20 +105,20 @@ public class AdvertController {
     @RequestMapping(value = "save", method = RequestMethod.POST)
     public ModelAndView save(Principal principal, ModelAndView m, @ModelAttribute("advert") @Validated Advertisement advertisement, BindingResult bindingResult) {
         ModelAndView model = new ModelAndView("newAdvertisement");
+        FillListBox fillListBox = new FillListBox(categoryDAO, formOfEmploymentDAO, positionDAO);
 
         if (bindingResult.hasErrors()) {
-            fillListBox(model);
+            fillListBox.fillListBox(model);
 
             model.addObject("css", "error");
             model.addObject("msg", "Nie wprowadzono wszystkich danych lub wprowadzono je niepoprawnie");
         } else {
-
             Users user = usersDAO.findUser(principal.getName());
 
             advertisementDAO.add(user.getId_uzytkownik(), advertisement);
             model.addObject("css", "msgSuccess");
             model.addObject("msg", "Dodano poprawnie!");
-            fillListBox(model);
+            fillListBox.fillListBox(model);
 
             advertisement.setLokalizacja("");
             advertisement.setTytul("");
@@ -129,24 +130,4 @@ public class AdvertController {
         return model;
     }
 
-    public void fillListBox(ModelAndView model) {
-        populateModelCategory(model);
-        populateModelFormOfEmployment(model);
-        populateModelPosition(model);
-    }
-
-    private void populateModelCategory(ModelAndView model) {
-        List<Category> category = categoryDAO.findAll();
-        model.addObject("id_kategoria", category);
-    }
-
-    private void populateModelFormOfEmployment(ModelAndView model) {
-        List<FormOfEmployment> formOfEmployments = formOfEmploymentDAO.findAll();
-        model.addObject("id_forma_zatrudnienia", formOfEmployments);
-    }
-
-    private void populateModelPosition(ModelAndView model) {
-        List<Position> positions = positionDAO.findAll();
-        model.addObject("id_stanowisko", positions);
-    }
 }
