@@ -49,6 +49,7 @@
         <option value="1">0-1000</option>
         <option value="2">1000-2000</option>
         <option value="3">2000-3000</option>
+        <option value="4">4000-5000</option>
         <option value="5">5000-6000</option>
         <option value="6">6000-7500</option>
         <option value="7">7500-10000</option>

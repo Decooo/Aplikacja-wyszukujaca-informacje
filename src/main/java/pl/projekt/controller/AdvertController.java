@@ -99,6 +99,7 @@ public class AdvertController {
         model.addObject("formOfEmployments", formOfEmployments);
         model.addObject("users", users);
         model.addObject("positions", positions);
+        System.out.println("AdvertController.list");
         return model;
     }
 
