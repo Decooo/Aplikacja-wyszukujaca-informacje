@@ -42,8 +42,14 @@
         Forma zatrudnienia: <form:select path="id_forma_zatrudnienia"><form:options items="${id_forma_zatrudnienia}"
                                                                                     itemValue="id_forma_zatrudnienia"
                                                                                     itemLabel="nazwa"/></form:select><br/><br/>
-        Stanowisko: <form:select path="id_stanowisko"><form:options items="${id_stanowisko}" itemValue="id_stanowisko"
-                                                                    itemLabel="nazwa"/></form:select><br/><br/>
+        Stanowisko: <form:select path="id_stanowisko"  >
+        <form:options items="${id_stanowisko}" value="id_stanowisko" itemLabel="nazwa" selected="selected"/>
+        <option value="1">0-1000</option>
+        </form:select><br/><br/>
+
+
+
+
         Zarobki:<select size="1" name="salary">
         <option value="1">0-1000</option>
         <option value="2">1000-2000</option>

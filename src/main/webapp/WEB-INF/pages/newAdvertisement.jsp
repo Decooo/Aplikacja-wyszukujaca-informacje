@@ -19,7 +19,7 @@
 <jsp:include page="_header.jsp"/>
 <jsp:include page="_menu.jsp"/>
 
-<div class="main">
+<div id="container">
     <h1>Dodawanie nowego ogloszenia</h1>
 
     <c:if test="${not empty msg}">
@@ -35,10 +35,16 @@
                                                                                     itemLabel="nazwa"/></form:select><br/><br/>
         Stanowisko: <form:select path="id_stanowisko"><form:options items="${id_stanowisko}" itemValue="id_stanowisko"
                                                                     itemLabel="nazwa"/></form:select><br/><br/>
-        Tytul: <form:input path="tytul"/><form:errors path="tytul"/><br/><br/>
-        Lokalizacja: <form:input path="lokalizacja"/><form:errors path="lokalizacja"/><br/><br/>
-        Zarobki: <form:input path="zarobki"/><form:errors path="zarobki"/><br/><br/>
-        Opis: <form:input path="opis"/><form:errors path="opis"/><br/><br/>
+        <div id="box3">Tytul: <form:input path="tytul" /><form:errors path="tytul" id="error"/>
+        </div>
+        <div id="box3">
+        Lokalizacja: <form:input path="lokalizacja" /><form:errors path="lokalizacja" id="error"/>
+        </div>
+        <div id="box3">
+        Zarobki: <form:input path="zarobki"/><form:errors path="zarobki"  id="error"/>
+        </div>
+        <p></p>
+        Opis: <form:input path="opis" id="error"/><form:errors path="opis"/><br/><br/>
 
         <form:button>Dodaj</form:button>
     </form:form>
