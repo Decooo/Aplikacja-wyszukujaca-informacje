@@ -35,14 +35,14 @@
     </form:form>
 
     <form:form commandName="search" action="advancedSearch" method="post" role="form">
-        Lokalizacja: <input type="search" name="location"><br/>
+        Lokalizacja: <input type="search" name="location"><br/><br/>
 
-        Kategoria: <form:select path="id_kategoria"><option selected="selected"></option><form:options items="${id_kategoria}" itemValue="id_kategoria"
+        Kategoria: <form:select path="id_kategoria"><option value=0 selected="selected">Nie wybrano</option><form:options items="${id_kategoria}" itemValue="id_kategoria"
                                                                   itemLabel="nazwa"/></form:select><br/><br/>
-        Forma zatrudnienia: <form:select path="id_forma_zatrudnienia"><option selected="selected"></option><form:options items="${id_forma_zatrudnienia}"
+        Forma zatrudnienia: <form:select path="id_forma_zatrudnienia"><option value=0 selected="selected">Nie wybrano</option><form:options items="${id_forma_zatrudnienia}"
                                                                                     itemValue="id_forma_zatrudnienia"
                                                                                     itemLabel="nazwa"  /></form:select><br/><br/>
-        Stanowisko: <form:select path="id_stanowisko"><option selected="selected"></option><form:options items="${id_stanowisko}" itemValue="id_stanowisko"
+        Stanowisko: <form:select path="id_stanowisko"><option value=0 selected="selected">Nie wybrano</option><form:options items="${id_stanowisko}" itemValue="id_stanowisko"
                                                                     itemLabel="nazwa"/></form:select><br/><br/>
         Zarobki:<select size="1" name="salary">
         <option selected="selected"></option>
