@@ -3,12 +3,16 @@ package pl.projekt.controller;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.transaction.annotation.Transactional;
+import org.springframework.web.bind.WebDataBinder;
+import org.springframework.web.bind.annotation.InitBinder;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 import pl.projekt.dao.*;
 import pl.projekt.model.*;
+import pl.projekt.util.FillListBox;
 import pl.projekt.validator.AdvertisementValidator;
 
 import java.util.ArrayList;
@@ -35,13 +39,24 @@ public class SearchController {
     @Autowired
     private AdvertisementValidator advertisementValidator;
 
-    @RequestMapping(value = "/search")
-    public ModelAndView fullTextSearch(@RequestParam(value = "inquiry", required = false) String inquiry,
-                                       RedirectAttributes attributes) {
-        ModelAndView model = new ModelAndView();
+    @InitBinder
+    public void myInitBuilder(WebDataBinder dataBinder) {
+        Object target = dataBinder.getTarget();
+        if (target == null) {
+            return;
+        }
+        System.out.println("target = " + target);
+        if (target.getClass() == Advertisement.class) {
+            dataBinder.setValidator(advertisementValidator);
+        }
+    }
 
+    @RequestMapping(value = "/search")
+    public ModelAndView fullTextSearch(@RequestParam(value = "inquiry") String inquiry,
+                                       RedirectAttributes attributes, @ModelAttribute("search") Advertisement advertisement) {
+        ModelAndView model = new ModelAndView();
         List<Advertisement> adverts = advertisementDAO.fullTextSearch(inquiry);
-        if(adverts.size()<1){
+        if (adverts.size() < 1) {
             model.setViewName("redirect:/ogloszenia/lista");
             attributes.addFlashAttribute("css", "error");
             attributes.addFlashAttribute("msg", "Obecnie nie posiadamy ofert pracy spełniających podane kryteria");
@@ -65,11 +80,23 @@ public class SearchController {
         model.addObject("formOfEmployments", formOfEmployments);
         model.addObject("users", users);
         model.addObject("positions", positions);
-        model.addObject("adverts",adverts);
-        model.addObject("inquiry",inquiry);
+        model.addObject("adverts", adverts);
+        model.addObject("inquiry", inquiry);
         model.setViewName("searchList");
+        FillListBox fillListBox = new FillListBox(categoryDAO, formOfEmploymentDAO, positionDAO);
+        fillListBox.fillListBox(model);
         System.out.println("inquiry = " + inquiry);
 
+        return model;
+    }
+
+    @RequestMapping("/advancedSearch")
+    public ModelAndView advancedSearch(@RequestParam(value = "inquiry", required = false) String inquiry,@ModelAttribute("search") Advertisement advertisement) {
+        ModelAndView model = new ModelAndView();
+        FillListBox fillListBox = new FillListBox(categoryDAO, formOfEmploymentDAO, positionDAO);
+        fillListBox.fillListBox(model);
+
+        model.setViewName("searchList");
         return model;
     }
 

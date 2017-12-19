@@ -11,6 +11,7 @@ import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 import pl.projekt.dao.*;
 import pl.projekt.model.*;
+import pl.projekt.util.FillListBox;
 import pl.projekt.validator.AdvertisementValidator;
 
 import java.security.Principal;
@@ -37,7 +38,6 @@ public class MyAdvertsController {
     UsersDAO usersDAO;
     @Autowired
     private AdvertisementValidator advertisementValidator;
-
 
     @InitBinder
     public void myInitBuilder(WebDataBinder dataBinder) {
@@ -91,7 +91,9 @@ public class MyAdvertsController {
         Advertisement advertisement = advertisementDAO.findByID(idAdvert);
         model.addObject("updateAdvert", advertisement);
         model.addObject("advertId", idAdvert);
-        fillListBox(model);
+        FillListBox fillListBox = new FillListBox(categoryDAO, formOfEmploymentDAO, positionDAO);
+        fillListBox.fillListBox(model);
+
         return model;
     }
 
@@ -101,33 +103,14 @@ public class MyAdvertsController {
         if (bindingResult.hasErrors()) {
             model.addObject("css", "error");
             model.addObject("msg", "Nie wprowadzono wszystkich danych lub wprowadzono je niepoprawnie!");
-            fillListBox(model);
+            FillListBox fillListBox = new FillListBox(categoryDAO, formOfEmploymentDAO, positionDAO);
+            fillListBox.fillListBox(model);
+
             return model;
         }
         advertisementDAO.update(advertisement.getId_ogloszenie(), advertisement.getId_kategoria(), advertisement.getId_forma_zatrudnienia(), advertisement.getId_stanowisko(), advertisement.getTytul(), advertisement.getLokalizacja(), advertisement.getZarobki(), advertisement.getOpis());
         model.setViewName("redirect:/ogloszenia/moje");
         return model;
-    }
-
-    public void fillListBox(ModelAndView model) {
-        populateModelCategory(model);
-        populateModelFormOfEmployment(model);
-        populateModelPosition(model);
-    }
-
-    private void populateModelCategory(ModelAndView model) {
-        List<Category> category = categoryDAO.findAll();
-        model.addObject("id_kategoria", category);
-    }
-
-    private void populateModelFormOfEmployment(ModelAndView model) {
-        List<FormOfEmployment> formOfEmployments = formOfEmploymentDAO.findAll();
-        model.addObject("id_forma_zatrudnienia", formOfEmployments);
-    }
-
-    private void populateModelPosition(ModelAndView model) {
-        List<Position> positions = positionDAO.findAll();
-        model.addObject("id_stanowisko", positions);
     }
 
 }

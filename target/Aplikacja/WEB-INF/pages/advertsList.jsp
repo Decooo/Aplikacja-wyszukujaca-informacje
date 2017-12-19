@@ -42,7 +42,7 @@
                 </div>
              </form:form>
         </div>
-       
+
     <h1 style="text-align:center;color:#193f8f; clear: both;">Lista wszystkich ogłoszeń</h1>
 
 
