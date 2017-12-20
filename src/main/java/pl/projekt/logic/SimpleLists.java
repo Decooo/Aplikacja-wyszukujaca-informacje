@@ -28,41 +28,41 @@ public class SimpleLists {
 
     public List<Advertisement> searchSimpleList(List<Advertisement> adverts, String salary, String location, int id_category,
                                                 int id_position, int id_formOfEmployment) {
-        List<Advertisement> foundAds = new ArrayList<Advertisement>();
+        List<Advertisement> foundAds = adverts;
 
         //podane zarobki
         if (!salary.equals("")) {
-            halfDivision(foundAds, adverts, salary);
+            halfDivision(foundAds, salary);
         }
         //podana kategoria
         if (id_category != 0) {
-            tableAddress(foundAds, adverts);
+            tableAddress(foundAds);
         }
         //podana lokalziacja
-        if (!salary.equals("")) {
-            findLocation(foundAds, adverts);
+        if (!location.equals("")) {
+            findLocation(foundAds);
         }
         //podane stanowisko
         if (id_position != 0) {
-            findPosition(foundAds, adverts);
+            findPosition(foundAds);
         }
         //podana forma zatrudnienia
         if (id_formOfEmployment != 0) {
-            findFormOfEmployment(foundAds, adverts);
+            findFormOfEmployment(foundAds);
         }
 
         return foundAds;
     }
 
     //podział połówkowy z modyfikacją kompletnego wyszukiwania
-    private void halfDivision(List<Advertisement> foundAds, List<Advertisement> adverts, String salary) {
+    private void halfDivision(List<Advertisement> foundAds, String salary) {
         String[] parts = salary.split("-");
         int minSalary = Integer.parseInt(parts[0]);
         int maxSalary = Integer.parseInt(parts[1]);
-        adverts = sortSalary(adverts);
+        foundAds = sortSalary(foundAds);
 
-        int middleIndex = adverts.size()/2;
-        int middleSalary = adverts.get(middleIndex).getZarobki();
+        int middleIndex = foundAds.size()/2;
+        int middleSalary = foundAds.get(middleIndex).getZarobki();
 
 
         if(minSalary==middleSalary || (middleSalary>minSalary && middleSalary<maxSalary)){
@@ -78,19 +78,19 @@ public class SimpleLists {
     }
 
     //tablica adresowa ze względu na kategorie wyszukiwania
-    private void tableAddress(List<Advertisement> foundAds, List<Advertisement> adverts) {
+    private void tableAddress(List<Advertisement> foundAds) {
     }
 
     //wyszukiwanie po podanej lokalizacji
-    private void findLocation(List<Advertisement> foundAds, List<Advertisement> adverts) {
+    private void findLocation(List<Advertisement> foundAds) {
     }
 
     //wyszukiwanie po podanym stanowisku
-    private void findPosition(List<Advertisement> foundAds, List<Advertisement> adverts) {
+    private void findPosition(List<Advertisement> foundAds) {
     }
 
     //wyszukiwanie po podanej formie zatrudnienia
-    private void findFormOfEmployment(List<Advertisement> foundAds, List<Advertisement> adverts) {
+    private void findFormOfEmployment(List<Advertisement> foundAds) {
     }
 
     private List<Advertisement> sortSalary(List<Advertisement> adverts) {
