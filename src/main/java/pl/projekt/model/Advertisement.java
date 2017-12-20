@@ -4,6 +4,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import java.util.Comparator;
 
 /**
  * Created by jakub on 21.11.2017.
@@ -23,6 +24,20 @@ public class Advertisement {
     private String lokalizacja;
     private int zarobki;
     private String opis;
+
+    public Advertisement(int id_uzytkownik, int id_kategoria, int id_forma_zatrudnienia, int id_stanowisko, String tytul, String lokalizacja, int zarobki, String opis) {
+        this.id_uzytkownik = id_uzytkownik;
+        this.id_kategoria = id_kategoria;
+        this.id_forma_zatrudnienia = id_forma_zatrudnienia;
+        this.id_stanowisko = id_stanowisko;
+        this.tytul = tytul;
+        this.lokalizacja = lokalizacja;
+        this.zarobki = zarobki;
+        this.opis = opis;
+    }
+
+    public Advertisement() {
+    }
 
     @Override
     public String toString() {
@@ -110,4 +125,5 @@ public class Advertisement {
     public void setOpis(String opis) {
         this.opis = opis;
     }
+
 }

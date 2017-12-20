@@ -40,7 +40,7 @@
         <div id="panel">
             <form method="post" action="${pageContext.request.contextPath}j_spring_security_check" role="form">
             <label for="username">Nazwa użytkownika:</label>
-                <input type="text" id="username" name="username">
+                <input type="text2" id="username" name="username">
                 <label for="password">Hasło:</label>
                 <input type="password" id="password" name="password">
                 <div id="lower">

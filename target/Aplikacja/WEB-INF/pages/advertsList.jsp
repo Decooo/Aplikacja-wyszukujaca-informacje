@@ -22,7 +22,7 @@
     <div id="container">
         <hr>
         <div id="box2" >
-            <h1 ">Wyszukaj Ogłoszenie:</h1>
+            <h1> Wyszukaj Ogłoszenie:</h1>
         </div>
         <div id="box2">
 
@@ -43,13 +43,13 @@
              </form:form>
         </div>
 
-    <h1 style="text-align:center;color:#193f8f; clear: both;">Lista wszystkich ogłoszeń</h1>
+    <h1>Lista wszystkich ogłoszeń</h1>
 
 
 
         <list:forEach var="advert" items="${adverts}" varStatus="loop">
 
-                <div id="tytul">${advert.tytul}</div>
+                <div id="tytul2">${advert.tytul}</div>
                 <div id="box"><h>Autor:</h> <list:forEach begin="${loop.index}" step="1" end="${loop.index}" var="user"
                                   items="${users}">${user.login}</list:forEach></div>
                 <div id="box"><h>Kategoria:</h> <list:forEach begin="${loop.index}" step="1" end="${loop.index}" var="cat"
