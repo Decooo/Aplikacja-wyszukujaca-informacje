@@ -94,13 +94,15 @@ public class SearchController {
     }
 
     @RequestMapping("/advancedSearch")
-    public ModelAndView advancedSearch(@ModelAttribute("search") Advertisement advertisement) {
+    public ModelAndView advancedSearch(@ModelAttribute("search") Advertisement advertisement, @ModelAttribute("location") String location,
+                                       @ModelAttribute("salary") String salary, @RequestParam("id_kategoria") int id_category,
+                                       @RequestParam("id_forma_zatrudnienia") int id_formOfEmployment,
+                                       @RequestParam("id_stanowisko") int id_position) {
         ModelAndView model = new ModelAndView();
         FillListBox fillListBox = new FillListBox(categoryDAO, formOfEmploymentDAO, positionDAO);
         fillListBox.fillListBox(model);
-
         SimpleLists simpleLists = new SimpleLists(advertisementDAO);
-        simpleLists.searchSimpleList(getAds(),advertisement);
+        simpleLists.searchSimpleList(getAds(),salary,location,id_category,id_position,id_formOfEmployment);
 
         model.setViewName("searchList");
         return model;

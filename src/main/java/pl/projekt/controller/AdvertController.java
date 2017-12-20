@@ -4,7 +4,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.validation.BindingResult;
-import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.WebDataBinder;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
@@ -104,7 +103,7 @@ public class AdvertController {
     }
 
     @RequestMapping(value = "save", method = RequestMethod.POST)
-    public ModelAndView save(Principal principal, ModelAndView m, @ModelAttribute("advert") @Validated Advertisement advertisement, BindingResult bindingResult) {
+    public ModelAndView save(Principal principal, ModelAndView m, @ModelAttribute("advert")Advertisement advertisement,BindingResult bindingResult) {
         ModelAndView model = new ModelAndView("newAdvertisement");
         FillListBox fillListBox = new FillListBox(categoryDAO, formOfEmploymentDAO, positionDAO);
 

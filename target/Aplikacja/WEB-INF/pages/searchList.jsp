@@ -33,7 +33,7 @@
         <button name="btnSearch">Szukaj</button>
 
     </form:form>
-
+<br/><br/>
     <form:form commandName="search" action="advancedSearch" method="post" role="form">
         Lokalizacja: <input type="search" name="location"><br/><br/>
 
@@ -46,14 +46,15 @@
                                                                     itemLabel="nazwa"/></form:select><br/><br/>
         Zarobki:<select size="1" name="salary">
         <option selected="selected"></option>
-        <option value="1">0-1000</option>
-        <option value="2">1000-2000</option>
-        <option value="3">2000-3000</option>
-        <option value="5">5000-6000</option>
-        <option value="6">6000-7500</option>
-        <option value="7">7500-10000</option>
-        <option value="8">10000-15000</option>
-        <option value="9">15000-100000</option>
+        <option value="0-1000">0-1000</option>
+        <option value="1000-2000">1000-2000</option>
+        <option value="2000-3000">2000-3000</option>
+        <option value="4000-5000">4000-5000</option>
+        <option value="5000-6000">5000-6000</option>
+        <option value="6000-7500">6000-7500</option>
+        <option value="7500-10000">7500-10000</option>
+        <option value="10000-15000">10000-15000</option>
+        <option value="15000-100000">15000-100000</option>
         </select><br/><br/>
         <form:button>Wyszukaj</form:button>
     </form:form>

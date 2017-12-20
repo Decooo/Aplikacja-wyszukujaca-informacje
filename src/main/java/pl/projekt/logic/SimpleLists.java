@@ -26,27 +26,28 @@ public class SimpleLists {
         this.advertisementDAO = advertisementDAO;
     }
 
-    public List<Advertisement> searchSimpleList(List<Advertisement> adverts, Advertisement advertisement) {
+    public List<Advertisement> searchSimpleList(List<Advertisement> adverts,String salary, String location, int id_category,
+                                                int id_position, int id_formOfEmployment) {
         List<Advertisement> foundAds = new ArrayList<Advertisement>();
 
         //podane zarobki
-        if (advertisement.getZarobki()!=0) {
+        if (!salary.equals("")) {
             halfDivision(foundAds, adverts);
         }
         //podana kategoria
-        if (advertisement.getId_kategoria()!=0) {
+        if (id_category!=0) {
             tableAddress(foundAds, adverts);
         }
         //podana lokalziacja
-        if (advertisement.getLokalizacja()!=null) {
+        if (!salary.equals("")) {
             findLocation(foundAds, adverts);
         }
         //podane stanowisko
-        if (advertisement.getId_stanowisko()!=0) {
+        if (id_position!=0) {
             findPosition(foundAds, adverts);
         }
         //podana forma zatrudnienia
-        if (advertisement.getId_forma_zatrudnienia()!=0) {
+        if (id_formOfEmployment!=0) {
             findFormOfEmployment(foundAds, adverts);
         }
 
@@ -69,7 +70,8 @@ public class SimpleLists {
     private void findPosition(List<Advertisement> foundAds, List<Advertisement> adverts) {
     }
 
-    //wyszukiwanei po podanej formie zatrudnienia
+    //wyszukiwanie po podanej formie zatrudnienia
     private void findFormOfEmployment(List<Advertisement> foundAds, List<Advertisement> adverts) {
     }
+
 }
