@@ -59,9 +59,22 @@ public class SimpleLists {
         String[] parts = salary.split("-");
         int minSalary = Integer.parseInt(parts[0]);
         int maxSalary = Integer.parseInt(parts[1]);
-        System.out.println("adverts = " + adverts.toString());
         adverts = sortSalary(adverts);
-        System.out.println("adverts = " + adverts.toString());
+
+        int middleIndex = adverts.size()/2;
+        int middleSalary = adverts.get(middleIndex).getZarobki();
+
+
+        if(minSalary==middleSalary || (middleSalary>minSalary && middleSalary<maxSalary)){
+            //sprawdzaj wartosc (size/2)-k do momentu az wartosc bedzie wieksza od maxSalary, gdzie k to ilosć iteracji
+        }else if(maxSalary==middleSalary){
+            //sprawdzaj wartość od (size/2)+k, do momentu az wartosć będzie mniejsza od minimalnej gdzie k to ilosc iteracji
+        }else if(middleSalary>maxSalary){
+            //przeszukaj 1 połowe tablicy do momentu az wartosc bedzie wieksza od maksymalnej
+        }else if(middleSalary<minSalary){
+            //przeszukaj drugą połowe tablicy do momentu az wartosc bedzie większa od maksymalnej
+        }
+
     }
 
     //tablica adresowa ze względu na kategorie wyszukiwania
