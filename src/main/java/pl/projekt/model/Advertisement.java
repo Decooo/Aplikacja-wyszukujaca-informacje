@@ -4,6 +4,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import java.util.Comparator;
 
 /**
  * Created by jakub on 21.11.2017.
@@ -124,4 +125,5 @@ public class Advertisement {
     public void setOpis(String opis) {
         this.opis = opis;
     }
+
 }
