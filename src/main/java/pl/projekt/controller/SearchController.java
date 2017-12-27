@@ -14,6 +14,7 @@ import pl.projekt.dao.*;
 import pl.projekt.logic.SimpleLists;
 import pl.projekt.model.*;
 import pl.projekt.util.FillListBox;
+import pl.projekt.util.FillTables;
 import pl.projekt.validator.AdvertisementValidator;
 
 import java.util.ArrayList;
@@ -72,12 +73,8 @@ public class SearchController {
         List<Users> users = new ArrayList<Users>();
         List<Position> positions = new ArrayList<Position>();
 
-        for (Advertisement advert : adverts) {
-            category.add(categoryDAO.findCategoryByID(advert.getId_kategoria()));
-            formOfEmployments.add(formOfEmploymentDAO.findByID(advert.getId_forma_zatrudnienia()));
-            users.add(usersDAO.findByID(advert.getId_uzytkownik()));
-            positions.add(positionDAO.findByID(advert.getId_stanowisko()));
-        }
+        FillTables fillTables = new FillTables(categoryDAO, formOfEmploymentDAO, positionDAO, usersDAO);
+        fillTables.fillTables(adverts, category, formOfEmployments, users, positions);
 
         model.addObject("category", category);
         model.addObject("formOfEmployments", formOfEmployments);
@@ -99,11 +96,26 @@ public class SearchController {
                                        @RequestParam("id_forma_zatrudnienia") int id_formOfEmployment,
                                        @RequestParam("id_stanowisko") int id_position) {
         ModelAndView model = new ModelAndView();
+        List<Category> category = new ArrayList<Category>();
+        List<FormOfEmployment> formOfEmployments = new ArrayList<FormOfEmployment>();
+        List<Users> users = new ArrayList<Users>();
+        List<Position> positions = new ArrayList<Position>();
+        List<Advertisement> adverts = new ArrayList<Advertisement>();
+
+
         FillListBox fillListBox = new FillListBox(categoryDAO, formOfEmploymentDAO, positionDAO);
         fillListBox.fillListBox(model);
         SimpleLists simpleLists = new SimpleLists(advertisementDAO);
-        simpleLists.searchSimpleList(getAds(),salary,location,id_category,id_position,id_formOfEmployment);
+        adverts = simpleLists.searchSimpleList(getAds(), salary, location, id_category, id_position, id_formOfEmployment);
+        model.addObject("adverts", adverts);
 
+        FillTables fillTables = new FillTables(categoryDAO, formOfEmploymentDAO, positionDAO, usersDAO);
+        fillTables.fillTables(adverts, category, formOfEmployments, users, positions);
+
+        model.addObject("category", category);
+        model.addObject("formOfEmployments", formOfEmployments);
+        model.addObject("users", users);
+        model.addObject("positions", positions);
         model.setViewName("searchList");
         return model;
     }
