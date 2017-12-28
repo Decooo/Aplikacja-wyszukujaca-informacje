@@ -180,11 +180,11 @@ public class SimpleLists {
     //wyszukiwanie po podanej lokalizacji
     private List<Advertisement> findLocation(List<Advertisement> foundAds, String location) {
         List<Advertisement> listFoundsAds = new ArrayList<Advertisement>();
-//        for(int i = 0; i<foundAds.size();i++){
-//            if(foundAds.get(i).getLokalizacja().equalsIgnoreCase(location)){
-//                listFoundsAds.add(foundAds.get(i));
-//            }
-//        }
+        for(int i = 0; i<foundAds.size();i++){
+            if(foundAds.get(i).getLokalizacja().equalsIgnoreCase(location)){
+                listFoundsAds.add(foundAds.get(i));
+            }
+        }
         return listFoundsAds;
     }
 
