@@ -4,8 +4,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.transaction.annotation.Transactional;
 import pl.projekt.dao.AdvertisementDAO;
 import pl.projekt.model.Advertisement;
+import pl.projekt.util.AdvertisementComparator;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 /**
@@ -32,23 +34,23 @@ public class SimpleLists {
 
         //podane zarobki
         if (!salary.equals("")) {
-            foundAds=halfDivision(foundAds, salary);
+            foundAds = halfDivision(foundAds, salary);
         }
         //podana kategoria
         if (id_category != 0) {
-            tableAddress(foundAds);
+            foundAds = tableAddress(foundAds, id_category);
         }
-        //podana lokalziacja
+        //podana lokalizacja
         if (!location.equals("")) {
-            findLocation(foundAds);
+            foundAds = findLocation(foundAds, location);
         }
         //podane stanowisko
         if (id_position != 0) {
-            findPosition(foundAds);
+            foundAds = findPosition(foundAds, id_position);
         }
         //podana forma zatrudnienia
         if (id_formOfEmployment != 0) {
-            findFormOfEmployment(foundAds);
+            foundAds = findFormOfEmployment(foundAds, id_formOfEmployment);
         }
         return foundAds;
     }
@@ -83,7 +85,7 @@ public class SimpleLists {
             //przeszukaj 1 połowe tablicy do momentu az wartosc bedzie wieksza od maksymalnej
             int index = 0;
             while (index < foundAds.size() && foundAds.get(index).getZarobki() <= maxSalary) {
-                if(foundAds.get(index).getZarobki()>minSalary){
+                if (foundAds.get(index).getZarobki() > minSalary) {
                     ads.add(foundAds.get(index));
                 }
                 index++;
@@ -93,14 +95,14 @@ public class SimpleLists {
             //przeszukaj drugą połowe tablicy do momentu az wartosc bedzie większa od maksymalnej
             int index = middleIndex;
             while (index < foundAds.size() && foundAds.get(index).getZarobki() <= maxSalary) {
-                if(foundAds.get(index).getZarobki()>minSalary){
+                if (foundAds.get(index).getZarobki() > minSalary) {
                     ads.add(foundAds.get(index));
                 }
                 index++;
             }
             return ads;
         }
-           return foundAds;
+        return foundAds;
     }
 
     private List<Advertisement> sortSalary(List<Advertisement> adverts) {
@@ -130,7 +132,10 @@ public class SimpleLists {
             }
             index++;
         } while (index == middleIndex);
-        return middleIndex+index-1;
+
+        if ((middleIndex + index - 1) == foundAds.size()) {
+            return foundAds.size() - 1;
+        } else return middleIndex + index - 1;
     }
 
     private int startingIndex(List<Advertisement> foundAds, int middleIndex, int middleSalary) {
@@ -141,23 +146,68 @@ public class SimpleLists {
             }
             index++;
         } while (index == middleIndex);
-        return middleIndex-index+1;
+        return middleIndex - index + 1;
     }
 
     //tablica adresowa ze względu na kategorie wyszukiwania
-    private void tableAddress(List<Advertisement> foundAds) {
+    private List<Advertisement> tableAddress(List<Advertisement> foundAds, int idCategory) {
+        List<Advertisement> listFoundsAds = new ArrayList<Advertisement>();
+        ArrayList<Integer> idCategories = new ArrayList<Integer>();
+        int[][] tabIndex = new int[31][2];
+        Collections.sort(foundAds, new AdvertisementComparator());
+        if (foundAds.size() > 0) {
+            idCategories.add(foundAds.get(0).getId_kategoria());
+            tabIndex[0][0] = 0;
+            for (int i = 1; i < foundAds.size(); i++) {
+                if (foundAds.get(i).getId_kategoria() != idCategories.get(idCategories.size() - 1)) {
+                    idCategories.add(foundAds.get(i).getId_kategoria());
+                    tabIndex[idCategories.size() - 2][1] = i - 1;
+                    tabIndex[idCategories.size() - 1][0] = i;
+                }
+            }
+            tabIndex[idCategories.size() - 1][1] = foundAds.size() - 1;
+        }
+        int indexCategory = idCategories.indexOf(idCategory);
+        if (indexCategory > -1) {
+            for (int i = tabIndex[indexCategory][0]; i <= tabIndex[indexCategory][1]; i++) {
+                listFoundsAds.add(foundAds.get(i));
+            }
+        }
+
+        return listFoundsAds;
     }
 
     //wyszukiwanie po podanej lokalizacji
-    private void findLocation(List<Advertisement> foundAds) {
+    private List<Advertisement> findLocation(List<Advertisement> foundAds, String location) {
+        List<Advertisement> listFoundsAds = new ArrayList<Advertisement>();
+        for (int i = 0; i < foundAds.size(); i++) {
+            if (foundAds.get(i).getLokalizacja().equalsIgnoreCase(location)) {
+                listFoundsAds.add(foundAds.get(i));
+            }
+        }
+        return listFoundsAds;
     }
 
     //wyszukiwanie po podanym stanowisku
-    private void findPosition(List<Advertisement> foundAds) {
+    private List<Advertisement> findPosition(List<Advertisement> foundAds, int idPosition) {
+        List<Advertisement> listFoundsAds = new ArrayList<Advertisement>();
+        for (int i = 0; i < foundAds.size(); i++) {
+            if (foundAds.get(i).getId_stanowisko() == idPosition) {
+                listFoundsAds.add(foundAds.get(i));
+            }
+        }
+        return listFoundsAds;
     }
 
     //wyszukiwanie po podanej formie zatrudnienia
-    private void findFormOfEmployment(List<Advertisement> foundAds) {
+    private List<Advertisement> findFormOfEmployment(List<Advertisement> foundAds, int idFormOfEmployment) {
+        List<Advertisement> listFoundsAds = new ArrayList<Advertisement>();
+        for (int i = 0; i < foundAds.size(); i++) {
+            if (foundAds.get(i).getId_forma_zatrudnienia() == idFormOfEmployment) {
+                listFoundsAds.add(foundAds.get(i));
+            }
+        }
+        return listFoundsAds;
     }
 
 
