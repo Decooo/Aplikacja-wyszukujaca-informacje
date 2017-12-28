@@ -42,15 +42,15 @@ public class SimpleLists {
         }
         //podana lokalizacja
         if (!location.equals("")) {
-            findLocation(foundAds);
+            foundAds = findLocation(foundAds, location);
         }
         //podane stanowisko
         if (id_position != 0) {
-            findPosition(foundAds);
+            foundAds = findPosition(foundAds,id_position);
         }
         //podana forma zatrudnienia
         if (id_formOfEmployment != 0) {
-            findFormOfEmployment(foundAds);
+            findFormOfEmployment(foundAds,id_formOfEmployment);
         }
         return foundAds;
     }
@@ -151,7 +151,7 @@ public class SimpleLists {
 
     //tablica adresowa ze względu na kategorie wyszukiwania
     private List<Advertisement> tableAddress(List<Advertisement> foundAds, int idCategory) {
-        List<Advertisement> tempListAds = new ArrayList<Advertisement>();
+        List<Advertisement> listFoundsAds = new ArrayList<Advertisement>();
         ArrayList<Integer> idCategories = new ArrayList<Integer>();
         int[][] tabIndex = new int[31][2];
         Collections.sort(foundAds, new AdvertisementComparator());
@@ -170,24 +170,34 @@ public class SimpleLists {
         int indexCategory = idCategories.indexOf(idCategory);
         if (indexCategory > -1) {
             for (int i = tabIndex[indexCategory][0]; i <= tabIndex[indexCategory][1]; i++) {
-                tempListAds.add(foundAds.get(i));
+                listFoundsAds.add(foundAds.get(i));
             }
         }
 
-        foundAds = tempListAds;
-        return foundAds;
+        return listFoundsAds;
     }
 
     //wyszukiwanie po podanej lokalizacji
-    private void findLocation(List<Advertisement> foundAds) {
+    private List<Advertisement> findLocation(List<Advertisement> foundAds, String location) {
+        List<Advertisement> listFoundsAds = new ArrayList<Advertisement>();
+//        for(int i = 0; i<foundAds.size();i++){
+//            if(foundAds.get(i).getLokalizacja().equalsIgnoreCase(location)){
+//                listFoundsAds.add(foundAds.get(i));
+//            }
+//        }
+        return listFoundsAds;
     }
 
     //wyszukiwanie po podanym stanowisku
-    private void findPosition(List<Advertisement> foundAds) {
+    private List<Advertisement> findPosition(List<Advertisement> foundAds, int idPosition) {
+        List<Advertisement> listFoundsAds = new ArrayList<Advertisement>();
+        return listFoundsAds;
+
     }
 
     //wyszukiwanie po podanej formie zatrudnienia
-    private void findFormOfEmployment(List<Advertisement> foundAds) {
+    private void findFormOfEmployment(List<Advertisement> foundAds, int idFormOfEmployment) {
+
     }
 
 
