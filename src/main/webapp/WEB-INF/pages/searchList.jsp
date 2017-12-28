@@ -27,17 +27,12 @@
         <div class=${css}>${msg}</div>
     </c:if>
 
-    <%--<form:form action="search" method="post">--%>
 
-        <%--<input type="search" name="inquiry" value="${pageContext.request.getAttribute("inquiry")}"><br/><br/>--%>
-        <%--<button name="btnSearch">Szukaj</button>--%>
-
-    <%--</form:form>--%>
 <br/><br/>
     <form:form commandName="search" action="advancedSearch" method="post" role="form">
         <input type="search" name="inquiry" value="${pageContext.request.getAttribute("inquiry")}"><br/><br/>
 
-        Lokalizacja: <input type="search" name="location"><br/><br/>
+        Lokalizacja: <input type="search" name="location" value="${pageContext.request.getAttribute("location")}"><br/><br/>
 
         Kategoria: <form:select path="id_kategoria"><option value=0 selected="selected">Nie wybrano</option><form:options items="${id_kategoria}" itemValue="id_kategoria"
                                                                   itemLabel="nazwa"/></form:select><br/><br/>
@@ -47,7 +42,10 @@
         Stanowisko: <form:select path="id_stanowisko"><option value=0 selected="selected">Nie wybrano</option><form:options items="${id_stanowisko}" itemValue="id_stanowisko"
                                                                     itemLabel="nazwa"/></form:select><br/><br/>
         Zarobki:<select size="1" name="salary">
-        <option selected="selected"></option>
+        <option selected="selected">${pageContext.request.getAttribute("salary")}</option>
+        <c:if test="${not empty salary}">
+        <option></option>
+        </c:if>
         <option value="0-1500">0-1500</option>
         <option value="1500-3000">1500-3000</option>
         <option value="3000-4000">3000-4000</option>

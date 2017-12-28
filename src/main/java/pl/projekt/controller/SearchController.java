@@ -75,21 +75,13 @@ public class SearchController {
         List<FormOfEmployment> formOfEmployments = new ArrayList<FormOfEmployment>();
         List<Users> users = new ArrayList<Users>();
         List<Position> positions = new ArrayList<Position>();
-
         FillTables fillTables = new FillTables(categoryDAO, formOfEmploymentDAO, positionDAO, usersDAO);
         fillTables.fillTables(adverts, category, formOfEmployments, users, positions);
-
-        model.addObject("category", category);
-        model.addObject("formOfEmployments", formOfEmployments);
-        model.addObject("users", users);
-        model.addObject("positions", positions);
-        model.addObject("adverts", adverts);
-        model.addObject("inquiry", inquiry);
-        model.setViewName("searchList");
+        addObjectToModel(inquiry, model, category, formOfEmployments, users, positions, adverts);
         FillListBox fillListBox = new FillListBox(categoryDAO, formOfEmploymentDAO, positionDAO);
         fillListBox.fillListBox(model);
-        System.out.println("inquiry = " + inquiry);
 
+        model.setViewName("searchList");
         return model;
     }
 
@@ -100,7 +92,6 @@ public class SearchController {
                                        @RequestParam("id_forma_zatrudnienia") int id_formOfEmployment,
                                        @RequestParam("id_stanowisko") int id_position) {
         changeInquiry(inquiry);
-        System.out.println("getAds().toString() = " + getAds().toString());
         ModelAndView model = new ModelAndView();
         List<Category> category = new ArrayList<Category>();
         List<FormOfEmployment> formOfEmployments = new ArrayList<FormOfEmployment>();
@@ -112,18 +103,24 @@ public class SearchController {
         fillListBox.fillListBox(model);
         SimpleLists simpleLists = new SimpleLists(advertisementDAO);
         adverts = simpleLists.searchSimpleList(getAds(), salary, location, id_category, id_position, id_formOfEmployment);
-        model.addObject("adverts", adverts);
-
+        addObjectToModel(inquiry, model, category, formOfEmployments, users, positions, adverts);
         FillTables fillTables = new FillTables(categoryDAO, formOfEmploymentDAO, positionDAO, usersDAO);
         fillTables.fillTables(adverts, category, formOfEmployments, users, positions);
 
+        model.addObject("salary",salary);
+        model.addObject("location",location);
+
+        model.setViewName("searchList");
+        return model;
+    }
+
+    private void addObjectToModel(@RequestParam(value = "inquiry") String inquiry, ModelAndView model, List<Category> category, List<FormOfEmployment> formOfEmployments, List<Users> users, List<Position> positions, List<Advertisement> adverts) {
+        model.addObject("adverts", adverts);
         model.addObject("category", category);
         model.addObject("formOfEmployments", formOfEmployments);
         model.addObject("users", users);
         model.addObject("positions", positions);
         model.addObject("inquiry", inquiry);
-        model.setViewName("searchList");
-        return model;
     }
 
     private void changeInquiry(@RequestParam(value = "inquiry") String inquiry) {
@@ -133,9 +130,8 @@ public class SearchController {
         } else if (!inquiry.equals(getInquiry())) {
             setInquiry(inquiry);
             setAds(advertisementDAO.fullTextSearch(inquiry));
-        }else setAds(advertisementDAO.fullTextSearch(inquiry));
+        } else setAds(advertisementDAO.fullTextSearch(inquiry));
     }
-
 
     private List<Advertisement> getAds() {
         return ads;
