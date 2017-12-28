@@ -27,14 +27,16 @@
         <div class=${css}>${msg}</div>
     </c:if>
 
-    <form:form action="search" method="post">
+    <%--<form:form action="search" method="post">--%>
 
-        <input type="search" name="inquiry" value="${pageContext.request.getAttribute("inquiry")}"><br/><br/>
-        <button name="btnSearch">Szukaj</button>
+        <%--<input type="search" name="inquiry" value="${pageContext.request.getAttribute("inquiry")}"><br/><br/>--%>
+        <%--<button name="btnSearch">Szukaj</button>--%>
 
-    </form:form>
+    <%--</form:form>--%>
 <br/><br/>
     <form:form commandName="search" action="advancedSearch" method="post" role="form">
+        <input type="search" name="inquiry" value="${pageContext.request.getAttribute("inquiry")}"><br/><br/>
+
         Lokalizacja: <input type="search" name="location"><br/><br/>
 
         Kategoria: <form:select path="id_kategoria"><option value=0 selected="selected">Nie wybrano</option><form:options items="${id_kategoria}" itemValue="id_kategoria"
@@ -46,9 +48,9 @@
                                                                     itemLabel="nazwa"/></form:select><br/><br/>
         Zarobki:<select size="1" name="salary">
         <option selected="selected"></option>
-        <option value="0-1000">0-1000</option>
-        <option value="1000-2000">1000-2000</option>
-        <option value="2000-3000">2000-3000</option>
+        <option value="0-1500">0-1500</option>
+        <option value="1500-3000">1500-3000</option>
+        <option value="3000-4000">3000-4000</option>
         <option value="4000-5000">4000-5000</option>
         <option value="5000-6000">5000-6000</option>
         <option value="6000-7500">6000-7500</option>

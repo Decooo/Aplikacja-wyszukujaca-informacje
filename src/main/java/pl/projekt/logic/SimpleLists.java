@@ -50,7 +50,6 @@ public class SimpleLists {
         if (id_formOfEmployment != 0) {
             findFormOfEmployment(foundAds);
         }
-        System.out.println("2::foundAds.toString() = " + foundAds.toString());
         return foundAds;
     }
 
@@ -70,7 +69,6 @@ public class SimpleLists {
             while (index < foundAds.size() && foundAds.get(index).getZarobki() <= maxSalary) {
                 ads.add(foundAds.get(index));
                 index++;
-                System.out.println("index = " + index);
             }
             return ads;
         } else if (maxSalary == middleSalary) {

@@ -40,7 +40,9 @@ public class SearchController {
     UsersDAO usersDAO;
     @Autowired
     private AdvertisementValidator advertisementValidator;
+    private String inquiry = "";
     private List<Advertisement> ads;
+
 
     @InitBinder
     public void myInitBuilder(WebDataBinder dataBinder) {
@@ -60,6 +62,7 @@ public class SearchController {
         ModelAndView model = new ModelAndView();
         List<Advertisement> adverts = advertisementDAO.fullTextSearch(inquiry);
         setAds(adverts);
+        setInquiry(inquiry);
         if (adverts.size() < 1) {
             model.setViewName("redirect:/ogloszenia/lista");
             attributes.addFlashAttribute("css", "error");
@@ -91,17 +94,19 @@ public class SearchController {
     }
 
     @RequestMapping("/advancedSearch")
-    public ModelAndView advancedSearch(@ModelAttribute("search") Advertisement advertisement, @ModelAttribute("location") String location,
+    public ModelAndView advancedSearch(@RequestParam(value = "inquiry") String inquiry,
+                                       @ModelAttribute("search") Advertisement advertisement, @ModelAttribute("location") String location,
                                        @ModelAttribute("salary") String salary, @RequestParam("id_kategoria") int id_category,
                                        @RequestParam("id_forma_zatrudnienia") int id_formOfEmployment,
                                        @RequestParam("id_stanowisko") int id_position) {
+        changeInquiry(inquiry);
+        System.out.println("getAds().toString() = " + getAds().toString());
         ModelAndView model = new ModelAndView();
         List<Category> category = new ArrayList<Category>();
         List<FormOfEmployment> formOfEmployments = new ArrayList<FormOfEmployment>();
         List<Users> users = new ArrayList<Users>();
         List<Position> positions = new ArrayList<Position>();
         List<Advertisement> adverts = new ArrayList<Advertisement>();
-
 
         FillListBox fillListBox = new FillListBox(categoryDAO, formOfEmploymentDAO, positionDAO);
         fillListBox.fillListBox(model);
@@ -116,16 +121,36 @@ public class SearchController {
         model.addObject("formOfEmployments", formOfEmployments);
         model.addObject("users", users);
         model.addObject("positions", positions);
+        model.addObject("inquiry", inquiry);
         model.setViewName("searchList");
         return model;
     }
 
+    private void changeInquiry(@RequestParam(value = "inquiry") String inquiry) {
+        if (inquiry.equals("")) {
+            setInquiry(inquiry);
+            setAds(advertisementDAO.findAll());
+        } else if (!inquiry.equals(getInquiry())) {
+            setInquiry(inquiry);
+            setAds(advertisementDAO.fullTextSearch(inquiry));
+        }else setAds(advertisementDAO.fullTextSearch(inquiry));
+    }
 
-    public List<Advertisement> getAds() {
+
+    private List<Advertisement> getAds() {
         return ads;
     }
 
-    public void setAds(List<Advertisement> ads) {
+    private void setAds(List<Advertisement> ads) {
         this.ads = ads;
     }
+
+    private String getInquiry() {
+        return inquiry;
+    }
+
+    private void setInquiry(String inquiry) {
+        this.inquiry = inquiry;
+    }
+
 }
