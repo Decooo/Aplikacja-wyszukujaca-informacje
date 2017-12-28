@@ -191,8 +191,12 @@ public class SimpleLists {
     //wyszukiwanie po podanym stanowisku
     private List<Advertisement> findPosition(List<Advertisement> foundAds, int idPosition) {
         List<Advertisement> listFoundsAds = new ArrayList<Advertisement>();
+        for(int i = 0; i<foundAds.size();i++){
+            if(foundAds.get(i).getId_stanowisko()==idPosition){
+                listFoundsAds.add(foundAds.get(i));
+            }
+        }
         return listFoundsAds;
-
     }
 
     //wyszukiwanie po podanej formie zatrudnienia

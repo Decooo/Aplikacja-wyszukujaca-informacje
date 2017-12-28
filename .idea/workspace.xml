@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="895e5eca-8b19-4e1f-b585-c72383d0bd34" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/Aplikacja/WEB-INF/classes/pl/projekt/logic/SimpleLists.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/pl/projekt/logic/SimpleLists.class" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/Aplikacja.war" afterPath="$PROJECT_DIR$/target/Aplikacja.war" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/pl/projekt/logic/SimpleLists.class" afterPath="$PROJECT_DIR$/target/classes/pl/projekt/logic/SimpleLists.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/pl/projekt/logic/SimpleLists.java" afterPath="$PROJECT_DIR$/src/main/java/pl/projekt/logic/SimpleLists.java" />
     </list>
@@ -198,8 +198,8 @@
       <file leaf-file-name="SimpleLists.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/pl/projekt/logic/SimpleLists.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-2106">
-              <caret line="52" column="12" lean-forward="false" selection-start-line="52" selection-start-column="12" selection-end-line="52" selection-end-column="12" />
+            <state relative-caret-position="359">
+              <caret line="194" column="61" lean-forward="false" selection-start-line="194" selection-start-column="61" selection-end-line="194" selection-end-column="61" />
               <folding>
                 <element signature="e#5950#5965#0" expanded="true" />
                 <element signature="e#6024#6033#0" expanded="true" />
@@ -1536,7 +1536,7 @@
       <workItem from="1513674609339" duration="12491000" />
       <workItem from="1513715809910" duration="5425000" />
       <workItem from="1514400019227" duration="10493000" />
-      <workItem from="1514461755226" duration="21314000" />
+      <workItem from="1514461755226" duration="21531000" />
     </task>
     <task id="LOCAL-00001" summary="Pusty projekt">
       <created>1510775152311</created>
@@ -1783,11 +1783,18 @@
       <option name="project" value="LOCAL" />
       <updated>1514488990159</updated>
     </task>
-    <option name="localTasksCounter" value="36" />
+    <task id="LOCAL-00036" summary="Wyszukiwanie po lokalizacji - nie pełne">
+      <created>1514490160929</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1514490160929</updated>
+    </task>
+    <option name="localTasksCounter" value="37" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="168228000" />
+    <option name="totallyTimeSpent" value="168445000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -1918,7 +1925,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Dodanie klas DAO i DAOImpl dla wszystkich encji oraz utworzenie Bean w ApplicationContextConfig" />
     <MESSAGE value="Dodanie strony JSP nowych ogłoszen i nowego kontrolera" />
     <MESSAGE value="Ładowanie List Boxów przy dodawaniu ogłoszenia" />
     <MESSAGE value="Dodawanie nowych ogłoszen do bazy" />
@@ -1943,7 +1949,8 @@
     <MESSAGE value="Zapisywanie wybranego wynagrodzenia w comboboxie" />
     <MESSAGE value="Sortowanie ogloszen po id kategorii interfejsem comparator" />
     <MESSAGE value="Wyszukiwanie metoda list prostych z wykorzystaniem grupowania obiektow wedlug kategorii przy uzyciu tablicy adresowej" />
-    <option name="LAST_COMMIT_MESSAGE" value="Wyszukiwanie metoda list prostych z wykorzystaniem grupowania obiektow wedlug kategorii przy uzyciu tablicy adresowej" />
+    <MESSAGE value="Wyszukiwanie po lokalizacji - nie pełne" />
+    <option name="LAST_COMMIT_MESSAGE" value="Wyszukiwanie po lokalizacji - nie pełne" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -2406,8 +2413,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/pl/projekt/logic/SimpleLists.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2106">
-          <caret line="52" column="12" lean-forward="false" selection-start-line="52" selection-start-column="12" selection-end-line="52" selection-end-column="12" />
+        <state relative-caret-position="359">
+          <caret line="194" column="61" lean-forward="false" selection-start-line="194" selection-start-column="61" selection-end-line="194" selection-end-column="61" />
           <folding>
             <element signature="e#5950#5965#0" expanded="true" />
             <element signature="e#6024#6033#0" expanded="true" />
