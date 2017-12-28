@@ -46,11 +46,11 @@ public class SimpleLists {
         }
         //podane stanowisko
         if (id_position != 0) {
-            foundAds = findPosition(foundAds,id_position);
+            foundAds = findPosition(foundAds, id_position);
         }
         //podana forma zatrudnienia
         if (id_formOfEmployment != 0) {
-            findFormOfEmployment(foundAds,id_formOfEmployment);
+            foundAds = findFormOfEmployment(foundAds, id_formOfEmployment);
         }
         return foundAds;
     }
@@ -180,8 +180,8 @@ public class SimpleLists {
     //wyszukiwanie po podanej lokalizacji
     private List<Advertisement> findLocation(List<Advertisement> foundAds, String location) {
         List<Advertisement> listFoundsAds = new ArrayList<Advertisement>();
-        for(int i = 0; i<foundAds.size();i++){
-            if(foundAds.get(i).getLokalizacja().equalsIgnoreCase(location)){
+        for (int i = 0; i < foundAds.size(); i++) {
+            if (foundAds.get(i).getLokalizacja().equalsIgnoreCase(location)) {
                 listFoundsAds.add(foundAds.get(i));
             }
         }
@@ -191,8 +191,8 @@ public class SimpleLists {
     //wyszukiwanie po podanym stanowisku
     private List<Advertisement> findPosition(List<Advertisement> foundAds, int idPosition) {
         List<Advertisement> listFoundsAds = new ArrayList<Advertisement>();
-        for(int i = 0; i<foundAds.size();i++){
-            if(foundAds.get(i).getId_stanowisko()==idPosition){
+        for (int i = 0; i < foundAds.size(); i++) {
+            if (foundAds.get(i).getId_stanowisko() == idPosition) {
                 listFoundsAds.add(foundAds.get(i));
             }
         }
@@ -200,8 +200,14 @@ public class SimpleLists {
     }
 
     //wyszukiwanie po podanej formie zatrudnienia
-    private void findFormOfEmployment(List<Advertisement> foundAds, int idFormOfEmployment) {
-
+    private List<Advertisement> findFormOfEmployment(List<Advertisement> foundAds, int idFormOfEmployment) {
+        List<Advertisement> listFoundsAds = new ArrayList<Advertisement>();
+        for (int i = 0; i < foundAds.size(); i++) {
+            if (foundAds.get(i).getId_forma_zatrudnienia() == idFormOfEmployment) {
+                listFoundsAds.add(foundAds.get(i));
+            }
+        }
+        return listFoundsAds;
     }
 
 
