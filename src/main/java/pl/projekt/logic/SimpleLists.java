@@ -4,8 +4,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.transaction.annotation.Transactional;
 import pl.projekt.dao.AdvertisementDAO;
 import pl.projekt.model.Advertisement;
+import pl.projekt.util.AdvertisementComparator;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 /**
@@ -38,7 +40,7 @@ public class SimpleLists {
         if (id_category != 0) {
             tableAddress(foundAds);
         }
-        //podana lokalziacja
+        //podana lokalizacja
         if (!location.equals("")) {
             findLocation(foundAds);
         }
@@ -146,6 +148,9 @@ public class SimpleLists {
 
     //tablica adresowa ze względu na kategorie wyszukiwania
     private void tableAddress(List<Advertisement> foundAds) {
+        Collections.sort(foundAds, new AdvertisementComparator());
+
+
     }
 
     //wyszukiwanie po podanej lokalizacji
