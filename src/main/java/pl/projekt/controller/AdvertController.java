@@ -8,6 +8,7 @@ import org.springframework.web.bind.WebDataBinder;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
 import pl.projekt.dao.*;
+import pl.projekt.logic.CheckingSpam;
 import pl.projekt.model.*;
 import pl.projekt.util.FillListBox;
 import pl.projekt.util.FillTables;
@@ -100,18 +101,21 @@ public class AdvertController {
     }
 
     @RequestMapping(value = "save", method = RequestMethod.POST)
-    public ModelAndView save(Principal principal, ModelAndView m, @ModelAttribute("advert")Advertisement advertisement,BindingResult bindingResult) {
+    public ModelAndView save(Principal principal, ModelAndView m, @ModelAttribute("advert") Advertisement advertisement, BindingResult bindingResult) {
         ModelAndView model = new ModelAndView("newAdvertisement");
         FillListBox fillListBox = new FillListBox(categoryDAO, formOfEmploymentDAO, positionDAO);
-
+        CheckingSpam checkingSpam = new CheckingSpam(advertisementDAO);
+        Users user = usersDAO.findUser(principal.getName());
         if (bindingResult.hasErrors()) {
             fillListBox.fillListBox(model);
 
             model.addObject("css", "error");
             model.addObject("msg", "Nie wprowadzono wszystkich danych lub wprowadzono je niepoprawnie");
-        } else {
-            Users user = usersDAO.findUser(principal.getName());
+        }else if("spam".equalsIgnoreCase(checkingSpam.checkingSpam(user.getId_uzytkownik()))){
+            model.addObject("css", "error");
+            model.addObject("msg", "Nie można dodać ogłoszenia. Podobne znajduję się już w systemie");
 
+        }else {
             advertisementDAO.add(user.getId_uzytkownik(), advertisement);
             model.addObject("css", "msgSuccess");
             model.addObject("msg", "Dodano poprawnie!");
