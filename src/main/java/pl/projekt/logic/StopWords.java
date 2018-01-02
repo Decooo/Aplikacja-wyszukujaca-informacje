@@ -1,5 +1,6 @@
 package pl.projekt.logic;
 
+import org.springframework.transaction.annotation.Transactional;
 import pl.projekt.model.Advertisement;
 
 import java.io.BufferedReader;
@@ -10,13 +11,14 @@ import java.util.List;
 /**
  * Created by jakub on 02.01.2018.
  */
+@Transactional
 public class StopWords {
 
     public List<Advertisement> deleteStopWords(List<Advertisement> adverts) {
         ArrayList<Advertisement> doneAds = new ArrayList<Advertisement>();
 
         try {
-            FileReader fileReader = new FileReader("polish.stopwords.txt");
+            FileReader fileReader = new FileReader("stopwords.txt");
             BufferedReader bufferedReader = new BufferedReader(fileReader);
             for (int i = 0; i < adverts.size(); i++) {
                 String description = adverts.get(i).getOpis();
