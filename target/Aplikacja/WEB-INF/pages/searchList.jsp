@@ -47,14 +47,14 @@
         <option></option>
         </c:if>
         <option value="0-1500">0-1500</option>
-        <option value="1500-3000">1500-3000</option>
-        <option value="3000-4000">3000-4000</option>
-        <option value="4000-5000">4000-5000</option>
-        <option value="5000-6000">5000-6000</option>
-        <option value="6000-7500">6000-7500</option>
-        <option value="7500-10000">7500-10000</option>
-        <option value="10000-15000">10000-15000</option>
-        <option value="15000-100000">15000-100000</option>
+        <option value="1501-3000">1501-3000</option>
+        <option value="3001-4000">3001-4000</option>
+        <option value="4001-5000">4001-5000</option>
+        <option value="5001-6000">5001-6000</option>
+        <option value="6001-7500">6001-7500</option>
+        <option value="7501-10000">7501-10000</option>
+        <option value="10001-15000">10001-15000</option>
+        <option value="15001-100000">15001-100000</option>
         </select><br/><br/>
         <form:button>Wyszukaj</form:button>
     </form:form>
