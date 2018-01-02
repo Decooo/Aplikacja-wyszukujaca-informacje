@@ -23,10 +23,13 @@ public class CheckingSpam {
 
     public String checkingSpam(int userID) {
         List<Advertisement> ads = linearSearchWithGuard(userID);
+        StopWords stopWords = new StopWords();
         if (ads.size() == 0) return "noSpam";
-
-        return "noSpam";
+        System.out.println("ads.size() = " + ads.size());
+        ads=stopWords.deleteStopWords(ads);
+        return algorithmTF_idf(ads);
     }
+
 
     //przeszukiwanie z wartownikiem
     private List<Advertisement> linearSearchWithGuard(int userID) {
@@ -34,9 +37,7 @@ public class CheckingSpam {
         List<Advertisement> foundAds = new ArrayList<Advertisement>();
         adverts = advertisementDAO.findAllByID(userID);
         if (adverts.size() == 0) return adverts;
-
         adverts.add(new Advertisement(userID, 0, 0, 0, "guard", "guard", 0, "guard"));
-
         int i = 0;
         while (true) {
             if (adverts.get(i).getId_uzytkownik() == userID) {
@@ -51,4 +52,10 @@ public class CheckingSpam {
         return foundAds;
     }
 
+    private String algorithmTF_idf(List<Advertisement> ads) {
+
+
+
+        return "noSpam";
+    }
 }
