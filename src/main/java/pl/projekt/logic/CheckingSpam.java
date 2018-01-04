@@ -21,13 +21,16 @@ public class CheckingSpam {
         this.advertisementDAO = advertisementDAO;
     }
 
-    public String checkingSpam(int userID) {
+    public String checkingSpam(int userID, Advertisement advertisement) {
         List<Advertisement> ads = linearSearchWithGuard(userID);
         StopWords stopWords = new StopWords();
         if (ads.size() == 0) return "noSpam";
         System.out.println("ads.size() = " + ads.size());
-        ads=stopWords.deleteStopWords(ads);
-        return algorithmTF_idf(ads);
+        ads = stopWords.deleteStopWords(ads);
+        List<Advertisement> tempAdvertisement = new ArrayList<Advertisement>();
+        tempAdvertisement.add(advertisement);
+        tempAdvertisement = stopWords.deleteStopWords(tempAdvertisement);
+        return algorithmTF_idf(ads, tempAdvertisement.get(0));
     }
 
 
@@ -52,8 +55,16 @@ public class CheckingSpam {
         return foundAds;
     }
 
-    private String algorithmTF_idf(List<Advertisement> ads) {
+    private String algorithmTF_idf(List<Advertisement> ads, Advertisement advertisement) {
+        List<Advertisement> adsOtherLocation = new ArrayList<Advertisement>();
+        for (Advertisement ad : ads) {
+            if (!advertisement.getLokalizacja().equalsIgnoreCase(ad.getLokalizacja())) {
+                adsOtherLocation.add(ad);
+            }
+        }
 
+        //sprawdzenie czy opisy sa podobne
+        String[] description=advertisement.getOpis().split(" ");
 
 
         return "noSpam";

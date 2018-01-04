@@ -31,9 +31,11 @@ public class StopWords {
             }
             description = "";
             for (String word : words) {
-                word = word.trim();
-                description = description + " " + word;
+                if(!word.equalsIgnoreCase("")){
+                    description = description + " " + word;
+                }
             }
+            description=description.trim();
             adverts.get(i).setOpis(description);
             doneAds.add(adverts.get(i));
         }

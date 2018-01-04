@@ -111,11 +111,11 @@ public class AdvertController {
 
             model.addObject("css", "error");
             model.addObject("msg", "Nie wprowadzono wszystkich danych lub wprowadzono je niepoprawnie");
-        }else if("spam".equalsIgnoreCase(checkingSpam.checkingSpam(user.getId_uzytkownik()))){
+        } else if ("spam".equalsIgnoreCase(checkingSpam.checkingSpam(user.getId_uzytkownik(),advertisement))) {
             model.addObject("css", "error");
             model.addObject("msg", "Nie można dodać ogłoszenia. Podobne znajduję się już w systemie");
 
-        }else {
+        } else {
             advertisementDAO.add(user.getId_uzytkownik(), advertisement);
             model.addObject("css", "msgSuccess");
             model.addObject("msg", "Dodano poprawnie!");
