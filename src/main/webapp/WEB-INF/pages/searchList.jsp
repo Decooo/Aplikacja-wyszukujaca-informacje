@@ -27,33 +27,34 @@
         <div class=${css}>${msg}</div>
     </c:if>
 
-    <form:form action="search" method="post">
 
-        <input type="search" name="inquiry" value="${pageContext.request.getAttribute("inquiry")}"><br/><br/>
-        <button name="btnSearch">Szukaj</button>
-
-    </form:form>
-
+<br/><br/>
     <form:form commandName="search" action="advancedSearch" method="post" role="form">
-        Lokalizacja: <input type="search" name="location"><br/>
+        <input type="search" name="inquiry" value="${pageContext.request.getAttribute("inquiry")}"><br/><br/>
 
-        Kategoria: <form:select path="id_kategoria"><form:options items="${id_kategoria}" itemValue="id_kategoria"
+        Lokalizacja: <input type="search" name="location" value="${pageContext.request.getAttribute("location")}"><br/><br/>
+
+        Kategoria: <form:select path="id_kategoria"><option value=0 selected="selected">Nie wybrano</option><form:options items="${id_kategoria}" itemValue="id_kategoria"
                                                                   itemLabel="nazwa"/></form:select><br/><br/>
-        Forma zatrudnienia: <form:select path="id_forma_zatrudnienia"><form:options items="${id_forma_zatrudnienia}"
+        Forma zatrudnienia: <form:select path="id_forma_zatrudnienia"><option value=0 selected="selected">Nie wybrano</option><form:options items="${id_forma_zatrudnienia}"
                                                                                     itemValue="id_forma_zatrudnienia"
                                                                                     itemLabel="nazwa"  /></form:select><br/><br/>
-        Stanowisko: <form:select path="id_stanowisko"><form:options items="${id_stanowisko}" itemValue="id_stanowisko"
+        Stanowisko: <form:select path="id_stanowisko"><option value=0 selected="selected">Nie wybrano</option><form:options items="${id_stanowisko}" itemValue="id_stanowisko"
                                                                     itemLabel="nazwa"/></form:select><br/><br/>
         Zarobki:<select size="1" name="salary">
-        <option value="1">0-1000</option>
-        <option value="2">1000-2000</option>
-        <option value="3">2000-3000</option>
-        <option value="4">4000-5000</option>
-        <option value="5">5000-6000</option>
-        <option value="6">6000-7500</option>
-        <option value="7">7500-10000</option>
-        <option value="8">10000-15000</option>
-        <option value="9">15000-100000</option>
+        <option selected="selected">${pageContext.request.getAttribute("salary")}</option>
+        <c:if test="${not empty salary}">
+        <option></option>
+        </c:if>
+        <option value="0-1500">0-1500</option>
+        <option value="1501-3000">1501-3000</option>
+        <option value="3001-4000">3001-4000</option>
+        <option value="4001-5000">4001-5000</option>
+        <option value="5001-6000">5001-6000</option>
+        <option value="6001-7500">6001-7500</option>
+        <option value="7501-10000">7501-10000</option>
+        <option value="10001-15000">10001-15000</option>
+        <option value="15001-100000">15001-100000</option>
         </select><br/><br/>
         <form:button>Wyszukaj</form:button>
     </form:form>
