@@ -73,19 +73,11 @@ public class CheckingSpam {
 			int amountUseWords = 0;
 			fillInZero(numberDuplicates);
 			String[] text = ad.getOpis().split(" ");
-			for (int j = 0; j < description.length; j++) {
-				for (String aText : text) {
-					if (description[j].equalsIgnoreCase(aText)) {
-						numberDuplicates[j]++;
-					}
-				}
-			}
+			fillInDuplicates(description, numberDuplicates, text);
 
-			for (int k = 0; k < numberDuplicates.length; k++) {
-				//System.out.println("Ilosc powtorzen slowa = "+description[k] +" "+ numberDuplicates[k]);
-				amount += numberDuplicates[k];
-				if (numberDuplicates[k] > 0) amountUseWords++;
-				//System.out.println("amount = " + amount + ", " + amountUseWords + " suma slow: " + description.length);
+			for (int numberDuplicate : numberDuplicates) {
+				amount += numberDuplicate;
+				if (numberDuplicate > 0) amountUseWords++;
 			}
 
 			float resultSpam = ((float) amount / (float) description.length);
@@ -102,6 +94,16 @@ public class CheckingSpam {
 		return "noSpam";
 	}
 
+	private void fillInDuplicates(String[] description, int[] numberDuplicates, String[] text) {
+		for (int j = 0; j < description.length; j++) {
+			for (String aText : text) {
+				if (description[j].equalsIgnoreCase(aText)) {
+					numberDuplicates[j]++;
+				}
+			}
+		}
+	}
+
 
 	private void fillInZero(int[] numberDuplicates) {
 		for (int index : numberDuplicates) {
@@ -112,7 +114,7 @@ public class CheckingSpam {
 	private String[] removeDuplicates(String[] description) {
 		List<String> arrWithoutDuplicates = new ArrayList<String>();
 		if (description.length < 1) return description;
-		boolean theSame = false;
+		boolean theSame;
 
 		arrWithoutDuplicates.add(description[0]);
 		for (int i = 1; i < description.length; i++) {
