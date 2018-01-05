@@ -52,6 +52,7 @@ public class StopWords {
 		text = text.replace("!", "");
 		text = text.replace("-", "");
 		text = text.replace("?", "");
+		text = text.replace(System.getProperty("line.separator"),"");
 
 		return text;
 	}

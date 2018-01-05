@@ -86,15 +86,15 @@ public class AdvertController {
 		model.addObject("page", page);
 		List<Category> category = new ArrayList<Category>();
 		List<FormOfEmployment> formOfEmployments = new ArrayList<FormOfEmployment>();
-		List<Users> users = new ArrayList<Users>();
 		List<Position> positions = new ArrayList<Position>();
+		List<Users> users = new ArrayList<Users>();
 
 		FillTables fillTables = new FillTables(categoryDAO, formOfEmploymentDAO, positionDAO, usersDAO);
 		fillTables.fillTables(adverts, category, formOfEmployments, users, positions);
 
+		model.addObject("users", users);
 		model.addObject("category", category);
 		model.addObject("formOfEmployments", formOfEmployments);
-		model.addObject("users", users);
 		model.addObject("positions", positions);
 		System.out.println("AdvertController.list");
 		return model;
