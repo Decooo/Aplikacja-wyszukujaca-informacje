@@ -46,6 +46,9 @@
     <h1 style="text-align:center;color:#193f8f; clear: both;">Lista wszystkich ogłoszeń</h1>
 
 
+        <div class="pagination">
+            <list:forEach begin="${startpage}" end="${endpage}" var="p"><a href="<list:url value="/ogloszenia/lista" ><list:param name="page" value="${p}"/>${p}</list:url>"> ${p}</a></list:forEach>
+        </div>
 
         <list:forEach var="advert" items="${adverts}" varStatus="loop">
 
