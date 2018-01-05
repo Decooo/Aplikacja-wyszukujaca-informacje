@@ -24,7 +24,7 @@
         <setting name="validation-enabled" value="true" />
         <setting name="provider-name" value="" />
         <datasource-mapping>
-          <factory-entry name="pl.projekt.model" />
+          <factory-entry name="pl.projekt.model" value="12673326-d1ad-459e-a74e-73e594ec551f" />
         </datasource-mapping>
         <deploymentDescriptor name="persistence.xml" url="file://$MODULE_DIR$/src/main/resources/META-INF/persistence.xml" />
       </configuration>

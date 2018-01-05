@@ -12,7 +12,6 @@ import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 import pl.projekt.dao.*;
 import pl.projekt.model.*;
 import pl.projekt.util.FillListBox;
-import pl.projekt.util.FillTables;
 import pl.projekt.validator.AdvertisementValidator;
 
 import java.security.Principal;
@@ -64,8 +63,12 @@ public class MyAdvertsController {
         List<Position> positions = new ArrayList<Position>();
         List<Users> users = new ArrayList<Users>();
 
-        FillTables fillTables = new FillTables(categoryDAO, formOfEmploymentDAO, positionDAO, usersDAO);
-        fillTables.fillTables(myAdverts, category, formOfEmployments, users, positions);
+        for (Advertisement advert : myAdverts) {
+            category.add(categoryDAO.findCategoryByID(advert.getId_kategoria()));
+            formOfEmployments.add(formOfEmploymentDAO.findByID(advert.getId_forma_zatrudnienia()));
+            users.add(usersDAO.findByID(advert.getId_uzytkownik()));
+            positions.add(positionDAO.findByID(advert.getId_stanowisko()));
+        }
 
         model.addObject("users", users);
 
