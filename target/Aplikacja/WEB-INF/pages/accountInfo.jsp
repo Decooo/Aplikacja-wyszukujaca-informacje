@@ -15,16 +15,12 @@
 <body>
 <jsp:include page="_header.jsp"/>
 <jsp:include page="_menu.jsp"/>
-<div class="main"></div>
-Informacje o koncie
+<div class="main">
+    <h3>Informacje o koncie:</h3>
+    <br>
+    <p>Nazwa użytkownika: ${pageContext.request.userPrincipal.name}</p>
 
-<div class="account-container">
 
-
-    <ul>
-        <li>Nazwa użytkownika: ${pageContext.request.userPrincipal.name}</li>
-
-    </ul>
 </div>
 </div>
 <jsp:include page="_footer.jsp"/>

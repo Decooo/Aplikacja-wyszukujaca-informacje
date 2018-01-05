@@ -20,28 +20,38 @@
 <jsp:include page="_header.jsp"/>
 <jsp:include page="_menu.jsp"/>
 
-<div class="main">
-    <h1>Wyszukaj</h1>
+<div id="container" >
 
-    <c:if test="${not empty msg}">
-        <div class=${css}>${msg}</div>
-    </c:if>
+        <h1>Wyszukaj</h1>
+        <c:if test="${not empty msg}">
+            <div class=${css}>${msg}</div>
+        </c:if>
+    <div id="box4">
+      <form:form commandName="search" action="advancedSearch" method="post" role="form">
+          Słowo Kluczowe: <input type="search" name="inquiry" value="${pageContext.request.getAttribute("inquiry")}">
+    </div>
 
-
-<br/><br/>
-    <form:form commandName="search" action="advancedSearch" method="post" role="form">
-        <input type="search" name="inquiry" value="${pageContext.request.getAttribute("inquiry")}"><br/><br/>
-
-        Lokalizacja: <input type="search" name="location" value="${pageContext.request.getAttribute("location")}"><br/><br/>
-
+    <div id="box4">
+        Lokalizacja: <input type="search" name="location" value="${pageContext.request.getAttribute("location")}">
+    </div>
+    <div id="box4">
         Kategoria: <form:select path="id_kategoria"><option value=0 selected="selected">Nie wybrano</option><form:options items="${id_kategoria}" itemValue="id_kategoria"
-                                                                  itemLabel="nazwa"/></form:select><br/><br/>
-        Forma zatrudnienia: <form:select path="id_forma_zatrudnienia"><option value=0 selected="selected">Nie wybrano</option><form:options items="${id_forma_zatrudnienia}"
+                                                                 itemLabel="nazwa"/></form:select>
+    </div>
+
+    <div id="box4">
+    Forma zatrudnienia: <form:select path="id_forma_zatrudnienia"><option value=0 selected="selected">Nie wybrano</option><form:options items="${id_forma_zatrudnienia}"
                                                                                     itemValue="id_forma_zatrudnienia"
-                                                                                    itemLabel="nazwa"  /></form:select><br/><br/>
-        Stanowisko: <form:select path="id_stanowisko"><option value=0 selected="selected">Nie wybrano</option><form:options items="${id_stanowisko}" itemValue="id_stanowisko"
-                                                                    itemLabel="nazwa"/></form:select><br/><br/>
-        Zarobki:<select size="1" name="salary">
+                                                                                    itemLabel="nazwa"  /></form:select>
+    </div>
+
+    <div id="box4">
+    Stanowisko: <form:select path="id_stanowisko"><option value=0 selected="selected">Nie wybrano</option><form:options items="${id_stanowisko}" itemValue="id_stanowisko"
+                                                                    itemLabel="nazwa"/></form:select>
+    </div>
+
+    <div id="box4">
+    Zarobki:<select size="1" name="salary">
         <option selected="selected">${pageContext.request.getAttribute("salary")}</option>
         <c:if test="${not empty salary}">
         <option></option>
@@ -56,37 +66,33 @@
         <option value="10001-15000">10001-15000</option>
         <option value="15001-100000">15001-100000</option>
         </select><br/><br/>
-        <form:button>Wyszukaj</form:button>
+    </div>
+
+    <div id="box4">
+    <form:button>Wyszukaj</form:button>
     </form:form>
+    </div>
+
 
     <h1>Znalezione ogłoszenia</h1>
 
-    <table border="1" align="center">
-        <th>Autor</th>
-        <th>Kategoria</th>
-        <th>Forma zatrudnienia</th>
-        <th>Stanowisko</th>
-        <th>Tytul</th>
-        <th>Lokalizacja</th>
-        <th>Zarobki</th>
-        <th>Opis</th>
+
 
 
         <list:forEach var="advert" items="${adverts}" varStatus="loop">
-            <tr>
-                <td><list:forEach begin="${loop.index}" step="1" end="${loop.index}" var="user"
-                                  items="${users}">${user.login}</list:forEach></td>
-                <td><list:forEach begin="${loop.index}" step="1" end="${loop.index}" var="cat"
-                                  items="${category}">${cat.nazwa}</list:forEach></td>
-                <td><list:forEach begin="${loop.index}" step="1" end="${loop.index}" var="formOfEmployment"
-                                  items="${formOfEmployments}">${formOfEmployment.nazwa}</list:forEach></td>
-                <td><list:forEach begin="${loop.index}" step="1" end="${loop.index}" var="position"
-                                  items="${positions}">${position.nazwa}</list:forEach></td>
-                <td>${advert.tytul}</td>
-                <td>${advert.lokalizacja}</td>
-                <td>${advert.zarobki}</td>
-                <td>${advert.opis}</td>
-            </tr>
+            <div id="tytul2">${advert.tytul}</div>
+            <div id="box"><h>Autor:</h> <list:forEach begin="${loop.index}" step="1" end="${loop.index}" var="user"
+                                                      items="${users}">${user.login}</list:forEach></div>
+            <div id="box"><h>Kategoria:</h> <list:forEach begin="${loop.index}" step="1" end="${loop.index}" var="cat"
+                                                          items="${category}">${cat.nazwa}</list:forEach></div>
+            <div id="box"><h>Forma zatrudnienia:</h> <list:forEach begin="${loop.index}" step="1" end="${loop.index}" var="formOfEmployment"
+                                                                   items="${formOfEmployments}">${formOfEmployment.nazwa}</list:forEach></div>
+            <div id="box"><h>Stanowisko:</h> <list:forEach begin="${loop.index}" step="1" end="${loop.index}" var="position"
+                                                           items="${positions}">${position.nazwa}</list:forEach></div>
+
+            <div id="box"><h>Lokalizacja:</h> ${advert.lokalizacja}</div>
+            <div id="box"><h>Zarobki:</h> ${advert.zarobki}</div>
+            <div id="opis"> ${advert.opis}</div>
         </list:forEach>
     </table>
 
