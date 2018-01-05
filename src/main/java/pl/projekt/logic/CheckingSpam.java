@@ -25,8 +25,8 @@ public class CheckingSpam {
 		List<Advertisement> ads = linearSearchWithGuard(userID);
 		StopWords stopWords = new StopWords();
 		if (ads.size() == 0) return "noSpam";
-		System.out.println("ads.size() = " + ads.size());
-		ads = stopWords.deleteStopWords(checkLocation(ads, advertisement));
+		ads = stopWords.deleteStopWords(identicalLocation(ads, advertisement));
+		System.out.println("adsSize = " + ads.size());
 		List<Advertisement> tempAdvertisement = new ArrayList<Advertisement>();
 		tempAdvertisement.add(advertisement);
 		tempAdvertisement = stopWords.deleteStopWords(tempAdvertisement);
@@ -54,22 +54,59 @@ public class CheckingSpam {
 		return foundAds;
 	}
 
-	private List<Advertisement> checkLocation(List<Advertisement> ads, Advertisement advertisement) {
-		List<Advertisement> adsOtherLocation = new ArrayList<Advertisement>();
+	private List<Advertisement> identicalLocation(List<Advertisement> ads, Advertisement advertisement) {
+		List<Advertisement> adsIdenticalLocation = new ArrayList<Advertisement>();
 		for (Advertisement ad : ads) {
-			if (!advertisement.getLokalizacja().equalsIgnoreCase(ad.getLokalizacja())) {
-				adsOtherLocation.add(ad);
+			if (advertisement.getLokalizacja().equalsIgnoreCase(ad.getLokalizacja())) {
+				adsIdenticalLocation.add(ad);
 			}
 		}
-		return adsOtherLocation;
+		return adsIdenticalLocation;
 	}
 
 	private String algorithmTF_idf(List<Advertisement> ads, Advertisement advertisement) {
 		String[] description = advertisement.getOpis().split(" ");
 		description = removeDuplicates(description);
-		//
+		int[] numberDuplicates = new int[description.length];
+		for (Advertisement ad : ads) {
+			int amount = 0;
+			int amountUseWords = 0;
+			fillInZero(numberDuplicates);
+			String[] text = ad.getOpis().split(" ");
+			for (int j = 0; j < description.length; j++) {
+				for (String aText : text) {
+					if (description[j].equalsIgnoreCase(aText)) {
+						numberDuplicates[j]++;
+					}
+				}
+			}
 
+			for (int k = 0; k < numberDuplicates.length; k++) {
+				//System.out.println("Ilosc powtorzen slowa = "+description[k] +" "+ numberDuplicates[k]);
+				amount += numberDuplicates[k];
+				if (numberDuplicates[k] > 0) amountUseWords++;
+				//System.out.println("amount = " + amount + ", " + amountUseWords + " suma slow: " + description.length);
+			}
+
+			float resultSpam = ((float) amount / (float) description.length);
+			if (resultSpam > 0.9) {
+				float resultSpam2 = ((float) amountUseWords / (float) description.length);
+				if (resultSpam2 < 0.8) {
+					System.out.println("Wspolczynniki spamu: " + resultSpam + " , " + resultSpam2);
+				} else {
+					System.out.println("Wspolczynniki spamu: " + resultSpam + " , " + resultSpam2);
+					return "spam";
+				}
+			}
+		}
 		return "noSpam";
+	}
+
+
+	private void fillInZero(int[] numberDuplicates) {
+		for (int index : numberDuplicates) {
+			index = 0;
+		}
 	}
 
 	private String[] removeDuplicates(String[] description) {

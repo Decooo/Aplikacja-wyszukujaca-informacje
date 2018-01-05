@@ -112,8 +112,10 @@ public class AdvertController {
 			model.addObject("css", "error");
 			model.addObject("msg", "Nie wprowadzono wszystkich danych lub wprowadzono je niepoprawnie");
 		} else if ("spam".equalsIgnoreCase(checkingSpam.checkingSpam(user.getId_uzytkownik(), advertisement))) {
+			fillListBox.fillListBox(model);
+
 			model.addObject("css", "error");
-			model.addObject("msg", "Nie można dodać ogłoszenia. Podobne znajduję się już w systemie");
+			model.addObject("msg", "Nie można dodać tego ogłoszenia. Dodałeś już bardzo podobne ogłoszenie.");
 
 		} else {
 			advertisementDAO.add(user.getId_uzytkownik(), advertisement);
