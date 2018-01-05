@@ -19,9 +19,9 @@ public class SimpleLists {
 //podział połówkowy z własną modyfikacją -> zarobki
 //grupowanie obiektów tablicą adresową -> kategoria
 
-    private AdvertisementDAO advertisementDAO;
     static int[][] tableAddress = new int[31][2];
     static int sizeTableAddress = 0;
+    private AdvertisementDAO advertisementDAO;
 
     @Autowired
     public SimpleLists(AdvertisementDAO advertisementDAO) {
